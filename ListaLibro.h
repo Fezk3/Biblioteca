@@ -24,7 +24,7 @@ public:
 	// methods
 
 	virtual void agregarLibro(Libro*);
-	virtual void EliminarLibro();
+	virtual void EliminarLibro(Libro*);
 	virtual void mostrarLibro();
 	virtual bool buscarLibro(string);
 	virtual void mostrarColeccion();

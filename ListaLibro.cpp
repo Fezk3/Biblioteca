@@ -33,18 +33,17 @@ void ListaLibro::agregarLibro(Libro* libro) {
 
 }
 
-void ListaLibro::EliminarLibro() {
+void ListaLibro::EliminarLibro(Libro* lib) {
 
-	// agragar id
-	string id;
-
+	NodoLibro* lib = new NodoLibro(lib);
+	
 	NodoLibro* aux = head;
 	NodoLibro* aux2;
 
 	if (aux == NULL) {
 		cout << "El libro no existe" << endl;
 	}
-	if (aux->getLibro()->getId() == id) {
+	if (aux->getLibro()->getId() == lib->getId()) {
 		aux2 = aux->getSig();
 		delete aux;
 		head = aux2;
@@ -53,7 +52,7 @@ void ListaLibro::EliminarLibro() {
 	{
 		while (aux != NULL) {
 
-			if (aux->getLibro()->getId() == id) {
+			if (aux->getLibro()->getId() == lib->getId()) {
 
 				aux->setSig(aux->getSig()->getSig());
 
