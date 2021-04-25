@@ -140,10 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Libro.cpp" />
+    <ClCompile Include="ListaLibro.cpp" />
+    <ClCompile Include="NodoLibro.cpp" />
     <ClCompile Include="Project-I.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Libro.h" />
+    <ClInclude Include="ListaLibro.h" />
+    <ClInclude Include="NodoLibro.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
