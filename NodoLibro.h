@@ -1,14 +1,8 @@
 #pragma once
 #ifndef NodoLibro_H
 #define NodoLibro_H
-#include <iostream>
-#include <sstream>
 #include "Libro.h"
-using std::string;
-using std::stringstream;
-using std::endl;
-using std::cout;
-using std::cin;
+
 
 class NodoLibro {
 
