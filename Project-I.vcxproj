@@ -143,11 +143,13 @@
     <ClCompile Include="ListaLibro.cpp" />
     <ClCompile Include="NodoLibro.cpp" />
     <ClCompile Include="Project-I.cpp" />
+    <ClCompile Include="Usuario.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Libro.h" />
     <ClInclude Include="ListaLibro.h" />
     <ClInclude Include="NodoLibro.h" />
+    <ClInclude Include="Usuario.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
