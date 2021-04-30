@@ -2,10 +2,21 @@
 //
 
 #include <iostream>
+#include "Libro.h"
+#include "Usuario.h"
+#include "Lista.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+    Lista<Libro> L;
+    Libro *l1 = new Libro("Mort", "Terry Pratchett", "Novel", "2003", "Idk", true, "4785");
+    L.agregar(l1);
+    L.mostrar();
+
+
+
+    return 0;
 }
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar

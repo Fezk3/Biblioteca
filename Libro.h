@@ -47,7 +47,7 @@ public:
 
 	// methods
 
-	string tostring();
+	string toString();
 
 };
 

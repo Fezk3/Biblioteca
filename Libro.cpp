@@ -87,7 +87,7 @@ string Libro::getId() {
 
 // methods
 
-string Libro::tostring() {
+string Libro::toString() {
 
 	stringstream x;
 	
