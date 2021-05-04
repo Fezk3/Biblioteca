@@ -22,6 +22,8 @@ public:
 	void agregar(T* dato);
 	void mostrar();
 	void borrar(string);
+	void disponibilidad(string);
+	void mostrarListaFiltrada(string);
 
 };
 
@@ -113,7 +115,7 @@ void Lista<T>::borrar(string id) {
 
 		}
 		else {
-			//elimina el primer nodo de la lista
+			
 			if (anterior == NULL) {
 
 				head = head->getSig();
@@ -131,6 +133,60 @@ void Lista<T>::borrar(string id) {
 
 	}
 
+
+}
+
+template <class  T>
+void Lista<T>::disponibilidad(string dispo) {
+
+	Nodo<T>* aux = head;
+	bool encontrado = false;
+
+	while (aux != NULL) {
+
+		if(aux->getDato()->getTitulo() == dispo) {
+
+			std::cout << "Libro " << aux->getDato()->getTitulo() << " esta disponible con un total de " << aux->getDato()->getCantidad() << std::endl;
+			encontrado = true;
+
+		}
+
+		aux = aux->getSig();
+
+	}
+
+	if (aux == NULL && encontrado == false) {
+
+		std::cout << "El libro solicitado no se encuentra disponible o no esta en la base de datos de la biblioteca" << std::endl;
+
+	}
+
+}
+
+template <class T>
+void Lista<T>::mostrarListaFiltrada(string filtro) {
+
+	Nodo<T> *aux = head;
+	bool encontrado = false;
+
+	while (aux != NULL) {
+
+		if (aux->getDato()->getMateria() == filtro || aux->getDato()->getAutores() == filtro) {
+
+			std::cout << aux->getDato()->getTitulo() << std::endl;
+			encontrado = true;
+
+		}
+
+		aux = aux->getSig();
+
+	}
+
+	if (aux == NULL && encontrado == false) {
+
+		std::cout << "El libro solicitado no se encuentra disponible o no esta en la base de datos de la biblioteca" << std::endl;
+
+	}
 
 }
 

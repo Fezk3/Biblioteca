@@ -20,10 +20,11 @@ private:
 	string editorial;
 	bool estado;
 	string id;
+	int cantidad;
 
 public:
 
-	Libro(string, string, string,string,string,bool,string);
+	Libro(string, string, string,string,string,bool,string,int);
 	~Libro();
 
 	// sets
@@ -44,6 +45,7 @@ public:
 	string getEditorial();
 	bool getEstado();
 	string getId();
+	int getCantidad();
 
 	// methods
 

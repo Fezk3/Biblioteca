@@ -8,23 +8,31 @@
 
 int main()
 {
-
+    
     Lista<Libro> L;
-    Libro *l1 = new Libro("Mort", "Terry Pratchett", "Novel", "2003", "Idk", true, "1");
-    L.agregar(l1);
-    L.mostrar();
-    L.borrar("1");
-    L.mostrar();
+    Libro *l1 = new Libro("Mort", "Terry", "Novel", "2003", "Idk", true, "1", 4);
+    Libro* l2 = new Libro("Lart", "Terry", "Novel", "2003", "Idk", true, "2", 4);
+    Libro* l3 = new Libro("Uwu", "Terry", "Novel", "2003", "Idk", true, "3", 4);
+    Libro* l4 = new Libro("owo", "Terrys", "Novel", "2003", "Idk", true, "4", 4);
+    L.agregar(l1); L.agregar(l2); L.agregar(l3); L.agregar(l4);
+    L.mostrarListaFiltrada("Novel");
+
+    
+    // pruba lista usuarios
+
+    /*
+
+    Lista<Usuario> l2;
+    Usuario* u = new Usuario("Fezk3", "123", 4, false);
+    l2.agregar(u);
+    l2.mostrar();
+
+    l2.borrar("123");
+
+    l2.mostrar();
+
+    */
 
     return 0;
 }
 
-// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
-// Depurar programa: F5 o menú Depurar > Iniciar depuración
-
-// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
-//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
-//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
-//   4. Use la ventana Lista de errores para ver los errores
-//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
-//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
