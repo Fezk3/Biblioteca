@@ -8,7 +8,7 @@
 
 int main()
 {
-    
+    /*
     Lista<Libro> L;
     Libro *l1 = new Libro("Mort", "Terry", "Novel", "2003", "Idk", true, "1", 4);
     Libro* l2 = new Libro("Lart", "Terry", "Novel", "2003", "Idk", true, "2", 4);
@@ -16,7 +16,7 @@ int main()
     Libro* l4 = new Libro("owo", "Terrys", "Novel", "2003", "Idk", true, "4", 4);
     L.agregar(l1); L.agregar(l2); L.agregar(l3); L.agregar(l4);
     L.mostrarListaFiltrada("Novel");
-
+    */
     
     // pruba lista usuarios
 

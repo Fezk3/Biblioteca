@@ -1,6 +1,8 @@
 #include "Usuario.h"
 Usuario::Usuario(string Nombre, string ID, int Cantidad, bool Estado) :nombre(Nombre), id(ID), cantidad_l(Cantidad), estado(Estado) {
 
+	libro = NULL;
+
 }
 
 Usuario::~Usuario() {
@@ -36,6 +38,15 @@ int Usuario::getCantidad() {
 
 bool Usuario::getEstado() {
 	return estado;
+}
+
+void Usuario::prestamo(string lib) {
+
+	int cant = libro->getCantidad();
+	cant - 1;
+	libro->setCantidad(cant);
+	std::cout << "Usted ha realizado exitosamente el prestamo del libro " << lib << endl;
+
 }
 
 string Usuario::toString() {

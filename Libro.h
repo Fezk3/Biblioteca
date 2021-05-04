@@ -35,6 +35,7 @@ public:
 	void setEditorial(string);
 	void setEstado(bool);
 	void setId(string);
+	void setCantidad(int);
 
 	// gets
 

@@ -3,6 +3,7 @@
 #define USUARIO_H
 #include <iostream>
 #include <sstream>
+#include "Libro.h"
 using std::string; using std::stringstream; using std::cout; using std::endl; using std::cin;
 
 class Usuario {
@@ -17,12 +18,14 @@ public:
 	string getId();
 	int getCantidad();
 	bool getEstado();
+	void prestamo(string);
 	string toString();
 private:
 	string nombre;
 	string id;
 	int cantidad_l;//cantidad de libros prestados
 	bool estado;
+	Libro* libro;
 };
 
 #endif

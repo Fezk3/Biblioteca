@@ -47,6 +47,12 @@ void Libro::setId(string id) {
 
 }
 
+void Libro::setCantidad(int cantidad) {
+
+	this->cantidad = cantidad;
+
+}
+
 // gets
 
 string Libro::getTitulo() {
