@@ -66,7 +66,7 @@ void Lista<T>::mostrar() {
 
 	while (aux != NULL) {
 
-		std::cout << aux->getDato()->toString();
+		std::cout << aux->toString();
 		std::cout << "------------" << std::endl;
 		aux = aux->getSig();
 

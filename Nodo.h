@@ -14,22 +14,71 @@ private:
 public:
 
 	Nodo(T*);
-	virtual ~Nodo() {};
+	virtual ~Nodo();
 
 	// sets
-	void setDato(T* dato) { this->dato = dato; }
-	void setSig(Nodo<T>* sig) { this->sig = sig; }
+	void setDato(T* dato);
+	void setSig(Nodo<T>* sig);
 
 	//gets
-	Nodo<T>* getSig() { return sig; }
-	T* getDato() { return dato; }
+	Nodo<T>* getSig();
+	T* getDato();
 
+	//methods
+	string toString();
 
 };
 
 // Class methods implemetation since its a template (No .cpp needed)
 template <class T>
 Nodo<T>::Nodo(T* dato) : dato(dato), sig(NULL) {
+
+}
+
+template <class T>
+Nodo<T>::~Nodo() {
+
+}
+
+//sets
+template <class T>
+void Nodo<T>::setDato(T* dato) {
+
+	this->dato = dato;
+
+}
+
+template <class T>
+void Nodo<T>::setSig(Nodo<T>* sig) {
+
+	this->sig = sig;
+
+}
+
+//gets
+template <class T>
+T* Nodo<T>::getDato() {
+
+	return dato;
+
+}
+
+template <class T>
+Nodo<T>* Nodo<T>::getSig() {
+
+	return sig;
+
+}
+
+//methods
+template <class T>
+string Nodo<T>::toString() {
+
+	stringstream x;
+
+	x << dato->toString() << endl;
+
+	return x.str();
 
 }
 
