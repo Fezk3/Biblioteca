@@ -10,11 +10,11 @@ int main()
 {
 
     Lista<Libro> L;
-    Libro *l1 = new Libro("Mort", "Terry Pratchett", "Novel", "2003", "Idk", true, "4785");
+    Libro *l1 = new Libro("Mort", "Terry Pratchett", "Novel", "2003", "Idk", true, "1");
     L.agregar(l1);
     L.mostrar();
-
-
+    L.borrar("1");
+    L.mostrar();
 
     return 0;
 }

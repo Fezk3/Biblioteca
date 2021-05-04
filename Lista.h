@@ -21,6 +21,7 @@ public:
 
 	void agregar(T* dato);
 	void mostrar();
+	void borrar(string);
 
 };
 
@@ -64,13 +65,72 @@ void Lista<T>::mostrar() {
 
 	Nodo<T>* aux = head;
 
-	while (aux != NULL) {
+	if (head == NULL) {
 
-		std::cout << aux->toString();
-		std::cout << "------------" << std::endl;
-		aux = aux->getSig();
+		std::cout << "Lista vacia" << std::endl;
 
 	}
+	else {
+
+		while (aux != NULL) {
+
+			std::cout << aux->toString();
+			std::cout << "------------" << std::endl;
+			aux = aux->getSig();
+
+		}
+
+	}
+	
+}
+
+template <class T>
+void Lista<T>::borrar(string id) {
+
+	if (head != NULL) {
+
+		Nodo<T>* borrar;
+		Nodo<T>* anterior;
+		borrar = head;
+		anterior = NULL;
+
+		while (borrar != NULL) {
+
+			if (borrar->getDato()->getId() == id) {
+
+				break;
+
+			}
+
+			anterior = borrar;
+			borrar = borrar->getSig();
+
+		}
+
+		if (borrar == NULL) {
+
+			cout << "El Elemento No Existe\n";
+
+		}
+		else {
+			//elimina el primer nodo de la lista
+			if (anterior == NULL) {
+
+				head = head->getSig();
+				delete borrar;
+
+			}
+			else {
+
+				anterior->setSig(borrar->getSig());
+				delete borrar;
+
+			}
+
+		}
+
+	}
+
 
 }
 
