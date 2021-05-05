@@ -24,6 +24,7 @@ public:
 	void borrar(string);
 	void disponibilidad(string);
 	void mostrarListaFiltrada(string);
+	void mostrarPedido(int);
 
 };
 
@@ -168,10 +169,11 @@ void Lista<T>::mostrarListaFiltrada(string filtro) {
 
 	Nodo<T> *aux = head;
 	bool encontrado = false;
+	int idPrestamo = std::stoi(filtro);
 
 	while (aux != NULL) {
 
-		if (aux->getDato()->getMateria() == filtro || aux->getDato()->getAutores() == filtro) {
+		if(aux->getDato()->getMateria() == filtro || aux->getDato()->getAutores() == filtro) {
 
 			std::cout << aux->getDato()->getTitulo() << std::endl;
 			encontrado = true;
@@ -185,6 +187,27 @@ void Lista<T>::mostrarListaFiltrada(string filtro) {
 	if (aux == NULL && encontrado == false) {
 
 		std::cout << "El libro solicitado no se encuentra disponible o no esta en la base de datos de la biblioteca" << std::endl;
+
+	}
+
+}
+
+
+template <class T>
+void Lista<T>::mostrarPedido(int ped) {
+
+	Nodo<T>* aux = head;
+
+	while (aux != NULL) {
+
+		if (aux->getDato()->getId() == ped) {
+
+			std::cout << aux->getDato()->toString();
+			break;
+
+		}
+
+		aux = aux->getSig();
 
 	}
 

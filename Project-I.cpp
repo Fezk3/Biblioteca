@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Libro.h"
 #include "Usuario.h"
+#include "Prestamo.h"
 #include "Lista.h"
 
 int main()
@@ -32,6 +33,13 @@ int main()
     l2.mostrar();
 
     */
+
+    Lista<Prestamo> p;
+    Prestamo* p1 = new Prestamo("123", "456", "Martes", "Viernes");
+    Prestamo* p2 = new Prestamo("342", "2", "Martes", "Viernes");
+    Prestamo* p3 = new Prestamo("910", "1", "Martes", "Viernes");
+    p.agregar(p1); p.agregar(p2); p.agregar(p3);
+    p.mostrarPedido(3);
 
     return 0;
 }

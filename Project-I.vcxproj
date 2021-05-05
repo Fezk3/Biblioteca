@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Libro.cpp" />
+    <ClCompile Include="Prestamo.cpp" />
     <ClCompile Include="Project-I.cpp" />
     <ClCompile Include="Usuario.cpp" />
   </ItemGroup>
@@ -147,6 +148,7 @@
     <ClInclude Include="Libro.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Nodo.h" />
+    <ClInclude Include="Prestamo.h" />
     <ClInclude Include="Usuario.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
