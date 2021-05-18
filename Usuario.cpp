@@ -1,7 +1,7 @@
 #include "Usuario.h"
 Usuario::Usuario(string Nombre, string ID, int Cantidad, bool Estado) :nombre(Nombre), id(ID), cantidad_l(Cantidad), estado(Estado) {
 
-	libro = NULL;
+	prestamos;
 
 }
 
@@ -40,12 +40,9 @@ bool Usuario::getEstado() {
 	return estado;
 }
 
-void Usuario::prestamo(string lib) {
+void Usuario::prestamo(Prestamo *nuevoP) {
 
-	int cant = libro->getCantidad();
-	cant - 1;
-	libro->setCantidad(cant);
-	std::cout << "Usted ha realizado exitosamente el prestamo del libro " << lib << endl;
+	prestamos.agregar(nuevoP);
 
 }
 

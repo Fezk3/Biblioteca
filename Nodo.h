@@ -1,7 +1,12 @@
 #pragma once
 #ifndef NODO_H
 #define NODO_H
+#include <sstream>
 #include <iostream>
+using std::stringstream;
+using std::string;
+using std::endl;
+using std::cout;
 
 template <class T>
 class Nodo {
