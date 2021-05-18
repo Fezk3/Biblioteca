@@ -44,6 +44,8 @@ int main()
     u->prestamo(p1);
     u->mostrarPrestamos();
     
+    cout << "despues de devolver\n\n";
+    
     return 0;
 }
 
