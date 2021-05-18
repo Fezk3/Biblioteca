@@ -20,6 +20,7 @@ public:
 	int getCantidad();
 	bool getEstado();
 	void prestamo(Prestamo*);
+	void mostrarPrestamos();
 	string toString();
 private:
 	string nombre;

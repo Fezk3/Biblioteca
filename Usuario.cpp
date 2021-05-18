@@ -46,6 +46,18 @@ void Usuario::prestamo(Prestamo *nuevoP) {
 
 }
 
+void Usuario::mostrarPrestamos() {
+
+	prestamos.mostrar();
+
+}
+
+void Usuario::devolver(string id) {
+
+	prestamos.borrar(id);
+
+}
+
 string Usuario::toString() {
 	stringstream s;
 	s << "Nombre: " << getNombre() << endl;

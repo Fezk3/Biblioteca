@@ -21,25 +21,28 @@ int main()
     
     // pruba lista usuarios
 
-    /*
+    
 
     Lista<Usuario> l2;
     Usuario* u = new Usuario("Fezk3", "123", 4, false);
     l2.agregar(u);
     l2.mostrar();
 
-    l2.borrar("123");
+    //l2.borrar("123");
 
-    l2.mostrar();
+   // l2.mostrar();
 
-    */
+    
     
     Lista<Prestamo> p;
-    Prestamo* p1 = new Prestamo("123", "456", "Martes", "Viernes");
+    Prestamo* p1 = new Prestamo("63", "123", "Martes", "Viernes");
     Prestamo* p2 = new Prestamo("342", "2", "Martes", "Viernes");
     Prestamo* p3 = new Prestamo("910", "1", "Martes", "Viernes");
-    p.agregar(p1); p.agregar(p2); p.agregar(p3);
-    p.mostrarPedido(3);
+   // p.agregar(p1); p.agregar(p2); p.agregar(p3);
+   // p.mostrarPedido(3);
+
+    u->prestamo(p1);
+    u->mostrarPrestamos();
     
     return 0;
 }
