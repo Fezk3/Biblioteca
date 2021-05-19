@@ -51,13 +51,13 @@ void Usuario::mostrarPrestamos() {
 	prestamos.mostrar();
 
 }
-/*
-void Usuario::devolver(string id) {
 
-	prestamos.borrar(id);
+void Usuario::devolver(int id) {
+
+	prestamos.borrarPrestamo(id);
 
 }
-*/
+
 string Usuario::toString() {
 	stringstream s;
 	s << "Nombre: " << getNombre() << endl;

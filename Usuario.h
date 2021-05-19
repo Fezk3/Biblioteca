@@ -21,7 +21,7 @@ public:
 	bool getEstado();
 	void prestamo(Prestamo*);
 	void mostrarPrestamos();
-	//void devolver(string);
+	void devolver(int);
 	string toString();
 private:
 	string nombre;

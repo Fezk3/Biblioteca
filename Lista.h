@@ -22,6 +22,7 @@ public:
 	void agregar(T* dato);
 	void mostrar();
 	void borrar(string);
+	void borrarPrestamo(int);
 	void disponibilidad(string);
 	void mostrarListaFiltrada(string);
 	void mostrarPedido(int);
@@ -210,6 +211,56 @@ void Lista<T>::mostrarPedido(int ped) {
 		aux = aux->getSig();
 
 	}
+
+}
+
+template <class T>
+void Lista<T>::borrarPrestamo(int id) {
+
+	if (head != NULL) {
+
+		Nodo<T>* borrar;
+		Nodo<T>* anterior;
+		borrar = head;
+		anterior = NULL;
+
+		while (borrar != NULL) {
+
+			if (borrar->getDato()->getId() == id) {
+
+				break;
+
+			}
+
+			anterior = borrar;
+			borrar = borrar->getSig();
+
+		}
+
+		if (borrar == NULL) {
+
+			cout << "El Elemento No Existe\n";
+
+		}
+		else {
+
+			if (anterior == NULL) {
+
+				head = head->getSig();
+				delete borrar;
+
+			}
+			else {
+
+				anterior->setSig(borrar->getSig());
+				delete borrar;
+
+			}
+
+		}
+
+	}
+
 
 }
 
