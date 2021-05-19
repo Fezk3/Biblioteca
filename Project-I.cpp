@@ -19,7 +19,7 @@ int main()
     L.mostrarListaFiltrada("Terry");
     L.mostrarEspecifico("1");
 
-    cout<<L.cantidadNodos();  // para cantidad de ejemplares
+    cout<<L.cantidadNodos();  para cantidad de ejemplares
 
     */
     
