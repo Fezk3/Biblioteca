@@ -170,11 +170,10 @@ void Lista<T>::mostrarListaFiltrada(string filtro) {
 
 	Nodo<T> *aux = head;
 	bool encontrado = false;
-	int idPrestamo = std::stoi(filtro);
 
 	while (aux != NULL) {
 
-		if(aux->getDato()->getMateria() == filtro || aux->getDato()->getAutores() == filtro) {
+		if(aux->getDato()->getMateria() == filtro || aux->getDato()->getAutores() == filtro || aux->getDato()->getTitulo() == filtro) {
 
 			std::cout << aux->getDato()->getTitulo() << std::endl;
 			encontrado = true;
