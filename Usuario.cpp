@@ -1,7 +1,7 @@
 #include "Usuario.h"
 Usuario::Usuario(string Nombre, string ID, int Cantidad, bool Estado) :nombre(Nombre), id(ID), cantidad_l(Cantidad), estado(Estado) {
 
-	prestamos;
+	prestamos; // lista de prestamos
 
 }
 
