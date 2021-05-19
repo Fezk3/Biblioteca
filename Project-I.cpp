@@ -42,6 +42,7 @@ int main()
    // p.mostrarPedido(3);
 
     u->prestamo(p1);
+    u->prestamo(p2);
     u->mostrarPrestamos();
     
     cout << "despues de devolver\n\n";
