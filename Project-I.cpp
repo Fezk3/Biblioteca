@@ -9,20 +9,20 @@
 
 int main()
 {
-    /*
+    
     Lista<Libro> L;
     Libro *l1 = new Libro("Mort", "Terry", "Novel", "2003", "Idk", true, "1", 4);
     Libro* l2 = new Libro("Lart", "Terry", "Novel", "2003", "Idk", true, "2", 4);
     Libro* l3 = new Libro("Uwu", "Terry", "Novel", "2003", "Idk", true, "3", 4);
     Libro* l4 = new Libro("owo", "Terrys", "Novel", "2003", "Idk", true, "4", 4);
     L.agregar(l1); L.agregar(l2); L.agregar(l3); L.agregar(l4);
-    L.mostrarListaFiltrada("Terry");
-    */
+   // L.mostrarListaFiltrada("Terry");
+    L.mostrarEspecifico("1");
     
     // pruba lista usuarios
 
     
-
+    /*
     Lista<Usuario> l2;
     Usuario* u = new Usuario("Fezk3", "123", 4, false);
     l2.agregar(u);
@@ -49,7 +49,7 @@ int main()
 
     u->devolver(1);
     u->mostrarPrestamos();
-    
+    */
     return 0;
 }
 

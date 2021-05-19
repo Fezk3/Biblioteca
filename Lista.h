@@ -26,6 +26,7 @@ public:
 	void disponibilidad(string);
 	void mostrarListaFiltrada(string);
 	void mostrarPedido(int);
+	void mostrarEspecifico(string);
 
 };
 
@@ -262,5 +263,42 @@ void Lista<T>::borrarPrestamo(int id) {
 
 
 }
+
+template <class T>
+void Lista<T>::mostrarEspecifico(string dato) {
+
+	Nodo<T>* aux = head;
+	bool enc = false;
+
+	if (head == NULL) {
+
+		std::cout << "No disponible" << std::endl;
+
+	}
+	else {
+
+		while (aux != NULL) {
+
+			if (aux->getDato()->getId() == dato) {
+
+				std::cout << aux->getDato()->toString();
+				enc = true;
+
+			}
+
+			aux = aux->getSig();
+
+		}
+
+	}
+
+	if (aux == NULL && enc == false) {
+
+		std::cout << "El dato solicitado no se encuentra disponible o no esta en la base de datos de la biblioteca" << std::endl;
+
+	}
+
+}
+
 
 #endif
