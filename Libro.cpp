@@ -1,7 +1,7 @@
 #include "Libro.h"
 
-Libro::Libro(string titulo, string autores, string materia, string annio_edi, string editorial, bool estado, string id, int cantidad) : titulo(titulo), autores(autores),
-materia(materia), annio_edi(annio_edi), editorial(editorial), estado(estado), id(id), cantidad(cantidad) {
+Libro::Libro(string titulo, string autores, string materia, string annio_edi, string editorial, bool estado, string id) : titulo(titulo), autores(autores),
+materia(materia), annio_edi(annio_edi), editorial(editorial), estado(estado), id(id) {
 
 }
 
@@ -47,12 +47,6 @@ void Libro::setId(string id) {
 
 }
 
-void Libro::setCantidad(int cantidad) {
-
-	this->cantidad = cantidad;
-
-}
-
 // gets
 
 string Libro::getTitulo() {
@@ -88,12 +82,6 @@ bool Libro::getEstado() {
 string Libro::getId() {
 
 	return id;
-
-}
-
-int Libro::getCantidad() {
-
-	return cantidad;
 
 }
 
