@@ -27,6 +27,7 @@ public:
 	void mostrarListaFiltrada(string);
 	void mostrarPedido(int);
 	void mostrarEspecifico(string);
+	int cantidadNodos();
 
 };
 
@@ -300,5 +301,21 @@ void Lista<T>::mostrarEspecifico(string dato) {
 
 }
 
+template<class T>
+int Lista<T>::cantidadNodos() {
+
+	Nodo<T>* aux = head;
+	int cant = 0;
+	
+	while (aux != NULL) {
+
+		cant++;
+		aux = aux->getSig();
+
+	}
+
+	return cant;
+
+}
 
 #endif

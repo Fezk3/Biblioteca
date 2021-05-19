@@ -18,7 +18,11 @@ int main()
     L.agregar(l1); L.agregar(l2); L.agregar(l3); L.agregar(l4);
     L.mostrarListaFiltrada("Terry");
     L.mostrarEspecifico("1");
+
+    cout<<L.cantidadNodos();  // para cantidad de ejemplares
+
     */
+    
     // pruba lista usuarios
 
    
