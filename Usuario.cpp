@@ -63,8 +63,8 @@ string Usuario::toString() {
 	s << "Nombre: " << getNombre() << endl;
 	s << "ID: " << getId() << endl;
 	s << "Libros prestados: " << getCantidad() << endl;
-	if (getEstado() == false) { s << "Estado: inactivo" << endl; }
-	else { s << "Estado: activo" << endl; }
+	s << "Estado del prestamo: " << (estado ? "Activo" : "Inactivo") << std::endl;
+
 	return s.str();
 }
 
