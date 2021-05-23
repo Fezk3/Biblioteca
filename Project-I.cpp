@@ -6,17 +6,20 @@
 
 int main()
 {
-    //Prueba Biblioteca
-    Biblioteca New;
+    //Prueba Biblioteca (Funca)
+
+    /*Biblioteca New;
     Libro* l1 = new Libro("Mort", "Terry", "Novel", "2003", "Idk", true, "1");
     New.AgregarLr(l1);
-    New.LeerLr();
+    New.LeerLr();*/
     
     
     
     
   
-    /* Lista<Libro> L;
+    /* Prueba lista(Funca)
+    
+    Lista<Libro> L;
 
     Libro *l1 = new Libro("Mort", "Terry", "Novel", "2003", "Idk", true, "1");
     Libro* l2 = new Libro("Lart", "Terry", "Novel", "2003", "Idk", false, "2");
