@@ -28,6 +28,7 @@ public:
 	void mostrarPedido(int);
 	void mostrarEspecifico(string);
 	int cantidadNodos();
+	void cambioEstado(string);
 
 };
 
@@ -309,12 +310,37 @@ int Lista<T>::cantidadNodos() {
 	
 	while (aux != NULL) {
 
-		cant++;
+		if (aux->getDato()->getEstado() == true) {
+
+			cant++;
+
+		}
+
 		aux = aux->getSig();
 
 	}
 
 	return cant;
+
+}
+
+template<class T>
+void Lista<T>::cambioEstado(string id) {
+
+	Nodo<T>* aux = head;
+
+	while (aux != NULL) {
+
+		if (aux->getDato()->getId() == id) {
+
+			(aux->getDato()->getEstado() ? aux->getDato()->setEstado(false) : aux->getDato()->setEstado(true));
+			break;
+
+		}
+
+		aux = aux->getSig();
+
+	}
 
 }
 
