@@ -2,15 +2,22 @@
 //
 
 #include <iostream>
-#include "Libro.h"
-#include "Usuario.h"
-#include "Prestamo.h"
-#include "Lista.h"
+#include "Biblioteca.h"
 
 int main()
 {
+    //Prueba Biblioteca
+    Biblioteca New;
+    Libro* l1 = new Libro("Mort", "Terry", "Novel", "2003", "Idk", true, "1");
+    New.AgregarLr(l1);
+    New.LeerLr();
     
-    Lista<Libro> L;
+    
+    
+    
+  
+    /* Lista<Libro> L;
+
     Libro *l1 = new Libro("Mort", "Terry", "Novel", "2003", "Idk", true, "1");
     Libro* l2 = new Libro("Lart", "Terry", "Novel", "2003", "Idk", false, "2");
     Libro* l3 = new Libro("Uwu", "Terry", "Novel", "2003", "Idk", true, "3");
@@ -21,7 +28,7 @@ int main()
 
     L.cambioEstado("1"); L.cambioEstado("1");
     cout<<"\n\nCantidad de ejemplares "<<L.cantidadNodos();  
-
+    */
     
     
     // pruba lista usuarios
