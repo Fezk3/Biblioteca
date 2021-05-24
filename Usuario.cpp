@@ -1,7 +1,12 @@
 #include "Usuario.h"
-Usuario::Usuario(string Nombre, string ID, int Cantidad, bool Estado) :nombre(Nombre), id(ID), cantidad_l(Cantidad), estado(Estado) {
+
+int Usuario::cont = 1;
+
+Usuario::Usuario(string Nombre, int Cantidad, bool Estado) :nombre(Nombre), cantidad_l(Cantidad), estado(Estado) {
 
 	prestamos; // lista de prestamos
+	this->id = cont;
+	cont++;
 
 }
 
@@ -12,7 +17,7 @@ void Usuario::setNombre(string Nombre) {
 	this->nombre = Nombre;
 }
 
-void Usuario::setId(string ID) {
+void Usuario::setId(int ID) {
 	this->id = ID;
 }
 
@@ -28,7 +33,7 @@ string Usuario::getNombre() {
 	return nombre;
 }
 
-string Usuario::getId() {
+int Usuario::getId() {
 	return id;
 }
 

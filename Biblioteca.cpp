@@ -44,22 +44,22 @@ void Biblioteca::LeerUsuarios()
 	Usuarios.mostrar();
 }
 
-void Biblioteca::EliminarMort(string ID)
+void Biblioteca::EliminarMort(int ID)
 {
 	Mort.borrar(ID);
 }
 
-void Biblioteca::EliminarLr(string ID)
+void Biblioteca::EliminarLr(int ID)
 {
 	Lr_Rings.borrar(ID);
 }
 
-void Biblioteca::EliminarCthu(string ID)
+void Biblioteca::EliminarCthu(int ID)
 {
 	Call_Cthu.borrar(ID);
 }
 
-void Biblioteca::EliminarUsuario(string ID)
+void Biblioteca::EliminarUsuario(int ID)
 {
 	Usuarios.borrar(ID);
 }

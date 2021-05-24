@@ -21,14 +21,14 @@ public:
 
 	void agregar(T* dato);
 	void mostrar();
-	void borrar(string);
+	void borrar(int);
 	void borrarPrestamo(int);
 	void disponibilidad(string);
 	void mostrarListaFiltrada(string);
 	void mostrarPedido(int);
-	void mostrarEspecifico(string);
+	void mostrarEspecifico(int);
 	int cantidadNodos();
-	void cambioEstado(string);
+	void cambioEstado(int);
 
 };
 
@@ -92,7 +92,7 @@ void Lista<T>::mostrar() {
 }
 
 template <class T>
-void Lista<T>::borrar(string id) {
+void Lista<T>::borrar(int id) {
 
 	if (head != NULL) {
 
@@ -267,7 +267,7 @@ void Lista<T>::borrarPrestamo(int id) {
 }
 
 template <class T>
-void Lista<T>::mostrarEspecifico(string dato) {
+void Lista<T>::mostrarEspecifico(int dato) {
 
 	Nodo<T>* aux = head;
 	bool enc = false;
@@ -325,7 +325,7 @@ int Lista<T>::cantidadNodos() {
 }
 
 template<class T>
-void Lista<T>::cambioEstado(string id) {
+void Lista<T>::cambioEstado(int id) {
 
 	Nodo<T>* aux = head;
 

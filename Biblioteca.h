@@ -18,10 +18,10 @@ public:
 	void LeerLr();
 	void LeerCthu();
 	void LeerUsuarios();
-	void EliminarMort(string);
-	void EliminarLr(string);
-	void EliminarCthu(string);
-	void EliminarUsuario(string);
+	void EliminarMort(int);
+	void EliminarLr(int);
+	void EliminarCthu(int);
+	void EliminarUsuario(int);
 	~Biblioteca();
 
 private:

@@ -19,11 +19,12 @@ private:
 	string annio_edi;
 	string editorial;
 	bool estado;
-	string id;
+	static int cont;
+	int id;
 
 public:
 
-	Libro(string, string, string,string,string,bool,string);
+	Libro(string, string, string,string,string,bool);
 	~Libro();
 
 	// sets
@@ -33,7 +34,7 @@ public:
 	void setAnnio_edi(string);
 	void setEditorial(string);
 	void setEstado(bool);
-	void setId(string);
+	void setId(int);
 
 	// gets
 
@@ -43,7 +44,7 @@ public:
 	string getAnnio_eddi();
 	string getEditorial();
 	bool getEstado();
-	string getId();
+	int getId();
 
 	// methods
 

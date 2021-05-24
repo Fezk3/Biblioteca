@@ -1,7 +1,12 @@
 #include "Libro.h"
 
-Libro::Libro(string titulo, string autores, string materia, string annio_edi, string editorial, bool estado, string id) : titulo(titulo), autores(autores),
-materia(materia), annio_edi(annio_edi), editorial(editorial), estado(estado), id(id) {
+int Libro::cont = 1;
+
+Libro::Libro(string titulo, string autores, string materia, string annio_edi, string editorial, bool estado) : titulo(titulo), autores(autores),
+materia(materia), annio_edi(annio_edi), editorial(editorial), estado(estado){
+
+	this->id = cont;  // id unico automatico para cada libro
+	cont++;
 
 }
 
@@ -41,7 +46,7 @@ void Libro::setEstado(bool estado) {
 
 }
 
-void Libro::setId(string id) {
+void Libro::setId(int id) {
 
 	this->id = id;
 
@@ -79,7 +84,7 @@ bool Libro::getEstado() {
 
 }
 
-string Libro::getId() {
+int Libro::getId() {
 
 	return id;
 

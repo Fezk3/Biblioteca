@@ -9,14 +9,14 @@ using std::string; using std::stringstream; using std::cout; using std::endl; us
 
 class Usuario {
 public:
-	Usuario(string Nombre, string ID, int Cantidad, bool Estado);
+	Usuario(string Nombre, int Cantidad, bool Estado);
 	virtual ~Usuario();
 	void setNombre(string Nombre);
-	void setId(string ID);
+	void setId(int ID);
 	void setCantidad_L(int Cantidad);
 	void setEstado(bool Estado);
 	string getNombre();
-	string getId();
+	int getId();
 	int getCantidad();
 	bool getEstado();
 	void prestamo(Prestamo*);
@@ -25,9 +25,10 @@ public:
 	string toString();
 private:
 	string nombre;
-	string id;
+	int id;
 	int cantidad_l;//cantidad de libros prestados
 	bool estado;
+	static int cont;
 	Lista<Prestamo> prestamos;
 };
 
