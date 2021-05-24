@@ -59,7 +59,7 @@ void Usuario::mostrarPrestamos() {
 
 void Usuario::devolver(int id) {
 
-	prestamos.borrarPrestamo(id);
+	prestamos.borrar(id);
 
 }
 

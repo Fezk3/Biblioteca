@@ -20,15 +20,14 @@ public:
 	virtual ~Lista();
 
 	void agregar(T* dato);
-	void mostrar();
+	void mostrar(); // muestra la lista completa con tostring
 	void borrar(int);
-	void borrarPrestamo(int);
-	void disponibilidad(string);
-	void mostrarListaFiltrada(string);
+	void disponibilidad(string); // cuantos ejemplares de un libro hay apartir del titulo
+	void mostrarListaFiltrada(string); // 
 	void mostrarPedido(int);
 	void mostrarEspecifico(int);
-	int cantidadNodos();
-	void cambioEstado(int);
+	int cantidadNodos(string); // filtrar por string 
+	void cambioEstado(int); // activo/suspendido || disponible/prestado
 
 };
 
@@ -149,9 +148,8 @@ void Lista<T>::disponibilidad(string dispo) {
 
 	while (aux != NULL) {
 
-		if(aux->getDato()->getTitulo() == dispo) {
+		if (aux->getDato()->getTitulo() == dispo) {
 
-			std::cout << "Libro " << aux->getDato()->getTitulo() << " esta disponible con un total de " << aux->getDato()->getCantidad() << std::endl;
 			encontrado = true;
 
 		}
@@ -160,11 +158,17 @@ void Lista<T>::disponibilidad(string dispo) {
 
 	}
 
-	if (aux == NULL && encontrado == false) {
+	if (encontrado == true) {
 
-		std::cout << "El libro solicitado no se encuentra disponible o no esta en la base de datos de la biblioteca" << std::endl;
+		std::cout << "Libro " << dispo << " esta disponible con un total de " << cantidadNodos(dispo) << std::endl;
 
 	}
+	else {
+
+		std::cout << "No existe el libro solicitado";
+
+	}
+
 
 }
 
@@ -217,56 +221,6 @@ void Lista<T>::mostrarPedido(int ped) {
 }
 
 template <class T>
-void Lista<T>::borrarPrestamo(int id) {
-
-	if (head != NULL) {
-
-		Nodo<T>* borrar;
-		Nodo<T>* anterior;
-		borrar = head;
-		anterior = NULL;
-
-		while (borrar != NULL) {
-
-			if (borrar->getDato()->getId() == id) {
-
-				break;
-
-			}
-
-			anterior = borrar;
-			borrar = borrar->getSig();
-
-		}
-
-		if (borrar == NULL) {
-
-			cout << "El Elemento No Existe\n";
-
-		}
-		else {
-
-			if (anterior == NULL) {
-
-				head = head->getSig();
-				delete borrar;
-
-			}
-			else {
-
-				anterior->setSig(borrar->getSig());
-				delete borrar;
-
-			}
-
-		}
-
-	}
-
-
-}
-
-template <class T>
 void Lista<T>::mostrarEspecifico(int dato) {
 
 	Nodo<T>* aux = head;
@@ -303,14 +257,15 @@ void Lista<T>::mostrarEspecifico(int dato) {
 }
 
 template<class T>
-int Lista<T>::cantidadNodos() {
+int Lista<T>::cantidadNodos(string titulo) {
 
 	Nodo<T>* aux = head;
 	int cant = 0;
+
 	
 	while (aux != NULL) {
 
-		if (aux->getDato()->getEstado() == true) {
+		if (aux->getDato()->getEstado() == true && aux->getDato()->getTitulo() == titulo) {
 
 			cant++;
 
