@@ -36,6 +36,8 @@ int main()
 
     L.cambioEstado(1);
     L.disponibilidad("Mort");
+
+    L.mostrarMaterias();
     
     
     

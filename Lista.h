@@ -27,6 +27,7 @@ public:
 	void mostrarEspecifico(int); // mostrar ibj especifico con tostring 
 	int cantidadNodos(string); 
 	void cambioEstado(int); // activo/suspendido || disponible/prestado
+	void mostrarMaterias(); //incompleto
 
 };
 
@@ -276,6 +277,16 @@ void Lista<T>::cambioEstado(int id) {
 		aux = aux->getSig();
 
 	}
+
+}
+
+template <class T>
+void Lista<T>::mostrarMaterias() {
+
+	//Nodo<T>* aux = head;
+	
+	std::cout << "Las materias disponibles son: \n";
+	std::cout << "Novelas\n";
 
 }
 
