@@ -26,7 +26,8 @@ int main()
     Libro* l4 = new Libro("owo", "Terrys", "Novela", "2003", "Idk", true);
     L.agregar(l1); L.agregar(l2); L.agregar(l3); L.agregar(l4);
 
-    cout << "Lista filtrada\n";
+    cout << "Segun el criterio de busqueda especificado, estos son los resultados: \n";
+
     L.mostrarListaFiltrada("Novela");
 
     cout << "\n\nEspecifico\n";

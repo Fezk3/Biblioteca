@@ -181,7 +181,8 @@ void Lista<T>::mostrarListaFiltrada(string filtro) {
 
 		if(aux->getDato()->getMateria() == filtro || aux->getDato()->getAutores() == filtro || aux->getDato()->getTitulo() == filtro) {
 
-			std::cout << aux->getDato()->getTitulo() << std::endl;
+			std::cout <<"Libro: "<< aux->getDato()->getTitulo() << std::endl;
+			std::cout << "----------\n";
 			encontrado = true;
 
 		}
