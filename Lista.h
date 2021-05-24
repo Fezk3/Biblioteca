@@ -23,10 +23,9 @@ public:
 	void mostrar(); // muestra la lista completa con tostring
 	void borrar(int);
 	void disponibilidad(string); // cuantos ejemplares de un libro hay apartir del titulo
-	void mostrarListaFiltrada(string); // 
-	void mostrarPedido(int);
-	void mostrarEspecifico(int);
-	int cantidadNodos(string); // filtrar por string 
+	void mostrarListaFiltrada(string); // muestra los distintos ejemplares de libros segun el criterio dado
+	void mostrarEspecifico(int); // mostrar ibj especifico con tostring 
+	int cantidadNodos(string); 
 	void cambioEstado(int); // activo/suspendido || disponible/prestado
 
 };
@@ -201,26 +200,6 @@ void Lista<T>::mostrarListaFiltrada(string filtro) {
 
 
 template <class T>
-void Lista<T>::mostrarPedido(int ped) {
-
-	Nodo<T>* aux = head;
-
-	while (aux != NULL) {
-
-		if (aux->getDato()->getId() == ped) {
-
-			std::cout << aux->getDato()->toString();
-			break;
-
-		}
-
-		aux = aux->getSig();
-
-	}
-
-}
-
-template <class T>
 void Lista<T>::mostrarEspecifico(int dato) {
 
 	Nodo<T>* aux = head;
@@ -250,7 +229,7 @@ void Lista<T>::mostrarEspecifico(int dato) {
 
 	if (aux == NULL && enc == false) {
 
-		std::cout << "El dato solicitado no se encuentra disponible o no esta en la base de datos de la biblioteca" << std::endl;
+		std::cout << "El dato solicitado no se encuentra disponible o no esta en la base de datos" << std::endl;
 
 	}
 

@@ -20,18 +20,20 @@ int main()
     
     Lista<Libro> L;
 
-    Libro *l1 = new Libro("Mort", "Terry", "Novel", "2003", "Idk", true);
-    Libro* l2 = new Libro("Lart", "Terry", "Novel", "2003", "Idk", false);
-    Libro* l3 = new Libro("Mort", "Terry", "Novel", "2003", "Idk", true);
-    Libro* l4 = new Libro("owo", "Terrys", "Novel", "2003", "Idk", true);
+    Libro *l1 = new Libro("Mort", "Terry", "Novela", "2003", "Idk", true);
+    Libro* l2 = new Libro("Lart", "Terry", "Novela", "2003", "Idk", false);
+    Libro* l3 = new Libro("Mort", "Terry", "Novela", "2003", "Idk", true);
+    Libro* l4 = new Libro("owo", "Terrys", "Novela", "2003", "Idk", true);
     L.agregar(l1); L.agregar(l2); L.agregar(l3); L.agregar(l4);
-    L.mostrarListaFiltrada("Terry");
+
+    cout << "Lista filtrada\n";
+    L.mostrarListaFiltrada("Novela");
 
     cout << "\n\nEspecifico\n";
 
     L.mostrarEspecifico(3);
 
-    L.cambioEstado(1); L.cambioEstado(1);
+    L.cambioEstado(1);
     L.disponibilidad("Mort");
     
     
