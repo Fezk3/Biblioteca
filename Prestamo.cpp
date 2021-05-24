@@ -5,7 +5,6 @@ int Prestamo::num = 1;
 
 Prestamo::Prestamo(string id_libro, string id_usuario, string dia_prestamo, string dia_vencimiento) : id_libro(id_libro), id_usuario(id_usuario), dia_prestamo(dia_prestamo), dia_vencimiento(dia_vencimiento) {
 
-	this->estado = true;  // true ->vigente || false ->vencido
 	this->id = num;
 	num++;
 
