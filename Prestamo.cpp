@@ -39,12 +39,6 @@ void Prestamo::setVencimiento(string dia_vencimiento) {
 
 }
 
-void Prestamo::setEstado(bool estado) {
-
-	this->estado = estado;
-
-}
-
 //gets
 string Prestamo::getIdUsuario() {
 
@@ -70,12 +64,6 @@ string Prestamo::getDiaInicio() {
 
 }
 
-bool Prestamo::getEstado() {
-
-	return estado;
-
-}
-
 int Prestamo::getId() {
 
 	return id;
@@ -92,7 +80,6 @@ string Prestamo::toString() {
 	x << "Id del libro prestado: " << id_libro << std::endl;
 	x << "Dia en que se realizo el prestamo: " << dia_prestamo << std::endl;
 	x << "Dia de vencimiento (3 dias despues): " << dia_vencimiento << std::endl;
-	x << "Estado del prestamo: "<< (estado ? "vigente" : "vencido") << std::endl;
 
 	return x.str();
 

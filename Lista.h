@@ -28,6 +28,7 @@ public:
 	int cantidadNodos(string); 
 	void cambioEstado(int); // activo/suspendido || disponible/prestado
 	void mostrarMaterias(); //incompleto
+	int LibroDisponible(string); // retorna primer libro disponible en base al titulo, para el prestamo
 
 };
 
@@ -277,6 +278,27 @@ void Lista<T>::cambioEstado(int id) {
 		aux = aux->getSig();
 
 	}
+
+}
+
+template <class T>
+int Lista<T>::LibroDisponible(string titulo) {
+
+	Nodo<T>* aux = head;
+
+	while (aux != NULL) {
+
+		if (aux->getDato()->getEstado() == true) {
+
+			return aux->getDato()->getId();
+
+		}
+
+		aux = aux->getSig();
+
+	}
+
+	return 0;
 
 }
 
