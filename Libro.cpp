@@ -100,7 +100,7 @@ string Libro::toString() {
 	x << "Autor(es): " << getAutores() << endl;
 	x << "Materia: " << getMateria() << endl;
 	x << "Anio de Edicion: " << getAnnio_eddi() << endl;
-	x << "Estado: " << getEstado() << endl;
+	x << "Estado: " << (getEstado() ? "Disponible" : "No disponible")<<endl;
 	x << "Id: " << getId() << endl;
 
 	return x.str();
