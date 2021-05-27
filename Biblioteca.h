@@ -9,27 +9,22 @@ class Biblioteca
 {
 public:
 
-	Biblioteca();
-	void AgregarMort(Libro *);
-	void AgregarLr(Libro *);
-	void AgreagrCthu(Libro *);
-	void AgregarUsuario(Usuario *);
-	void LeerMort();
-	void LeerLr();
-	void LeerCthu();
-	void LeerUsuarios();
-	void EliminarMort(int);
-	void EliminarLr(int);
-	void EliminarCthu(int);
-	void EliminarUsuario(int);
-	~Biblioteca();
+    Biblioteca();
+    void AgregarLibro(Libro*);
+    void AgregarUsuario(Usuario*);
+    void MostarLista();
+    void MostarUsuarios();
+    void MostarLibro(int);//Muestra libro o pedido en especifico
+    void MostrarListaFiltrada(string);//Muestra la lista por el filtro de titulo o Editoral o año 
+    void EliminarLibro(int);
+    void EliminarUsuario(int);
+    ~Biblioteca();
 
 private:
-	Lista<Libro> Mort;
-	Lista<Libro> Lr_Rings;//Lord of The Rings
-	Lista<Libro> Call_Cthu; //The Call of Cthulhu
-	Lista<Usuario> Usuarios;//Los administradores o bibliotecarios
+    Lista<Libro> Coleccion;//Se guardan todos los libros
+    Lista<Usuario> Usuarios;//Los administradores o bibliotecarios
 };
+
 #endif // !BIBLIOTECA_H
 
 

@@ -4,64 +4,44 @@ Biblioteca::Biblioteca()
 {
 }
 
-void Biblioteca::AgregarMort(Libro* Nuevo)
+void Biblioteca::AgregarLibro(Libro* Nuevo)
 {
-	Mort.agregar(Nuevo);
+    Coleccion.agregar(Nuevo);
 }
 
-void Biblioteca::AgregarLr(Libro *Nuevo)
+void Biblioteca::AgregarUsuario(Usuario* Nuevo)
 {
-	Lr_Rings.agregar(Nuevo);
+    Usuarios.agregar(Nuevo);
 }
 
-void Biblioteca::AgreagrCthu(Libro *Nuevo)
+void Biblioteca::MostarLista()
 {
-	Call_Cthu.agregar(Nuevo);
+    Coleccion.mostrar();
 }
 
-void Biblioteca::AgregarUsuario(Usuario *Nuevo)
+void Biblioteca::MostarUsuarios()
 {
-	Usuarios.agregar(Nuevo);
+    Usuarios.mostrar();
 }
 
-void Biblioteca::LeerMort()
+void Biblioteca::MostarLibro(int ID)
 {
-	Mort.mostrar();
+    Coleccion.mostrarEspecifico(ID);
 }
 
-void Biblioteca::LeerLr()
+void Biblioteca::MostrarListaFiltrada(string ToE)
 {
-	Lr_Rings.mostrar();
+    Coleccion.mostrarListaFiltrada(ToE);
 }
 
-void Biblioteca::LeerCthu()
+void Biblioteca::EliminarLibro(int ID)
 {
-	Call_Cthu.mostrar();
-}
-
-void Biblioteca::LeerUsuarios()
-{
-	Usuarios.mostrar();
-}
-
-void Biblioteca::EliminarMort(int ID)
-{
-	Mort.borrar(ID);
-}
-
-void Biblioteca::EliminarLr(int ID)
-{
-	Lr_Rings.borrar(ID);
-}
-
-void Biblioteca::EliminarCthu(int ID)
-{
-	Call_Cthu.borrar(ID);
+    Coleccion.borrar(ID);
 }
 
 void Biblioteca::EliminarUsuario(int ID)
 {
-	Usuarios.borrar(ID);
+    Usuarios.borrar(ID);
 }
 
 Biblioteca::~Biblioteca()
