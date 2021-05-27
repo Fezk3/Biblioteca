@@ -12,12 +12,16 @@ public:
     Biblioteca();
     void AgregarLibro(Libro*);
     void AgregarUsuario(Usuario*);
-    void MostarLista();
+    void MostarLibro();
     void MostarUsuarios();
     void MostarLibro(int);//Muestra libro o pedido en especifico
-    void MostrarListaFiltrada(string);//Muestra la lista por el filtro de titulo o Editoral o año 
+    void MostrarListaFiltrada(string);//Muestra la lista por el filtro de titulo o materia o autores 
     void EliminarLibro(int);
     void EliminarUsuario(int);
+    void MostrarDisp(string);//Muestra la cantidad unidades disponibles (Libros)
+    void MostrarEspeLibro(int);//Muestra un libro en especifico
+    void MostrarEspeUsuario(int); //Muestra persona en especifico
+    void Devolucion(int);
     ~Biblioteca();
 
 private:

@@ -2,6 +2,8 @@
 
 Biblioteca::Biblioteca()
 {
+    Usuarios;
+    Coleccion;
 }
 
 void Biblioteca::AgregarLibro(Libro* Nuevo)
@@ -14,7 +16,7 @@ void Biblioteca::AgregarUsuario(Usuario* Nuevo)
     Usuarios.agregar(Nuevo);
 }
 
-void Biblioteca::MostarLista()
+void Biblioteca::MostarLibro()
 {
     Coleccion.mostrar();
 }
@@ -42,6 +44,26 @@ void Biblioteca::EliminarLibro(int ID)
 void Biblioteca::EliminarUsuario(int ID)
 {
     Usuarios.borrar(ID);
+}
+
+void Biblioteca::MostrarDisp(string ID)
+{
+    Coleccion.disponibilidad(ID);
+}
+
+void Biblioteca::MostrarEspeLibro(int ID)
+{
+    Coleccion.mostrarEspecifico(ID);
+}
+
+void Biblioteca::MostrarEspeUsuario(int ID)
+{
+    Usuarios.mostrarEspecifico(ID);
+}
+
+void Biblioteca::Devolucion(int ID)
+{
+    Coleccion.cambioEstado(ID);
 }
 
 Biblioteca::~Biblioteca()
