@@ -29,6 +29,7 @@ public:
 	void cambioEstado(int); // activo/suspendido || disponible/prestado
 	void mostrarMaterias(); //incompleto
 	int LibroDisponible(string); // retorna primer libro disponible en base al titulo, para el prestamo
+	T* retornaObj(int id); // retorna objs en base al id 
 
 };
 
@@ -299,6 +300,28 @@ int Lista<T>::LibroDisponible(string titulo) {
 	}
 
 	return 0;
+
+}
+
+template<class T>
+T *Lista<T>::retornaObj(int id) {
+
+	Nodo<T>* aux = head;
+	
+	while (aux != NULL)
+	{
+
+		if (aux->getDato()->getId() == id) {
+
+			return aux->getDato();
+
+		}
+
+		aux = aux->getSig();
+
+	}
+
+	return NULL; // si no se encuentra
 
 }
 

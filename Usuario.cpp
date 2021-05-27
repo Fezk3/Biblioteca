@@ -63,6 +63,12 @@ void Usuario::devolver(int id) {
 
 }
 
+int Usuario::libroPrestamo() {
+
+	return 0; // por mientras
+
+}
+
 string Usuario::toString() {
 	stringstream s;
 	s << "Nombre: " << getNombre() << endl;

@@ -22,6 +22,7 @@ public:
 	void prestamo(Prestamo*);
 	void mostrarPrestamos();
 	void devolver(int);
+	int libroPrestamo(); 
 	string toString();
 private:
 	string nombre;
