@@ -21,8 +21,7 @@ public:
 	bool getEstado();
 	void prestamo(Prestamo*);
 	void mostrarPrestamos();
-	void devolver(int);
-	int libroPrestamo(); 
+	int devolver(int id); // retorna id del libro que esta devolviendo
 	string toString();
 private:
 	string nombre;

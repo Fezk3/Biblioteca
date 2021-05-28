@@ -57,15 +57,15 @@ void Usuario::mostrarPrestamos() {
 
 }
 
-void Usuario::devolver(int id) {
+int Usuario::devolver(int id) {
+
+	Prestamo* temp = prestamos.retornaObj(id); // prestamo a devolver
+
+	int libroId = temp->getIdLibro();
 
 	prestamos.borrar(id);
 
-}
-
-int Usuario::libroPrestamo() {
-
-	return 0; // por mientras
+	return libroId;  // id del libro que se devuelve para cambiar su estado en la lista de libros de la biblioteca
 
 }
 

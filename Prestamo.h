@@ -14,8 +14,8 @@ class Prestamo
 
 private:
 
-	string id_libro;
-	string id_usuario;
+	int id_libro;
+	int id_usuario;
 	string dia_prestamo;
 	string dia_vencimiento;
 	static int num;
@@ -24,18 +24,18 @@ private:
 
 public:
 
-	Prestamo(string, string, string, string);
+	Prestamo(int, int, string, string);
 	~Prestamo();
 
 	//sets
-	void setIdLibro(string);
-	void setIdUsuario(string);
+	void setIdLibro(int);
+	void setIdUsuario(int);
 	void setDiaInicio(string);
 	void setVencimiento(string);
 	
 	//gets
-	string getIdLibro();
-	string getIdUsuario();
+	int getIdLibro();
+	int getIdUsuario();
 	string getDiaInicio();
 	string getVencimiento();
 	int getId();
