@@ -61,10 +61,6 @@ void Biblioteca::MostrarEspeUsuario(int ID)
     Usuarios.mostrarEspecifico(ID);
 }
 
-void Biblioteca::Devolucion(int ID)
-{
-    Coleccion.cambioEstado(ID);
-}
 
 Biblioteca::~Biblioteca()
 {

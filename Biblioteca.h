@@ -21,7 +21,6 @@ public:
     void MostrarDisp(string);//Muestra la cantidad unidades disponibles (Libros)
     void MostrarEspeLibro(int);//Muestra un libro en especifico
     void MostrarEspeUsuario(int); //Muestra persona en especifico
-    void Devolucion(int);
     ~Biblioteca();
 
 private:
