@@ -70,7 +70,7 @@ int main()
     u->devolver(1);
     u->mostrarPrestamos();
 
-    cout << "USUARIO\n\n";
+    cout << "USUARIO\n\n"; // ahora con metodo para ver la cantidad de prestamos que tiene -> 8 max (check via controlmethod)
     cout<< u->toString();
     */
     return 0;
