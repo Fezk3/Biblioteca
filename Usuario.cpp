@@ -70,11 +70,13 @@ int Usuario::devolver(int id) {
 }
 
 string Usuario::toString() {
+
 	stringstream s;
+
 	s << "Nombre: " << getNombre() << endl;
 	s << "ID: " << getId() << endl;
-	s << "Libros prestados: " << getCantidad() << endl;
-	s << "Estado del prestamo: " << (estado ? "Activo" : "Inactivo") << std::endl;
+	s << "Libros prestados: " << prestamos.cantidadTotalNodos() << endl;
+	s << "Estado: " << (estado ? "Activo" : "Inactivo") << std::endl;
 
 	return s.str();
 }

@@ -26,7 +26,7 @@ public:
 	void mostrarListaFiltrada(string); // muestra los distintos ejemplares de libros segun el criterio dado
 	void mostrarEspecifico(int); // mostrar ibj especifico con tostring 
 	int cantidadNodosEspec(string); // cantidad de nodos en base al titulo de un libro
-	int cantidadTotalNodos(); // total de nodos en la lista
+	int cantidadTotalNodos(); // total de nodos en la lista -> usar por si user quiere ver el total de libros tiene la biblioteca
 	void cambioEstado(int); // activo/suspendido || disponible/prestado
 	void mostrarMaterias(); //incompleto
 	int LibroDisponible(string); // retorna primer libro disponible en base al titulo, para el prestamo

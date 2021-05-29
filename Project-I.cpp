@@ -15,9 +15,8 @@ int main()
 
     */
 
-
-
-
+    // pruebas lista de libros
+    
     Lista<Libro> L;
 
     Libro* l1 = new Libro("Mort", "Terry", "Novela", "2003", "Idk", true);
@@ -27,11 +26,11 @@ int main()
     L.agregar(l1); L.agregar(l2); L.agregar(l3); L.agregar(l4);
 
     Libro* clon = L.retornaObj(1);
-
-    L.agregar(clon);
-    L.mostrar();
-    std::cout << "\n\nCantidad de elementos en la lista: "<<L.cantidadTotalNodos();
-
+    
+   L.agregar(clon);
+   L.mostrar();
+   std::cout << "\n\nCantidad de elementos en la lista: "<<L.cantidadTotalNodos()<<"\n\n";  // total cantidad de nodos
+    
 
     /*
     cout << "Segun el criterio de busqueda especificado, estos son los resultados: \n";
@@ -49,7 +48,7 @@ int main()
 
     /*
     Lista<Usuario> l2;
-    Usuario* u = new Usuario("Fezk3", "123", 4, false);
+    Usuario* u = new Usuario("Fezk3", 4, true);
     l2.agregar(u);
     l2.mostrar();
     //l2.borrar("123");
@@ -57,9 +56,9 @@ int main()
 
 
     Lista<Prestamo> p;
-    Prestamo* p1 = new Prestamo("63", "123", "Martes", "Viernes");
-    Prestamo* p2 = new Prestamo("342", "2", "Martes", "Viernes");
-    Prestamo* p3 = new Prestamo("910", "1", "Martes", "Viernes");
+    Prestamo* p1 = new Prestamo(63, 123, "Martes", "Viernes");
+    Prestamo* p2 = new Prestamo(342, 2, "Martes", "Viernes");
+    Prestamo* p3 = new Prestamo(910, 1, "Martes", "Viernes");
    // p.agregar(p1); p.agregar(p2); p.agregar(p3);
    // p.mostrarPedido(3);
 
@@ -70,6 +69,9 @@ int main()
     cout << "despues de devolver\n\n";
     u->devolver(1);
     u->mostrarPrestamos();
+
+    cout << "USUARIO\n\n";
+    cout<< u->toString();
     */
     return 0;
 }
