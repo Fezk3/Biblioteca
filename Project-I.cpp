@@ -30,6 +30,7 @@ int main()
 
     L.agregar(clon);
     L.mostrar();
+    std::cout << "\n\nCantidad de elementos en la lista: "<<L.cantidadTotalNodos();
 
 
     /*

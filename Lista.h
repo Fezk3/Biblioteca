@@ -25,7 +25,8 @@ public:
 	void disponibilidad(string); // cuantos ejemplares de un libro hay apartir del titulo
 	void mostrarListaFiltrada(string); // muestra los distintos ejemplares de libros segun el criterio dado
 	void mostrarEspecifico(int); // mostrar ibj especifico con tostring 
-	int cantidadNodos(string); 
+	int cantidadNodosEspec(string); // cantidad de nodos en base al titulo de un libro
+	int cantidadTotalNodos(); // total de nodos en la lista
 	void cambioEstado(int); // activo/suspendido || disponible/prestado
 	void mostrarMaterias(); //incompleto
 	int LibroDisponible(string); // retorna primer libro disponible en base al titulo, para el prestamo
@@ -162,7 +163,7 @@ void Lista<T>::disponibilidad(string dispo) {
 
 	if (encontrado == true) {
 
-		std::cout << "Libro " << dispo << " esta disponible con un total de " << cantidadNodos(dispo) << std::endl;
+		std::cout << "Libro " << dispo << " esta disponible con un total de " << cantidadNodosEspec(dispo) << std::endl;
 
 	}
 	else {
@@ -240,7 +241,7 @@ void Lista<T>::mostrarEspecifico(int dato) {
 }
 
 template<class T>
-int Lista<T>::cantidadNodos(string titulo) {
+int Lista<T>::cantidadNodosEspec(string titulo) {
 
 	Nodo<T>* aux = head;
 	int cant = 0;
@@ -253,6 +254,26 @@ int Lista<T>::cantidadNodos(string titulo) {
 			cant++;
 
 		}
+
+		aux = aux->getSig();
+
+	}
+
+	return cant;
+
+}
+
+template<class T>
+int Lista<T>::cantidadTotalNodos() {
+
+	Nodo<T>* aux = head;
+	int cant = 0;
+
+
+	while (aux != NULL) {
+
+
+		cant++;
 
 		aux = aux->getSig();
 
