@@ -16,11 +16,13 @@ public:
     void MostarUsuarios();
     void MostarLibro(int);//Muestra libro o pedido en especifico
     void MostrarListaFiltrada(string);//Muestra la lista por el filtro de titulo o materia o autores 
+    void MostrarCantidadLibrosEspc(string); // Muestra la cantidad de libros que hay disponibles de un libro(Sin importar el estado)
     void EliminarLibro(int);
     void EliminarUsuario(int);
-    void MostrarDisp(string);//Muestra la cantidad unidades disponibles (Libros)
+    void MostrarDisp(string);//Muestra la cantidad unidades disponibles (Libros) en especifico
     void MostrarEspeLibro(int);//Muestra un libro en especifico
     void MostrarEspeUsuario(int); //Muestra persona en especifico
+    Usuario *TraerUsuario(int); //Trae un usuario con el metodod de Retorna  *T 
     ~Biblioteca();
 
 private:

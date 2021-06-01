@@ -29,7 +29,7 @@ public:
 	int cantidadTotalNodos(); // total de nodos en la lista -> usar por si user quiere ver el total de libros tiene la biblioteca
 	void cambioEstado(int); // activo/suspendido || disponible/prestado
 	void mostrarMaterias(); //incompleto
-	int LibroDisponible(string); // retorna primer libro disponible en base al titulo, para el prestamo
+	int LibroDisponible(string); // retorna el primer id del primer libro disponible en base al titulo, para el prestamo
 	T* retornaObj(int id); // retorna objs en base al id 
 
 };

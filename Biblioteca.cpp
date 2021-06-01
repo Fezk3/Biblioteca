@@ -36,6 +36,11 @@ void Biblioteca::MostrarListaFiltrada(string ToE)
     Coleccion.mostrarListaFiltrada(ToE);
 }
 
+void Biblioteca::MostrarCantidadLibrosEspc(string Nombre)
+{
+    Coleccion.cantidadNodosEspec(Nombre);
+}
+
 void Biblioteca::EliminarLibro(int ID)
 {
     Coleccion.borrar(ID);
@@ -59,6 +64,11 @@ void Biblioteca::MostrarEspeLibro(int ID)
 void Biblioteca::MostrarEspeUsuario(int ID)
 {
     Usuarios.mostrarEspecifico(ID);
+}
+
+Usuario *Biblioteca::TraerUsuario(int ID)
+{
+    return Usuarios.retornaObj(ID);
 }
 
 
