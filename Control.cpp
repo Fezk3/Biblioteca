@@ -130,12 +130,16 @@ void Control::MenuUsuarios(Usuario* U)
 		cout << "2. Mostar Usuarios\n";
 		cout << "3. Mostar Usuario Especifico\n";
 		cout << "4. Eliminar Usuario\n";
-		cout << "5. Salir\n";
+		cout << "5. Realizar Prestamo\n";
+		cout << "6. Ver mis prestamos\n";
+		cout << "7. Ver mi cantidad de prestamos\n";
+		cout << "8. Ver mi Usuario\n";
+		cout << "9. Salir\n";
 		cout << "==================================\n";
 		cout << "Digite un numero: "; cin >> Comprobar; cout << "\n";
 		try
 		{
-			if (Comprobar != "1" && Comprobar != "2" && Comprobar != "3" && Comprobar != "4" && Comprobar != "5") {
+			if (Comprobar != "1" && Comprobar != "2" && Comprobar != "3" && Comprobar != "4" && Comprobar != "5" && Comprobar != "6" && Comprobar != "7" && Comprobar != "8" && Comprobar != "9") {
 				throw Comprobar;
 			}
 			else {
@@ -151,6 +155,8 @@ void Control::MenuUsuarios(Usuario* U)
 						Usuario* Nuevo;
 						Nuevo = new Usuario(Nombre, 1);
 						Global.AgregarUsuario(Nuevo);
+						cout << "El usuario ha sido creado exitosamente\n";
+						cout << Nuevo->toString();
 						FinalizarSub = 1;
 						break;
 					case 2:
@@ -180,6 +186,28 @@ void Control::MenuUsuarios(Usuario* U)
 						FinalizarSub = 1;
 						break;
 					case 5:
+						MenuPrestamo(Cliente);
+						FinalizarSub = 1;
+						break;
+					case 6:
+						cout << "===============================\n";
+						Cliente->mostrarPrestamos();
+						cout << "===============================\n";
+						FinalizarSub = 1;
+						break;
+					case 7:
+						cout << "===============================\n";
+						cout << "La cantidad de prestamos del usuario " << Cliente->getNombre() << " es de: ";
+						Cliente->cantidadPrestamos();
+						cout << "===============================\n";
+						FinalizarSub = 1;
+						break;
+					case 8:
+						cout << "Su usuario es: \n";
+						Cliente->toString();
+						FinalizarSub = 1;
+						break;
+					case 9:
 						cout << "===============================\n";
 						cout << "Cerrando el programa\n";
 						cout << "===============================\n";
@@ -205,6 +233,7 @@ void Control::MenuUsuarios(Usuario* U)
 
 void Control::MenuPrestamo(Usuario* U)
 {
+
 }
 
 void Control::MenuPrincipal()
@@ -237,6 +266,7 @@ void Control::MenuPrincipal()
 						cout << "===============================\n";
 						cout << "Cerrando el programa\n";
 						cout << "===============================\n";
+						FinalizarSub = 1;
 						Finalizar = 1;
 						break;
 					}
