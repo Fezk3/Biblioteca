@@ -349,10 +349,31 @@ T *Lista<T>::retornaObj(int id) {
 template <class T>
 void Lista<T>::mostrarMaterias() {
 
-	//Nodo<T>* aux = head;
+	Nodo<T>* aux = head;
+
+	string mate[10] = {"", "", "", "", "", "", "", ""};
+	int j = 0;
+
+	while (aux != NULL) {
+
+		mate[j] = aux->getDato()->getMateria();
+
+		aux = aux->getSig();
+		j++;
+
+	}
 	
-	std::cout << "Las materias disponibles son: \n";
-	std::cout << "Novelas\n";
+	cout << "Las materias de las que se dispone son: \n";
+
+	for (int k = 0; k < 8; k++) {
+
+		if (mate[k] != "") {
+
+			cout << mate[k] << endl;
+
+		}
+
+	}
 
 }
 

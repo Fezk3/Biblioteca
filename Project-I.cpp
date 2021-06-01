@@ -19,10 +19,10 @@ int main()
     
     Lista<Libro> L;
 
-    Libro* l1 = new Libro("Mort", "Terry", "Novela", "2003", "Idk", true);
-    Libro* l2 = new Libro("Lart", "Terry", "Novela", "2003", "Idk", false);
-    Libro* l3 = new Libro("Mort", "Terry", "Novela", "2003", "Idk", true);
-    Libro* l4 = new Libro("owo", "Terrys", "Novela", "2003", "Idk", true);
+    Libro* l1 = new Libro("Mort", "Terry", "uwu", "2003", "Idk", true);
+    Libro* l2 = new Libro("Lart", "Terry", "Literatura", "2003", "Idk", false);
+    Libro* l3 = new Libro("Mort", "Terry", "Sociales", "2003", "Idk", true);
+    Libro* l4 = new Libro("owo", "Terrys", "Espaniol", "2003", "Idk", true);
     L.agregar(l1); L.agregar(l2); L.agregar(l3); L.agregar(l4);
 
     Libro* clon = L.retornaObj(1);
@@ -31,6 +31,8 @@ int main()
    L.mostrar();
    std::cout << "\n\nCantidad de elementos en la lista: "<<L.cantidadTotalNodos()<<"\n\n";  // total cantidad de nodos
     
+
+   L.mostrarMaterias();
 
     /*
     cout << "Segun el criterio de busqueda especificado, estos son los resultados: \n";
