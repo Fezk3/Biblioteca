@@ -5,16 +5,16 @@ void Control::MenuInicioS()
 {
 
 	int Finalizar = 0;
-	string Comprobar = "";
+	string ID = "";
 
 	Usuario* User;
 
 	do {
 		cout << "===============================\n";
 		cout << "Digite una Identificacion\n";
-		cout << "ID: "; cin >> Comprobar; cout << "\n";
+		cout << "ID: "; cin >> ID; cout << "\n";
 		cout << "===============================\n";
-		User = Global.TraerUsuario(stoi(Comprobar));
+		User = Global.TraerUsuario(stoi(ID));
 		if (User!=NULL) {
 			SubMenu(User);
 		}
@@ -54,14 +54,16 @@ void Control::MenuUsuarios(Usuario* U)
 		{
 			if (Comprobar != "1" || Comprobar != "2" || Comprobar != "3" || Comprobar != "4" || Comprobar != "5") {
 				do {
-					switch (stoi(Comprobar))
-					{
-					case 1:
+					switch (stoi(Comprobar)){
+					case 1: 
 						cout << "===============================\n";
-						cout << "Digite el Nombre: "; cin >> Nombre;cout<<" \n";
+						cout << "Digite el Nombre: "; 
+						cin >> Nombre; 
+						cout << " \n";
 						cout << "===============================\n";
-						Usuario* New = new Usuario(Nombre,1);
-						Global.AgregarUsuario(New);
+						Usuario* Nuevo;
+						Nuevo = new Usuario(Nombre, 1);
+						Global.AgregarUsuario(Nuevo);
 						break;
 					case 2:
 						MenuPrestamo(User);
