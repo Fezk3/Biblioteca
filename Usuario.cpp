@@ -62,7 +62,11 @@ int Usuario::devolver(int id) {
 	return libroId;  // id del libro que se devuelve para cambiar su estado en la lista de libros de la biblioteca
 
 }
+int Usuario::cantidadPrestamos() {
 
+	return prestamos.cantidadTotalNodos();
+
+}
 string Usuario::toString() {
 
 	stringstream s;

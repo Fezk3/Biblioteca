@@ -20,6 +20,7 @@ public:
 	void prestamo(Prestamo*);
 	void mostrarPrestamos();
 	int devolver(int id); // retorna id del libro que esta devolviendo
+	int cantidadPrestamos();
 	string toString();
 private:
 	string nombre;
