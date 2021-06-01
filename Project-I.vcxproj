@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Biblioteca.cpp" />
+    <ClCompile Include="Control.cpp" />
     <ClCompile Include="Libro.cpp" />
     <ClCompile Include="Prestamo.cpp" />
     <ClCompile Include="Project-I.cpp" />
@@ -147,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Biblioteca.h" />
+    <ClInclude Include="Control.h" />
     <ClInclude Include="Libro.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Nodo.h" />
