@@ -11,6 +11,7 @@ public:
 	void MenuPrestamo(Usuario*);
 	void MenuPrincipal();
 	void SubMenu(Usuario *);
+	void LlenaListas();
 private:
 	Biblioteca Global;
 };

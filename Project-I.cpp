@@ -2,10 +2,18 @@
 //
 
 #include <iostream>
-#include "Biblioteca.h"
+#include "Control.h"
 
 int main()
 {
+
+
+    Control c;
+
+    c.LlenaListas();
+    c.MenuPrincipal();
+
+
     //Prueba Biblioteca (Funca)
 
     /*Biblioteca New;
@@ -13,7 +21,7 @@ int main()
     New.AgregarLr(l1);
     New.LeerLr();
 
-    */
+    
 
     // pruebas lista de libros
     
@@ -34,7 +42,7 @@ int main()
 
    L.mostrarMaterias();
 
-    /*
+    
     cout << "Segun el criterio de busqueda especificado, estos son los resultados: \n";
     L.mostrarListaFiltrada("Novela");
     cout << "\n\nEspecifico\n";
@@ -42,13 +50,13 @@ int main()
     L.cambioEstado(1);
     L.disponibilidad("Mort");
     L.mostrarMaterias();
-    */
+    
 
 
     // pruba lista usuarios
 
 
-    /*
+    
     Lista<Usuario> l2;
     Usuario* u = new Usuario("Fezk3", 4, true);
     l2.agregar(u);

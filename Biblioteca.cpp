@@ -16,7 +16,7 @@ void Biblioteca::AgregarUsuario(Usuario* Nuevo)
     Usuarios.agregar(Nuevo);
 }
 
-void Biblioteca::MostarLibro()
+void Biblioteca::MostarLibros()
 {
     Coleccion.mostrar();
 }
@@ -54,11 +54,6 @@ void Biblioteca::EliminarUsuario(int ID)
 void Biblioteca::MostrarDisp(string ID)
 {
     Coleccion.disponibilidad(ID);
-}
-
-void Biblioteca::MostrarEspeLibro(int ID)
-{
-    Coleccion.mostrarEspecifico(ID);
 }
 
 void Biblioteca::MostrarEspeUsuario(int ID)
