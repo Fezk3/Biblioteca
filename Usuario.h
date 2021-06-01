@@ -9,15 +9,13 @@ using std::string; using std::stringstream; using std::cout; using std::endl; us
 
 class Usuario {
 public:
-	Usuario(string Nombre, int Cantidad, bool Estado);
+	Usuario(string Nombre, bool Estado);
 	virtual ~Usuario();
 	void setNombre(string Nombre);
 	void setId(int ID);
-	void setCantidad_L(int Cantidad);
 	void setEstado(bool Estado);
 	string getNombre();
 	int getId();
-	int getCantidad();
 	bool getEstado();
 	void prestamo(Prestamo*);
 	void mostrarPrestamos();
