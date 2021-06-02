@@ -21,6 +21,7 @@ public:
     void EliminarUsuario(int);
     void MostrarDisp(string);//Muestra la cantidad unidades disponibles (Libros) en especifico
     void MostrarEspeUsuario(int); //Muestra persona en especifico
+    void MostarMaterias();// muestra las materias
     Usuario *TraerUsuario(int); //Trae un usuario con el metodod de Retorna  *T 
     ~Biblioteca();
 

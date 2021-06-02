@@ -61,6 +61,11 @@ void Biblioteca::MostrarEspeUsuario(int ID)
     Usuarios.mostrarEspecifico(ID);
 }
 
+void Biblioteca::MostarMaterias()
+{
+    Coleccion.mostrarMaterias();
+}
+
 Usuario *Biblioteca::TraerUsuario(int ID)
 {
     return Usuarios.retornaObj(ID);
