@@ -256,7 +256,7 @@ int Lista<T>::cantidadNodosEspec(string titulo) {
 	
 	while (aux != NULL) {
 
-		if (aux->getDato()->getTitulo() == titulo) {
+		if (aux->getDato()->getTitulo() == titulo && aux->getDato()->getEstado() == true) {
 
 			cant++;
 
