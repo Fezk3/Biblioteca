@@ -53,6 +53,9 @@ void Usuario::mostrarPrestamos() {
 
 int Usuario::devolver(int id) {
 
+	if (prestamos.cantidadTotalNodos()==0 && prestamos.estaContenido(id)==false) {
+		return 0;
+	}
 	Prestamo* temp = prestamos.retornaObj(id); // prestamo a devolver
 
 	int libroId = temp->getIdLibro();

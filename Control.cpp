@@ -173,8 +173,8 @@ void Control::MenuLibros(Usuario* U)
 					case 9:
 						cout << "==============================\n";
 						cout << "El numero de libros totales son: \n";
-						Global.Coleccion.cantidadTotalNodos();
-						cout << "=================================\n";
+						cout<<Global.Coleccion.cantidadTotalNodos();
+						cout << "\n=================================\n";
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
@@ -367,7 +367,7 @@ void Control::MenuPrestamo(Usuario* U)
 			else {
 				
 				do {
-					string titulo, diaInicial, diaVencimiento; int id;
+					string titulo, diaInicial, diaVencimiento; int id, idprestamo,libroadevolver;
 					switch (stoi(Comprobar))
 					{
 					case 1:
@@ -402,15 +402,40 @@ void Control::MenuPrestamo(Usuario* U)
 								cout << "==================================\n";
 								cout << "Prestamo realizado exitosamente:\n";
 								Cliente->prestamos.mostrarEspecifico(prestamoNuevo->getId());
+								system("pause");
+								system("cls");
 							}
 						} else
 						{
 							cout << "El usuario ya tiene el maximo numero de prestamos permitidos\n";
+							system("pause");
+							system("cls");
 						}
 						FinalizarSub = 1;
 						break;
 					case 2:
-						
+
+						cout<<"Digite el id del prestamo que desea devolver:\n";
+						cin >> idprestamo;
+						if (Cliente->devolver(idprestamo)==0) {
+							cout << "No tiene prestamos disponibles para devolver" << endl;
+							system("pause");
+							system("cls");
+							FinalizarSub = 1;
+							break;
+						}
+						else {
+							
+							libroadevolver=Cliente->devolver(idprestamo);
+							cout << libroadevolver << "\n";
+							Global.Coleccion.cambioEstado(libroadevolver);
+
+							cout << "El libro ha sido devuelto con exito\n";
+							system("pause");
+							system("cls");
+							FinalizarSub = 1;
+							break;
+						}
 						break;
 					case 3:
 						cout << "===============================\n";

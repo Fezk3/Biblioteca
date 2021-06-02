@@ -31,6 +31,7 @@ public:
 	void mostrarMaterias(); //incompleto
 	int LibroDisponible(string); // retorna el primer id del primer libro disponible en base al titulo, para el prestamo
 	T* retornaObj(int id); // retorna objs en base al id 
+	bool estaContenido(int);
 
 };
 
@@ -348,6 +349,20 @@ T *Lista<T>::retornaObj(int id) {
 
 	return NULL; // si no se encuentra
 
+}
+
+template<class T>
+bool Lista<T>::estaContenido(int id)
+{
+	Nodo<T>* aux = head;
+
+	while (aux!=NULL)
+	{
+		if(aux->getDato()->getId()== id){ return true; }
+		aux = aux->getSig();
+	}
+
+	return false;
 }
 
 template <class T>
