@@ -51,9 +51,9 @@ void Biblioteca::EliminarUsuario(int ID)
     Usuarios.borrar(ID);
 }
 
-void Biblioteca::MostrarDisp(string ID)
+void Biblioteca::MostrarDisp(string titulo)
 {
-    Coleccion.disponibilidad(ID);
+    Coleccion.disponibilidad(titulo);
 }
 
 void Biblioteca::MostrarEspeUsuario(int ID)

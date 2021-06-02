@@ -25,7 +25,8 @@ public:
     Usuario *TraerUsuario(int); //Trae un usuario con el metodod de Retorna  *T 
     ~Biblioteca();
 
-private:
+
+    //Atributos
     Lista<Libro> Coleccion;//Se guardan todos los libros
     Lista<Usuario> Usuarios;//Los administradores o bibliotecarios
 };
