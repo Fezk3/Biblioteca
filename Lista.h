@@ -310,7 +310,7 @@ int Lista<T>::LibroDisponible(string titulo) {
 
 	while (aux != NULL) {
 
-		if (aux->getDato()->getEstado() == true) {
+		if (aux->getDato()->getEstado() == true && aux->getDato()->getTitulo() == titulo) {
 
 			return aux->getDato()->getId();
 
