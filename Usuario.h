@@ -22,12 +22,14 @@ public:
 	int devolver(int id); // retorna id del libro que esta devolviendo
 	int cantidadPrestamos();
 	string toString();
+
+	//Atributos
+	Lista<Prestamo> prestamos;//Lista de prestamos 
 private:
 	string nombre;
 	int id;
 	bool estado;
 	static int cont;
-	Lista<Prestamo> prestamos;
 };
 
 #endif
