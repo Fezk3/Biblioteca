@@ -49,8 +49,8 @@ void Control::MenuLibros(Usuario* U)
 		cout << "3. Mostar Libro Especifico\n";
 		cout << "4. Eliminar Libro\n";
 		cout << "5. Ver lista Filtrada\n";
-		cout << "6. Ver cantidad de un libro\n";
-		cout << "7. Ver Disponibilidad de un Libro\n";
+		cout << "6. Ver cantidad total de unidades de un libro\n";
+		cout << "7. Ver Disponibilidad para prestamos de un Libro\n";
 		cout << "8. Ver lista materias\n";
 		cout << "9. Mostrar cantidad total de libros disponibles\n";
 		cout << "10. Salir\n";
@@ -173,8 +173,7 @@ void Control::MenuLibros(Usuario* U)
 						break;
 					case 9:
 						cout << "==============================\n";
-						cout << "El numero de libros totales son: \n";
-						cout<<Global.Coleccion.cantidadTotalNodos();
+						cout << "\nEl numero de libros totales son: "<<Global.Coleccion.cantidadTotalNodos()<<"\n";
 						cout << "\n=================================\n";
 						FinalizarSub = 1;
 						system("pause");
