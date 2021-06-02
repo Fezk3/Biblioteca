@@ -136,6 +136,7 @@ void Control::MenuLibros(Usuario* U)
 						break;
 					case 6:
 						cout << "===============================\n";
+						cin.ignore();
 						cout << "Digite un nombre: ";
 						getline(cin, parametros);
 						cout << " \n";
