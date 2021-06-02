@@ -137,6 +137,8 @@ void Lista<T>::borrar(int id) {
 
 			}
 
+			cout << "\nElemente borrado con exito\n\n";
+
 		}
 
 	}
