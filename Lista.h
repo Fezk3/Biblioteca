@@ -194,6 +194,10 @@ void Lista<T>::mostrarListaFiltrada(string filtro) {
 		aux = aux->getSig();
 
 	}
+	
+	if (encontrado == true) {
+		cout << "Los anteriores son los libros que cumplen con el criterio especidicado\n";
+	}
 
 	if (aux == NULL && encontrado == false) {
 
