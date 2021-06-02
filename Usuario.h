@@ -25,7 +25,6 @@ public:
 private:
 	string nombre;
 	int id;
-	int cantidad_l;//cantidad de libros prestados
 	bool estado;
 	static int cont;
 	Lista<Prestamo> prestamos;

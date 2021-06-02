@@ -16,6 +16,8 @@ void Control::MenuInicioS()
 		cout << "===============================\n";
 		Cliente = Global.TraerUsuario(stoi(ID));
 		if (Cliente !=NULL) {
+			system("pause");
+			system("cls");
 			SubMenu(Cliente);
 			Finalizar=1;
 		}
@@ -23,6 +25,8 @@ void Control::MenuInicioS()
 			cout << "===============================\n";
 			cout << "El usuario no existe o lo digito mal\n";
 			cout << "===============================\n";
+			system("pause");
+			system("cls");
 			Finalizar = 1;
 		}
 	} while (Finalizar != 1);
@@ -33,74 +37,140 @@ void Control::MenuInicioS()
 void Control::MenuLibros(Usuario* U)
 {
 
-	int Finalizar = 0, FinalizarSub = 0;
-	string Comprobar;
+	Usuario* Cliente = U;
 
-	Usuario *Cliente = U;
+	int Finalizar = 0, FinalizarSub = 0;
 	do {
+		int ID = 0;
+		string parametros = "";
+		string Comprobar = "";
 		cout << "============(" << Cliente->getNombre() << ")============\n";
 		cout << "1. Agregar Libro\n";
 		cout << "2. Mostar Libros\n";
-		cout << "3. Mostar Especifico\n";
-		cout << "3. Mostar Lista Filtrada\n";
-		cout << "3. Mostar Cantidad de libros especificos\n";
-		cout << "3. Mostrar disponibilidad\n";
+		cout << "3. Mostar Libro Especifico\n";
 		cout << "4. Eliminar Libro\n";
-		cout << "5. Salir\n";
+		cout << "5. Ver lista Filtrada\n";
+		cout << "6. Ver cantidad de un libro\n";
+		cout << "7. Ver Disponibilidad de un Libro\n";
+		cout << "8. Ver lista materias\n";
+		cout << "9. Salir\n";
 		cout << "==================================\n";
 		cout << "Digite un numero: "; cin >> Comprobar; cout << "\n";
+		system("pause");
+		system("cls");
 		try
 		{
-			if (Comprobar != "1" && Comprobar != "2" && Comprobar != "3" && Comprobar != "4" && Comprobar != "5") {
+			if (Comprobar != "1" && Comprobar != "2" && Comprobar != "3" && Comprobar != "4" && Comprobar != "5" && Comprobar != "6" && Comprobar != "7" && Comprobar != "8" && Comprobar != "9") {
 				throw Comprobar;
 			}
 			else {
+				string titulo = "", autor = "", materia = "" ,anno = "", descripcion="";
 				do {
 					switch (stoi(Comprobar)) {
 					case 1:
 						cout << "===============================\n";
-						cout << "Digite el Nombre: ";
-						
+						cout << "Digite el Titulo: ";
+						cin >> titulo;
+						cout << "Digite el Autor/Autores: ";
+						cin >> autor;
+						cout << "Digite la materia: ";
+						cin >> materia;
+						cout << "Digite el Anno: ";
+						cin >> anno;
+						cout << "Digite la descripcion: ";
+						cin >> descripcion;
 						cout << " \n";
 						cout << "===============================\n";
-						/*Usuario* Nuevo;
-						Nuevo = new Usuario();
-						Global.AgregarUsuario(Nuevo);*/
-						/*Nuevo->toString();*/
+						Libro* Nuevo;
+						Nuevo = new Libro(titulo,autor,materia,anno,descripcion,1);
+						Global.AgregarLibro(Nuevo);
+						cout << "El libro ha sido creado exitosamente\n";
+						cout << Nuevo->toString();
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 2:
 						cout << "===============================\n";
-						Global.MostarUsuarios();
+						Global.MostarLibros();
 						cout << "===============================\n";
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 3:
 						cout << "===============================\n";
 						cout << "Digite el ID: ";
-						
+						cin >> ID;
 						cout << " \n";
 						cout << "===============================\n";
-						/*Global.MostrarEspeUsuario(ID);*/
+						Global.MostarLibro(ID);
 						cout << "===============================\n";
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 4:
 						cout << "===============================\n";
 						cout << "Digite el ID: ";
-						/*cin >> ID;*/
+						cin >> ID;
 						cout << " \n";
 						cout << "===============================\n";
-						/*Global.EliminarUsuario(ID);*/
+						Global.EliminarLibro(ID);
 						cout << "===============================\n";
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 5:
+						MenuPrestamo(Cliente);
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+					case 6:
 						cout << "===============================\n";
-						cout << "Cerrando el programa\n";
+						cout << "Digite un nombre: ";
+						cin >> parametros;
+						cout << " \n";
+						cout << "===============================\n";
+						Global.MostrarCantidadLibrosEspc(parametros);
 						cout << "===============================\n";
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+						break;
+					case 7:
+						cout << "===============================\n";
+						cout << "Digite un nombre: ";
+						cin >> parametros;
+						cout << " \n";
+						cout << "===============================\n";
+						cout << "La cantidad de libros disponibles es de: ";
+						Global.MostrarDisp(parametros); cout<< "\n";
+						cout << "\n===============================\n";
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+					case 8:
+						cout << "==============================\n";
+						cout << "Las materias son: \n";
+						Global.MostarMaterias();
+						cout << "=================================\n";
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+					case 9:
+						cout << "===============================\n";
+						cout << "Cerrando el Menu \n";
+						cout << "===============================\n";
 						Finalizar = 1;
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					}
 				} while (FinalizarSub != 1);
@@ -113,8 +183,11 @@ void Control::MenuLibros(Usuario* U)
 			cout << "===============================\n";
 			cout << "El numero que digito  es incorrecto, vuelva a intentar\n";
 			cout << "===============================\n";
+			system("pause");
+			system("cls");
 		}
 	} while (Finalizar != 1);
+	Finalizar = 0;
 }
 
 void Control::MenuUsuarios(Usuario* U)
@@ -137,6 +210,8 @@ void Control::MenuUsuarios(Usuario* U)
 		cout << "9. Salir\n";
 		cout << "==================================\n";
 		cout << "Digite un numero: "; cin >> Comprobar; cout << "\n";
+		system("pause");
+		system("cls");
 		try
 		{
 			if (Comprobar != "1" && Comprobar != "2" && Comprobar != "3" && Comprobar != "4" && Comprobar != "5" && Comprobar != "6" && Comprobar != "7" && Comprobar != "8" && Comprobar != "9") {
@@ -158,12 +233,16 @@ void Control::MenuUsuarios(Usuario* U)
 						cout << "El usuario ha sido creado exitosamente\n";
 						cout << Nuevo->toString();
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 2:
 						cout << "===============================\n";
 						Global.MostarUsuarios();
 						cout << "===============================\n";
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 3:
 						cout << "===============================\n";
@@ -174,6 +253,8 @@ void Control::MenuUsuarios(Usuario* U)
 						Global.MostrarEspeUsuario(ID);
 						cout << "===============================\n";
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 4:
 						cout << "===============================\n";
@@ -184,35 +265,47 @@ void Control::MenuUsuarios(Usuario* U)
 						Global.EliminarUsuario(ID);
 						cout << "===============================\n";
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 5:
 						MenuPrestamo(Cliente);
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 6:
 						cout << "===============================\n";
 						Cliente->mostrarPrestamos();
 						cout << "===============================\n";
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 7:
 						cout << "===============================\n";
 						cout << "La cantidad de prestamos del usuario " << Cliente->getNombre() << " es de: ";
-						Cliente->cantidadPrestamos();
-						cout << "===============================\n";
+						cout<<Cliente->cantidadPrestamos();
+						cout << "\n===============================\n";
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 8:
 						cout << "Su usuario es: \n";
-						Cliente->toString();
+						cout<<Cliente->toString();
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 9:
 						cout << "===============================\n";
-						cout << "Cerrando el programa\n";
+						cout << "Cerrando el Menu \n";
 						cout << "===============================\n";
 						Finalizar = 1;
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					}
 				} while (FinalizarSub != 1);
@@ -225,6 +318,8 @@ void Control::MenuUsuarios(Usuario* U)
 			cout << "===============================\n";
 			cout << "El numero que digito  es incorrecto, vuelva a intentar\n";
 			cout << "===============================\n";
+			system("pause");
+			system("cls");
 		}
 	} while (Finalizar != 1);
 	Finalizar = 0;
@@ -248,7 +343,8 @@ void Control::MenuPrincipal()
 		cout << "2. Salir\n";
 		cout << "==================================\n";
 		cout << "Digite un numero: "; cin >> Comprobar; cout << "\n";
-	
+		system("pause");
+		system("cls");
 		try
 		{
 			if (Comprobar!="1"&&Comprobar!="2") {
@@ -261,13 +357,17 @@ void Control::MenuPrincipal()
 					case 1:
 						MenuInicioS();
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 2:
 						cout << "===============================\n";
-						cout << "Cerrando el programa\n";
+						cout << "Cerrando el Programa\n";
 						cout << "===============================\n";
 						FinalizarSub = 1;
 						Finalizar = 1;
+						system("pause");
+						system("cls");
 						break;
 					}
 				} while (FinalizarSub != 1);
@@ -280,6 +380,8 @@ void Control::MenuPrincipal()
 			cout << "===============================\n";
 			cout << "El numero que digito  es incorrecto, vuelva a intentar\n";
 			cout << "===============================\n";
+			system("pause");
+			system("cls");
 		}
 	} while (Finalizar != 1);
 
@@ -301,6 +403,8 @@ void Control::SubMenu(Usuario* U)
 		cout << "4. Salir\n";
 		cout << "==================================\n";
 		cout << "Digite un numero: "; cin >> Comprobar; cout << "\n";
+		system("pause");
+		system("cls");
 		try
 		{
 			if (Comprobar != "1" && Comprobar != "2"&& Comprobar != "3" && Comprobar != "4") {
@@ -314,21 +418,31 @@ void Control::SubMenu(Usuario* U)
 					case 1:
 						MenuLibros(User);
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
+
 					case 2:
 						MenuPrestamo(User);
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
+
 					case 3:
 						MenuUsuarios(User);
 						FinalizarSub = 1;
+						system("pause");
+						system("cls");
 						break;
 					case 4:
 						cout << "===============================\n";
-						cout << "Cerrando el programa\n";
+						cout << "Cerrando el menu\n";
 						cout << "===============================\n";
 						FinalizarSub = 1;
 						Finalizar=1;
+						system("pause");
+						system("cls");
 						break;
 					}
 				} while (FinalizarSub != 1);
@@ -340,6 +454,8 @@ void Control::SubMenu(Usuario* U)
 			cout << "===============================\n";
 			cout << "El numero que digito  es incorrecto, vuelva a intentar\n";
 			cout << "===============================\n";
+			system("pause");
+			system("cls");
 		}
 	} while (Finalizar != 1);
 
@@ -348,19 +464,19 @@ void Control::SubMenu(Usuario* U)
 void Control::LlenaListas() {
 
 		Libro* l1 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 1);
-		Libro* l2 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 2);
+		Libro* l2 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 0);
 		Libro* l3 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 1);
 		Libro* l4 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 1);
 
 		Libro* l5 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 1);
-		Libro* l6 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 2);
-		Libro* l7 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 2);
-		Libro* l8 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 2);
+		Libro* l6 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 0);
+		Libro* l7 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 0);
+		Libro* l8 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 0);
 
 		Libro* l9 = new Libro("Quimica General", "Kenneth A. Goldsby", "Quimica", "2011", "Todo sobre quimica general", 1);
 		Libro* l10 = new Libro("Quimica General", "Kenneth A. Goldsby", "Quimica", "2011", "Todo sobre quimica general", 1);
 		Libro* l11 = new Libro("Quimica General", "Kenneth A. Goldsby", "Quimica", "2011", "Todo sobre quimica general", 1);
-		Libro* l12 = new Libro("Quimica General", "Kenneth A. Goldsby", "Quimica", "2011", "Todo sobre quimica general", 2);
+		Libro* l12 = new Libro("Quimica General", "Kenneth A. Goldsby", "Quimica", "2011", "Todo sobre quimica general", 0);
 
 		Libro* l13 = new Libro("Hunter x Hunter", "Yoshihiro Togashi", "Manga", "1997", "Historia de ficcion", 1);
 		Libro* l14 = new Libro("Hunter x Hunter", "Yoshihiro Togashi", "Manga", "1997", "Historia de ficcion", 1);
@@ -368,7 +484,7 @@ void Control::LlenaListas() {
 		Libro* l16 = new Libro("Hunter x Hunter", "Yoshihiro Togashi", "Manga", "1997", "Historia de ficcion", 1);
 
 		Usuario* u1 = new Usuario("Victor Segura", 1);
-		Usuario* u2 = new Usuario("Kevin Montero", 2);
+		Usuario* u2 = new Usuario("Kevin Montero", 0);
 
 		Global.AgregarUsuario(u1); Global.AgregarUsuario(u2);
 		Global.AgregarLibro(l1); Global.AgregarLibro(l2); Global.AgregarLibro(l3); Global.AgregarLibro(l4);
