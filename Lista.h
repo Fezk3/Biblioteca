@@ -22,14 +22,14 @@ public:
 	void agregar(T* dato);
 	void mostrar(); // muestra la lista completa con tostring
 	void borrar(int);
-	void disponibilidad(string); // cuantos ejemplares de un libro hay apartir del titulo
+	void disponibilidad(string); // cuantos ejemplares de un libro para prestar hay apartir del titulo
 	void mostrarListaFiltrada(string); // muestra los distintos ejemplares de libros segun el criterio dado
 	void mostrarEspecifico(int); // mostrar ibj especifico con tostring 
-	int cantidadNodosEspec(string); // cantidad de nodos en base al titulo de un libro
+	int cantidadNodosEspec(string); // cantidad de nodos en base al titulo de un libro con estado true
 	int cantidadTotalNodos(); // total de nodos en la lista -> usar por si user quiere ver el total de libros tiene la biblioteca
 	void cambioEstado(int); // activo/suspendido || disponible/prestado
 	void mostrarMaterias(); 
-	int cantidadNodosIguales(string);
+	int cantidadNodosIguales(string); // todos los titulos iguales, sin importar el estado
 	int LibroDisponible(string); // retorna el primer id del primer libro disponible en base al titulo, para el prestamo
 	T* retornaObj(int id); // retorna objs en base al id 
 	bool estaContenido(int);

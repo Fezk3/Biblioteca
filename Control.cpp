@@ -155,7 +155,7 @@ void Control::MenuLibros(Usuario* U)
 						getline(cin,parametros);
 						cout << " \n";
 						cout << "===============================\n";
-						cout << "La cantidad de libros disponibles es de: ";
+						//cout << "La cantidad de libros disponibles es de: ";
 						Global.MostrarDisp(parametros); cout<< "\n";
 						cout << "\n===============================\n";
 						FinalizarSub = 1;
