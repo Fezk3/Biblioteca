@@ -426,9 +426,7 @@ void Control::MenuPrestamo(Usuario* U)
 						else {
 							
 							libroadevolver = Cliente->devolver(idprestamo);
-							cout <<"Libro a devolver: "<< libroadevolver << "\n";
 							Global.Coleccion.cambioEstado(libroadevolver);
-
 							cout << "El libro ha sido devuelto con exito\n";
 							system("pause");
 							system("cls");

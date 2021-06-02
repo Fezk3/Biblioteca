@@ -61,8 +61,6 @@ int Usuario::devolver(int id) {
 
 	prestamos.borrar(id);
 
-	cout << "Libro id en metodo devolver:   " << libroId << endl;
-
 	return libroId;  // id del libro que se devuelve para cambiar su estado en la lista de libros de la biblioteca
 
 }
