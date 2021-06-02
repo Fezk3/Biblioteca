@@ -387,7 +387,6 @@ void Control::MenuPrestamo(Usuario* U)
 								break;
 							}
 							else {
-								cin.ignore();
 								cout << "Digite le fecha inicial:\n";
 								getline(cin, diaInicial);
 								cout << "Digite el dia el fecha de vencimiento(3 dias despues)\n";
@@ -417,7 +416,7 @@ void Control::MenuPrestamo(Usuario* U)
 
 						cout<<"Digite el id del prestamo que desea devolver:\n";
 						cin >> idprestamo;
-						if (Cliente->devolver(idprestamo)==0) {
+						if (Cliente->checkPrestamo(idprestamo) == false) {
 							cout << "No tiene prestamos disponibles para devolver" << endl;
 							system("pause");
 							system("cls");
@@ -426,8 +425,8 @@ void Control::MenuPrestamo(Usuario* U)
 						}
 						else {
 							
-							libroadevolver=Cliente->devolver(idprestamo);
-							cout << libroadevolver << "\n";
+							libroadevolver = Cliente->devolver(idprestamo);
+							cout <<"Libro a devolver: "<< libroadevolver << "\n";
 							Global.Coleccion.cambioEstado(libroadevolver);
 
 							cout << "El libro ha sido devuelto con exito\n";
