@@ -53,31 +53,38 @@ void Usuario::mostrarPrestamos() {
 
 int Usuario::devolver(int id) {
 
-	if (prestamos.cantidadTotalNodos()==0 && prestamos.estaContenido(id)==false) {
-		return 0;
-	}
 	Prestamo* temp = prestamos.retornaObj(id); // prestamo a devolver
-
-	if (temp == NULL) {
-
-		return 0;
-
-	}
 
 	int libroId = temp->getIdLibro();
 
-	cout << "LIBROID" << libroId; // retorna el id multiplicada por 10?????????????
+	cout << temp->toString()<<endl;
 
 	prestamos.borrar(id);
+
+	cout << "Libro id en metodo devolver:   " << libroId << endl;
 
 	return libroId;  // id del libro que se devuelve para cambiar su estado en la lista de libros de la biblioteca
 
 }
+
+bool Usuario::checkPrestamo(int idPres) {
+
+	if (prestamos.cantidadTotalNodos() == 0 || prestamos.estaContenido(id) == false) {
+
+		return false;
+
+	}
+
+	return true;
+
+}
+
 int Usuario::cantidadPrestamos() {
 
 	return prestamos.cantidadTotalNodos();
 
 }
+
 string Usuario::toString() {
 
 	stringstream s;
