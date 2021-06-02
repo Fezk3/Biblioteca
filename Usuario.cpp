@@ -58,7 +58,15 @@ int Usuario::devolver(int id) {
 	}
 	Prestamo* temp = prestamos.retornaObj(id); // prestamo a devolver
 
+	if (temp == NULL) {
+
+		return 0;
+
+	}
+
 	int libroId = temp->getIdLibro();
+
+	cout << "LIBROID" << libroId; // retorna el id multiplicada por 10?????????????
 
 	prestamos.borrar(id);
 
