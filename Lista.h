@@ -197,7 +197,7 @@ void Lista<T>::mostrarListaFiltrada(string filtro) {
 	}
 	
 	if (encontrado == true) {
-		cout << "Los anteriores son los libros que cumplen con el criterio especidicado\n";
+		cout << "\n\nLos anteriores son los libros que cumplen con el criterio especidicado\n\n";
 	}
 
 	if (aux == NULL && encontrado == false) {
@@ -368,31 +368,8 @@ bool Lista<T>::estaContenido(int id)
 template <class T>
 void Lista<T>::mostrarMaterias() {
 
-	Nodo<T>* aux = head;
-
-	string mate[10] = {"", "", "", "", "", "", "", ""};
-	int j = 0;
-
-	while (aux != NULL) {
-
-		mate[j] = aux->getDato()->getMateria();
-
-		aux = aux->getSig();
-		j++;
-
-	}
-	
 	cout << "Las materias de las que se dispone son: \n";
-
-	for (int k = 0; k < 8; k++) {
-
-		if (mate[k] != "") {
-
-			cout << mate[k] << endl;
-
-		}
-
-	}
+	cout << "Biologia\nQuimica\nNovela\nManga\n";
 
 }
 

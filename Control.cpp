@@ -48,7 +48,7 @@ void Control::MenuLibros(Usuario* U)
 		cout << "2. Mostar Libros\n";
 		cout << "3. Mostar Libro Especifico\n";
 		cout << "4. Eliminar Libro\n";
-		cout << "5. Ver lista Filtrada\n";
+		cout << "5. Ver lista de libros mediante busqueda de (Autores/Materia/Titulo)\n";
 		cout << "6. Ver cantidad total de unidades de un libro\n";
 		cout << "7. Ver Disponibilidad para prestamos de un Libro\n";
 		cout << "8. Ver lista materias\n";
@@ -164,9 +164,9 @@ void Control::MenuLibros(Usuario* U)
 						break;
 					case 8:
 						cout << "==============================\n";
-						cout << "Las materias son: \n";
+						cout << "Las materias son: \n\n";
 						Global.MostarMaterias();
-						cout << "=================================\n";
+						cout << "\n=================================\n";
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
