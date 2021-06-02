@@ -38,7 +38,7 @@ void Biblioteca::MostrarListaFiltrada(string ToE)
 
 void Biblioteca::MostrarCantidadLibrosEspc(string Nombre)
 {
-    cout<<"\n\nDel libro "<<Nombre<<" Hay un total de "<< Coleccion.cantidadNodosEspec(Nombre)<<" unidades en total\n\n";
+    cout<<"\n\nDel libro "<<Nombre<<" Hay un total de "<< Coleccion.cantidadNodosIguales(Nombre)<<" unidades\n\n";
 }
 
 void Biblioteca::EliminarLibro(int ID)
