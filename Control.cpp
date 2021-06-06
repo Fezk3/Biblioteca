@@ -44,15 +44,15 @@ void Control::MenuLibros(Usuario* U)
 		string parametros;
 		string Comprobar;
 		cout << "============(" << Cliente->getNombre() << ")============\n";
-		cout << "1. Agregar Libro\n";
-		cout << "2. Mostar Libros\n";
-		cout << "3. Mostar Libro Especifico\n";
-		cout << "4. Eliminar Libro\n";
-		cout << "5. Ver lista de libros mediante busqueda de (Autores/Materia/Titulo)\n";
-		cout << "6. Ver cantidad total de unidades de un libro\n";
-		cout << "7. Ver Disponibilidad para prestamos de un Libro\n";
-		cout << "8. Ver lista materias\n";
-		cout << "9. Mostrar cantidad total de libros disponibles\n";
+		cout << "1. Mostar Libros\n";
+		cout << "2. Mostar Libro Especifico\n";
+		cout << "3. Ver lista de libros mediante busqueda de (Autores/Materia/Titulo)\n";
+		cout << "4. Ver cantidad total de unidades de un libro\n";
+		cout << "5. Ver Disponibilidad para prestamos de un Libro\n";
+		cout << "6. Ver lista materias\n";
+		cout << "7. Mostrar cantidad total de libros disponibles\n";
+		cout << "8. Agregar Libro\n";
+		cout << "9. Eliminar Libro\n";
 		cout << "10. Salir\n";
 		cout << "==================================\n";
 		cout << "Digite un numero: "; cin>>Comprobar; cout << "\n";
@@ -69,38 +69,13 @@ void Control::MenuLibros(Usuario* U)
 					switch (stoi(Comprobar)) {
 					case 1:
 						cout << "===============================\n";
-						cout << "Digite el Titulo: "<<endl;
-						fflush(stdin);
-						cin.ignore();
-						getline(cin, titulo);
-						cout << "Digite el Autor/Autores"<<endl;
-						getline(cin, autor);
-						cout << "Digite la materia:"<<endl;
-						getline(cin, materia);
-						cout << "Digite el Anno: " << endl;
-						getline(cin, anno);
-						cout << "Digite la descripcion: " << endl;
-						getline(cin, descripcion);
-						cout << " \n";
-						cout << "===============================\n";
-						Libro* Nuevo;
-						Nuevo = new Libro(titulo,autor,materia,anno,descripcion,1);
-						Global.AgregarLibro(Nuevo);
-						cout << "El libro ha sido creado exitosamente\n";
-						cout << Nuevo->toString();
-						FinalizarSub = 1;
-						system("pause");
-						system("cls");
-						break;
-					case 2:
-						cout << "===============================\n";
 						Global.MostarLibros();
 						cout << "===============================\n";
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
 						break;
-					case 3:
+					case 2:
 						cout << "===============================\n";
 						cout << "Digite el ID: ";
 						cin >> ID;
@@ -112,19 +87,7 @@ void Control::MenuLibros(Usuario* U)
 						system("pause");
 						system("cls");
 						break;
-					case 4:
-						cout << "===============================\n";
-						cout << "Digite el ID: ";
-						cin>>ID;
-						cout << " \n";
-						cout << "===============================\n";
-						Global.EliminarLibro(ID);
-						cout << "===============================\n";
-						FinalizarSub = 1;
-						system("pause");
-						system("cls");
-						break;
-					case 5:
+					case 3:
 						cout << "===============================\n";
 						cin.ignore();
 						cout << "Escriba el criterio de busqueda (Materia,Titulo,Autor)\n";
@@ -134,7 +97,7 @@ void Control::MenuLibros(Usuario* U)
 						system("pause");
 						system("cls");
 						break;
-					case 6:
+					case 4:
 						cout << "===============================\n";
 						cin.ignore();
 						cout << "Digite un nombre: ";
@@ -147,22 +110,21 @@ void Control::MenuLibros(Usuario* U)
 						system("pause");
 						system("cls");
 						break;
-						break;
-					case 7:
+					case 5:
 						cout << "===============================\n";
 						cin.ignore();
 						cout << "Digite un nombre: ";
-						getline(cin,parametros);
+						getline(cin, parametros);
 						cout << " \n";
 						cout << "===============================\n";
 						//cout << "La cantidad de libros disponibles es de: ";
-						Global.MostrarDisp(parametros); cout<< "\n";
+						Global.MostrarDisp(parametros); cout << "\n";
 						cout << "\n===============================\n";
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
 						break;
-					case 8:
+					case 6:
 						cout << "==============================\n";
 						cout << "Las materias son: \n\n";
 						Global.MostarMaterias();
@@ -171,10 +133,47 @@ void Control::MenuLibros(Usuario* U)
 						system("pause");
 						system("cls");
 						break;
-					case 9:
+					case 7:
 						cout << "==============================\n";
-						cout << "\nEl numero de libros totales son: "<<Global.Coleccion.cantidadTotalNodos()<<"\n";
+						cout << "\nEl numero de libros totales son: " << Global.Coleccion.cantidadTotalNodos() << "\n";
 						cout << "\n=================================\n";
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+					case 8:
+						cout << "===============================\n";
+						cout << "Digite el Titulo: " << endl;
+						fflush(stdin);
+						cin.ignore();
+						getline(cin, titulo);
+						cout << "Digite el Autor/Autores" << endl;
+						getline(cin, autor);
+						cout << "Digite la materia:" << endl;
+						getline(cin, materia);
+						cout << "Digite el Anno: " << endl;
+						getline(cin, anno);
+						cout << "Digite la descripcion: " << endl;
+						getline(cin, descripcion);
+						cout << " \n";
+						cout << "===============================\n";
+						Libro* Nuevo;
+						Nuevo = new Libro(titulo, autor, materia, anno, descripcion, 1);
+						Global.AgregarLibro(Nuevo);
+						cout << "El libro ha sido creado exitosamente\n";
+						cout << Nuevo->toString();
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+					case 9:
+						cout << "===============================\n";
+						cout << "Digite el ID: ";
+						cin >> ID;
+						cout << " \n";
+						cout << "===============================\n";
+						Global.EliminarLibro(ID);
+						cout << "===============================\n";
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
