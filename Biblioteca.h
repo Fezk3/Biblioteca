@@ -14,15 +14,15 @@ public:
     void AgregarUsuario(Usuario*);
     void MostarLibros();
     void MostarUsuarios();
-    void MostarLibro(int);//Muestra libro
+    void MostarLibro(string);//Muestra libro
     void MostrarListaFiltrada(string);//Muestra la lista por el filtro de titulo o materia o autores 
     void MostrarCantidadLibrosEspc(string); // Muestra la cantidad de libros que hay disponibles de un libro(Sin importar el estado)
-    void EliminarLibro(int);
-    void EliminarUsuario(int);
+    void EliminarLibro(string);
+    void EliminarUsuario(string);
     void MostrarDisp(string);//Muestra la cantidad unidades disponibles (Libros) en especifico
-    void MostrarEspeUsuario(int); //Muestra persona en especifico
+    void MostrarEspeUsuario(string); //Muestra persona en especifico
     void MostarMaterias();// muestra las materias
-    Usuario *TraerUsuario(int); //Trae un usuario con el metodod de Retorna  *T 
+    Usuario *TraerUsuario(string); //Trae un usuario con el metodod de Retorna  *T 
     ~Biblioteca();
 
 

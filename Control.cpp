@@ -13,7 +13,7 @@ void Control::MenuInicioS()
 		cout << "Digite una Identificacion\n";
 		cout << "ID: "; cin >> ID; cout << "\n";
 		cout << "===============================\n";
-		Cliente = Global.TraerUsuario(stoi(ID));
+		Cliente = Global.TraerUsuario(ID);
 		if (Cliente !=NULL) {
 			system("pause");
 			system("cls");
@@ -40,7 +40,7 @@ void Control::MenuLibros(Usuario* U)
 
 	int Finalizar =0, FinalizarSub=0;
 	do {
-		int ID = 0;
+		string ID;
 		string parametros;
 		string Comprobar;
 		cout << "============(" << Cliente->getNombre() << ")============\n";
@@ -212,7 +212,7 @@ void Control::MenuUsuarios(Usuario* U)
 
 	int Finalizar = 0, FinalizarSub=0;
 	do {
-		int ID;
+		string ID;
 		string Comprobar;
 		cout << "============(" << Cliente->getNombre() << ")============\n";
 		cout << "1. Agregar Usuario\n";
@@ -366,7 +366,7 @@ void Control::MenuPrestamo(Usuario* U)
 			else {
 				
 				do {
-					string titulo, diaInicial, diaVencimiento; int id, idprestamo,libroadevolver;
+					string titulo, diaInicial, diaVencimiento, id, idprestamo, libroadevolver;
 					switch (stoi(Comprobar))
 					{
 					case 1:
@@ -377,7 +377,7 @@ void Control::MenuPrestamo(Usuario* U)
 							getline(cin, titulo);
 							id = Global.Coleccion.LibroDisponible(titulo);
 
-							if (id == 0) {
+							if (id == "0") {
 								cout << "El libro no se encuentra disponible\n";
 								cout << "==================================\n";
 								system("pause");

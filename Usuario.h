@@ -3,6 +3,7 @@
 #define USUARIO_H
 #include <iostream>
 #include <sstream>
+#include <string>
 #include "Lista.h"
 #include "Prestamo.h"
 using std::string; using std::stringstream; using std::cout; using std::endl; using std::cin;
@@ -12,23 +13,23 @@ public:
 	Usuario(string Nombre, bool Estado);
 	virtual ~Usuario();
 	void setNombre(string Nombre);
-	void setId(int ID);
+	void setId(string ID);
 	void setEstado(bool Estado);
 	string getNombre();
-	int getId();
+	string getId();
 	bool getEstado();
 	void prestamo(Prestamo*);
 	void mostrarPrestamos();
-	int devolver(int id); // retorna id del libro que esta devolviendo
+	string devolver(string id); // retorna id del libro que esta devolviendo
 	int cantidadPrestamos();
 	string toString();
-	bool checkPrestamo(int); // false si el prestamo no esta en su lista, true si lo esta
+	bool checkPrestamo(string); // false si el prestamo no esta en su lista, true si lo esta
 
 	//Atributos
 	Lista<Prestamo> prestamos;//Lista de prestamos 
 private:
 	string nombre;
-	int id;
+	string id;
 	bool estado;
 	static int cont;
 };

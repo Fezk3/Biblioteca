@@ -5,7 +5,7 @@ int Usuario::cont = 1;
 Usuario::Usuario(string Nombre,  bool Estado) :nombre(Nombre), estado(Estado) {
 
 	prestamos; // lista de prestamos
-	this->id = cont;
+	this->id += std::to_string(cont);
 	cont++;
 
 }
@@ -17,7 +17,7 @@ void Usuario::setNombre(string Nombre) {
 	this->nombre = Nombre;
 }
 
-void Usuario::setId(int ID) {
+void Usuario::setId(string ID) {
 	this->id = ID;
 }
 
@@ -30,7 +30,7 @@ string Usuario::getNombre() {
 	return nombre;
 }
 
-int Usuario::getId() {
+string Usuario::getId() {
 	return id;
 }
 
@@ -51,11 +51,11 @@ void Usuario::mostrarPrestamos() {
 
 }
 
-int Usuario::devolver(int id) {
+string Usuario::devolver(string id) {
 
 	Prestamo* temp = prestamos.retornaObj(id); // prestamo a devolver
 
-	int libroId = temp->getIdLibro();
+	string libroId = temp->getIdLibro();
 
 	cout << temp->toString()<<endl;
 
@@ -65,7 +65,7 @@ int Usuario::devolver(int id) {
 
 }
 
-bool Usuario::checkPrestamo(int idPres) {
+bool Usuario::checkPrestamo(string idPres) {
 
 	if (prestamos.cantidadTotalNodos() == 0 || prestamos.estaContenido(id) == false) {
 

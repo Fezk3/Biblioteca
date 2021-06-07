@@ -5,7 +5,7 @@ int Libro::cont = 1;
 Libro::Libro(string titulo, string autores, string materia, string annio_edi, string editorial, bool estado) : titulo(titulo), autores(autores),
 materia(materia), annio_edi(annio_edi), editorial(editorial), estado(estado){
 
-	this->id = cont;  // id unico automatico para cada libro
+	this->id += std::to_string(cont);  // id unico automatico para cada libro
 	cont++;
 
 }
@@ -46,7 +46,7 @@ void Libro::setEstado(bool estado) {
 
 }
 
-void Libro::setId(int id) {
+void Libro::setId(string id) {
 
 	this->id = id;
 
@@ -84,7 +84,7 @@ bool Libro::getEstado() {
 
 }
 
-int Libro::getId() {
+string Libro::getId() {
 
 	return id;
 
