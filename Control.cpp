@@ -50,7 +50,7 @@ void Control::MenuLibros(Usuario* U)
 		string ID;
 		string parametros;
 		string Comprobar;
-		cout << "============(" << Cliente->getNombre() << ")============\n";
+		cout << "============( " << Cliente->getNombre() << " )============\n";
 		cout << "\n1. Mostar Libros\n";
 		cout << "2. Mostar Libro Especifico\n";
 		cout << "3. Ver lista de libros mediante busqueda de (Autores/Materia/Titulo)\n";
