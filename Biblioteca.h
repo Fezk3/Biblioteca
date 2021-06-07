@@ -17,8 +17,8 @@ public:
     void MostarLibro(string);//Muestra libro
     void MostrarListaFiltrada(string);//Muestra la lista por el filtro de titulo o materia o autores 
     void MostrarCantidadLibrosEspc(string); // Muestra la cantidad de libros que hay disponibles de un libro(Sin importar el estado)
-    void EliminarLibro(string);
-    void EliminarUsuario(string);
+    bool EliminarLibro(string);
+    bool EliminarUsuario(string);
     void MostrarDisp(string);//Muestra la cantidad unidades disponibles (Libros) en especifico
     void MostrarEspeUsuario(string); //Muestra persona en especifico
     void MostarMaterias();// muestra las materias

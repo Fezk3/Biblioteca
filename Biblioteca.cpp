@@ -41,14 +41,14 @@ void Biblioteca::MostrarCantidadLibrosEspc(string Nombre)
     cout<<"\n\nDel libro "<<Nombre<<" Hay un total de "<< Coleccion.cantidadNodosIguales(Nombre)<<" unidades\n\n";
 }
 
-void Biblioteca::EliminarLibro(string ID)
+bool Biblioteca::EliminarLibro(string ID)
 {
-    Coleccion.borrar(ID);
+    return Coleccion.borrar(ID);
 }
 
-void Biblioteca::EliminarUsuario(string ID)
+bool Biblioteca::EliminarUsuario(string ID)
 {
-    Usuarios.borrar(ID);
+    return Usuarios.borrar(ID);
 }
 
 void Biblioteca::MostrarDisp(string titulo)
