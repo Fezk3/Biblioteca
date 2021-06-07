@@ -254,26 +254,25 @@ void Control::MenuUsuarios(Usuario* U)
 						Usuario* Nuevo;
 						Nuevo = new Usuario(Nombre, 1);
 						Global.AgregarUsuario(Nuevo);
-						cout << "El usuario ha sido creado exitosamente\n";
+						cout << "\nEl usuario ha sido creado exitosamente\n";
 						cout << Nuevo->toString();
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
 						break;
 					case 2:
-						cout << "===============================\n";
+						cout << "===============================\n\n";
 						Global.MostarUsuarios();
-						cout << "===============================\n";
+						cout << "\n===============================\n";
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
 						break;
 					case 3:
-						cout << "===============================\n";
+						cout << "===============================\n\n";
 						cout << "Digite el ID: ";
 						cin >> ID;
-						cout << " \n";
-						cout << "===============================\n";
+						cout << "\n===============================\n";
 						Global.MostrarEspeUsuario(ID);
 						cout << "===============================\n";
 						FinalizarSub = 1;
@@ -282,9 +281,9 @@ void Control::MenuUsuarios(Usuario* U)
 						break;
 					case 4:
 						cout << "===============================\n";
-						cout << "Digite el ID: ";
+						cout << "\nDigite el ID: ";
 						cin >> ID;
-						cout << "\n===============================\n";
+						cout << "\n\n===============================\n";
 						if (Global.EliminarUsuario(ID) == false) {
 
 							cout << "\nEl usuario no existe\n\n";
@@ -307,16 +306,16 @@ void Control::MenuUsuarios(Usuario* U)
 						system("cls");
 						break;
 					case 6:
-						cout << "===============================\n";
+						cout << "===============================\n\n";
 						Cliente->mostrarPrestamos();
-						cout << "===============================\n";
+						cout << "\n===============================\n";
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
 						break;
 					case 7:
 						cout << "===============================\n";
-						cout << "La cantidad de prestamos del usuario " << Cliente->getNombre() << " es de: ";
+						cout << "\nLa cantidad de prestamos del usuario " << Cliente->getNombre() << " es de: ";
 						cout<<Cliente->cantidadPrestamos();
 						cout << "\n===============================\n";
 						FinalizarSub = 1;
