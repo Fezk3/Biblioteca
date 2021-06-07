@@ -3,6 +3,7 @@
 #define LIBRO_H
 #include <iostream>
 #include <sstream>
+#include <string>
 using std::string;
 using std::stringstream;
 using std::endl;

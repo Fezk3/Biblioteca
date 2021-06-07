@@ -21,18 +21,18 @@ public:
 
 	void agregar(T* dato);
 	void mostrar(); // muestra la lista completa con tostring
-	void borrar(int);
+	void borrar(string); // borra por medio de id
 	void disponibilidad(string); // cuantos ejemplares de un libro para prestar hay apartir del titulo
 	void mostrarListaFiltrada(string); // muestra los distintos ejemplares de libros segun el criterio dado
-	void mostrarEspecifico(int); // mostrar ibj especifico con tostring 
+	void mostrarEspecifico(string); // mostrar ibj especifico con tostring por medio de id
 	int cantidadNodosEspec(string); // cantidad de nodos en base al titulo de un libro con estado true
 	int cantidadTotalNodos(); // total de nodos en la lista -> usar por si user quiere ver el total de libros tiene la biblioteca
-	void cambioEstado(int); // activo/suspendido || disponible/prestado
+	void cambioEstado(string); // activo/suspendido || disponible/prestado apartir de id
 	void mostrarMaterias(); 
 	int cantidadNodosIguales(string); // todos los titulos iguales, sin importar el estado
-	int LibroDisponible(string); // retorna el primer id del primer libro disponible en base al titulo, para el prestamo
-	T* retornaObj(int id); // retorna objs en base al id 
-	bool estaContenido(int);
+	string LibroDisponible(string); // retorna el primer id del primer libro disponible en base al titulo, para el prestamo
+	T* retornaObj(string id); // retorna objs en base al id 
+	bool estaContenido(string);  //check mediante id si esta en la lista
 
 };
 
@@ -96,7 +96,7 @@ void Lista<T>::mostrar() {
 }
 
 template <class T>
-void Lista<T>::borrar(int id) {
+void Lista<T>::borrar(string id) {
 
 	if (head != NULL) {
 
@@ -213,7 +213,7 @@ void Lista<T>::mostrarListaFiltrada(string filtro) {
 
 
 template <class T>
-void Lista<T>::mostrarEspecifico(int dato) {
+void Lista<T>::mostrarEspecifico(string dato) {
 
 	Nodo<T>* aux = head;
 	bool enc = false;
@@ -292,7 +292,7 @@ int Lista<T>::cantidadTotalNodos() {
 }
 
 template<class T>
-void Lista<T>::cambioEstado(int id) {
+void Lista<T>::cambioEstado(string id) {
 
 	Nodo<T>* aux = head;
 
@@ -312,7 +312,7 @@ void Lista<T>::cambioEstado(int id) {
 }
 
 template <class T>
-int Lista<T>::LibroDisponible(string titulo) {
+string Lista<T>::LibroDisponible(string titulo) {
 
 	Nodo<T>* aux = head;
 
@@ -328,12 +328,12 @@ int Lista<T>::LibroDisponible(string titulo) {
 
 	}
 
-	return 0;
+	return "0";
 
 }
 
 template<class T>
-T *Lista<T>::retornaObj(int id) {
+T *Lista<T>::retornaObj(string id) {
 
 	Nodo<T>* aux = head;
 	
@@ -355,7 +355,7 @@ T *Lista<T>::retornaObj(int id) {
 }
 
 template<class T>
-bool Lista<T>::estaContenido(int id)
+bool Lista<T>::estaContenido(string id)
 {
 	Nodo<T>* aux = head;
 

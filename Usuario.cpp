@@ -5,7 +5,7 @@ int Usuario::cont = 1;
 Usuario::Usuario(string Nombre,  bool Estado) :nombre(Nombre), estado(Estado) {
 
 	prestamos; // lista de prestamos
-	this->id = cont;
+	this->id += std::to_string(cont);
 	cont++;
 
 }
