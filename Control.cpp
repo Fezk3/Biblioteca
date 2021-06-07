@@ -230,7 +230,7 @@ void Control::MenuUsuarios(Usuario* U)
 		cout << "2. Mostar Usuarios\n";
 		cout << "3. Mostar Usuario Especifico\n";
 		cout << "4. Eliminar Usuario\n";
-		cout << "5. Realizar Prestamo\n";
+		cout << "5. Menu de Prestamos\n";
 		cout << "6. Ver mis prestamos\n";
 		cout << "7. Ver mi cantidad de prestamos\n";
 		cout << "8. Ver mi Usuario\n";
