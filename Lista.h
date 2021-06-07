@@ -361,8 +361,14 @@ bool Lista<T>::estaContenido(string id)
 
 	while (aux!=NULL)
 	{
-		if(aux->getDato()->getId()== id){ return true; }
+		if(aux->getDato()->getId() == id){
+
+			return true;
+
+		}
+
 		aux = aux->getSig();
+
 	}
 
 	return false;
