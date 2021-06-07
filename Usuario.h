@@ -12,10 +12,10 @@ public:
 	Usuario(string Nombre, bool Estado);
 	virtual ~Usuario();
 	void setNombre(string Nombre);
-	void setId(int ID);
+	void setId(string ID);
 	void setEstado(bool Estado);
 	string getNombre();
-	int getId();
+	string getId();
 	bool getEstado();
 	void prestamo(Prestamo*);
 	void mostrarPrestamos();
@@ -28,7 +28,7 @@ public:
 	Lista<Prestamo> prestamos;//Lista de prestamos 
 private:
 	string nombre;
-	int id;
+	string id;
 	bool estado;
 	static int cont;
 };

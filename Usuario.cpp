@@ -17,7 +17,7 @@ void Usuario::setNombre(string Nombre) {
 	this->nombre = Nombre;
 }
 
-void Usuario::setId(int ID) {
+void Usuario::setId(string ID) {
 	this->id = ID;
 }
 
@@ -30,7 +30,7 @@ string Usuario::getNombre() {
 	return nombre;
 }
 
-int Usuario::getId() {
+string Usuario::getId() {
 	return id;
 }
 
