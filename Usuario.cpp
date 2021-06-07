@@ -67,7 +67,7 @@ string Usuario::devolver(string id) {
 
 bool Usuario::checkPrestamo(string idPres) {
 
-	if (prestamos.cantidadTotalNodos() == 0 || prestamos.estaContenido(id) == false) {
+	if (prestamos.cantidadTotalNodos() == 0 || prestamos.estaContenido(idPres) == false) {
 
 		return false;
 
