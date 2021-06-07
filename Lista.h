@@ -21,7 +21,7 @@ public:
 
 	void agregar(T* dato);
 	void mostrar(); // muestra la lista completa con tostring
-	void borrar(string); // borra por medio de id
+	bool borrar(string); // borra por medio de id
 	void disponibilidad(string); // cuantos ejemplares de un libro para prestar hay apartir del titulo
 	void mostrarListaFiltrada(string); // muestra los distintos ejemplares de libros segun el criterio dado
 	void mostrarEspecifico(string); // mostrar ibj especifico con tostring por medio de id
@@ -96,7 +96,7 @@ void Lista<T>::mostrar() {
 }
 
 template <class T>
-void Lista<T>::borrar(string id) {
+bool Lista<T>::borrar(string id) {
 
 	if (head != NULL) {
 
@@ -120,11 +120,11 @@ void Lista<T>::borrar(string id) {
 
 		if (borrar == NULL) {
 
-			cout << "El Elemento No Existe\n";
+			return false;
 
 		}
 		else {
-			
+
 			if (anterior == NULL) {
 
 				head = head->getSig();
@@ -138,7 +138,7 @@ void Lista<T>::borrar(string id) {
 
 			}
 
-			cout << "\nElemente borrado con exito\n\n";
+			return true;
 
 		}
 
@@ -146,6 +146,7 @@ void Lista<T>::borrar(string id) {
 
 
 }
+
 
 template <class  T>
 void Lista<T>::disponibilidad(string dispo) {
