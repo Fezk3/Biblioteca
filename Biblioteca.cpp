@@ -26,7 +26,7 @@ void Biblioteca::MostarUsuarios()
     Usuarios.mostrar();
 }
 
-void Biblioteca::MostarLibro(int ID)
+void Biblioteca::MostarLibro(string ID)
 {
     Coleccion.mostrarEspecifico(ID);
 }
@@ -41,12 +41,12 @@ void Biblioteca::MostrarCantidadLibrosEspc(string Nombre)
     cout<<"\n\nDel libro "<<Nombre<<" Hay un total de "<< Coleccion.cantidadNodosIguales(Nombre)<<" unidades\n\n";
 }
 
-void Biblioteca::EliminarLibro(int ID)
+void Biblioteca::EliminarLibro(string ID)
 {
     Coleccion.borrar(ID);
 }
 
-void Biblioteca::EliminarUsuario(int ID)
+void Biblioteca::EliminarUsuario(string ID)
 {
     Usuarios.borrar(ID);
 }
@@ -56,7 +56,7 @@ void Biblioteca::MostrarDisp(string titulo)
     Coleccion.disponibilidad(titulo);
 }
 
-void Biblioteca::MostrarEspeUsuario(int ID)
+void Biblioteca::MostrarEspeUsuario(string ID)
 {
     Usuarios.mostrarEspecifico(ID);
 }
@@ -66,7 +66,7 @@ void Biblioteca::MostarMaterias()
     Coleccion.mostrarMaterias();
 }
 
-Usuario *Biblioteca::TraerUsuario(int ID)
+Usuario *Biblioteca::TraerUsuario(string ID)
 {
     return Usuarios.retornaObj(ID);
 }
