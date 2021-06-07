@@ -1,10 +1,16 @@
 #include "Control.h"
 #include <string> 
 
+void Control::UsuarioNuevo(Usuario* nuevo) {
+
+	Global.Usuarios.agregar(nuevo);
+
+}
+
 void Control::MenuInicioS()
 {
 	int Finalizar = 0;
-	string ID ;
+	string ID;
 
 	Usuario* Cliente;
 
@@ -17,8 +23,6 @@ void Control::MenuInicioS()
 		system("cls");
 		Cliente = Global.TraerUsuario(ID);
 		if (Cliente !=NULL) {
-			system("pause");
-			system("cls");
 			SubMenu(Cliente);
 			Finalizar=1;
 		}
@@ -28,6 +32,7 @@ void Control::MenuInicioS()
 			cout << "\n===============================\n";
 			system("pause");
 			system("cls");
+
 			Finalizar = 1;
 		}
 	} while (Finalizar != 1);
@@ -93,6 +98,7 @@ void Control::MenuLibros(Usuario* U)
 						cin.ignore();
 						cout << "\nEscriba el criterio de busqueda (Materia,Titulo,Autor)\n";
 						getline(cin, filtrodebusqueda);
+						cout << "\n\n";
 						Global.Coleccion.mostrarListaFiltrada(filtrodebusqueda);
 						FinalizarSub = 1;
 						system("pause");
@@ -101,7 +107,7 @@ void Control::MenuLibros(Usuario* U)
 					case 4:
 						cout << "===============================\n";
 						cin.ignore();
-						cout << "Digite un nombre: ";
+						cout << "Digite un nombre: \n";
 						getline(cin, parametros);
 						cout << "\n===============================\n";
 						Global.MostrarCantidadLibrosEspc(parametros);
@@ -115,9 +121,9 @@ void Control::MenuLibros(Usuario* U)
 						cin.ignore();
 						cout << "\nDigite un nombre: ";
 						getline(cin, parametros);
-						cout << "\n===============================\n";
+						cout << "\n===============================\n\n";
 						//cout << "La cantidad de libros disponibles es de: ";
-						Global.MostrarDisp(parametros); cout << "\n";
+						Global.MostrarDisp(parametros); 
 						cout << "\n===============================\n";
 						FinalizarSub = 1;
 						system("pause");
@@ -187,12 +193,10 @@ void Control::MenuLibros(Usuario* U)
 						break;
 					case 10:
 						cout << "===============================\n";
-						cout << "Cerrando el Menu \n";
+						cout << "\nCerrando el Menu \n";
 						cout << "===============================\n";
 						Finalizar = 1;
 						FinalizarSub = 1;
-						system("pause");
-						system("cls");
 						break;
 					}
 				} while (FinalizarSub != 1);
@@ -221,7 +225,7 @@ void Control::MenuUsuarios(Usuario* U)
 	do {
 		string ID;
 		string Comprobar;
-		cout << "============(" << Cliente->getNombre() << ")============\n\n";
+		cout << "============("  << Cliente->getNombre() <<  ")============\n\n";
 		cout << "1. Agregar Usuario\n";
 		cout << "2. Mostar Usuarios\n";
 		cout << "3. Mostar Usuario Especifico\n";
@@ -337,8 +341,6 @@ void Control::MenuUsuarios(Usuario* U)
 						cout << "===============================\n";
 						Finalizar = 1;
 						FinalizarSub = 1;
-						system("pause");
-						system("cls");
 						break;
 					}
 				} while (FinalizarSub != 1);
@@ -413,14 +415,14 @@ void Control::MenuPrestamo(Usuario* U)
 								Global.Coleccion.cambioEstado(id);//Pasando el estado del libro de true a false
 								Cliente->prestamo(prestamoNuevo);
 								cout << "==================================\n";
-								cout << "Prestamo realizado exitosamente:\n";
+								cout << "\nPrestamo realizado exitosamente:\n";
 								Cliente->prestamos.mostrarEspecifico(prestamoNuevo->getId());
 								system("pause");
 								system("cls");
 							}
 						} else
 						{
-							cout << "El usuario ya tiene el maximo numero de prestamos permitidos\n";
+							cout << "\nEl usuario ya tiene el maximo numero de prestamos permitidos\n";
 							system("pause");
 							system("cls");
 						}
@@ -431,7 +433,7 @@ void Control::MenuPrestamo(Usuario* U)
 						cout<<"Digite el id del prestamo que desea devolver:\n";
 						cin >> idprestamo;
 						if (Cliente->checkPrestamo(idprestamo) == false) {
-							cout << "No tiene prestamos disponibles para devolver" << endl;
+							cout << "\nEl id no corresponde a ningun prestamo activo" << endl;
 							system("pause");
 							system("cls");
 							FinalizarSub = 1;
@@ -454,8 +456,6 @@ void Control::MenuPrestamo(Usuario* U)
 						cout << "===============================\n";
 						FinalizarSub = 1;
 						Finalizar = 1;
-						system("pause");
-						system("cls");
 						break;
 					}
 				} while (FinalizarSub != 1);
@@ -479,19 +479,21 @@ void Control::MenuPrestamo(Usuario* U)
 void Control::MenuPrincipal()
 {
 	int Finalizar = 0, FinalizarSub = 0, Numero = 0;
-	string Comprobar = "", Comprobar2 = "";
+	string Comprobar = "", Comprobar2 = "", nombre;
+	Usuario* nuevo;
 
 	do {
 		cout << "============Bienvenido============\n";
 		cout << "\n1. Iniciar secion\n";
-		cout << "2. Salir\n\n";
+		cout << "2. Registrarse\n";
+		cout << "3. Salir\n\n";
 		cout << "==================================\n";
 		cout << "Digite un numero: "; cin >> Comprobar; cout << "\n";
 		system("pause");
 		system("cls");
 		try
 		{
-			if (Comprobar!="1"&&Comprobar!="2") {
+			if (Comprobar!="1"&&Comprobar!="2"&&Comprobar!="3") {
 				throw Comprobar;
 			}
 			else {
@@ -505,6 +507,25 @@ void Control::MenuPrincipal()
 						system("cls");
 						break;
 					case 2:
+						cin.ignore();
+						cout << "===============================\n";
+						cout << "\nDigite su nombre: \n";
+						getline(cin, nombre);
+						nuevo = new Usuario(nombre, 1);
+						UsuarioNuevo(nuevo);
+						cout << "\n\nUsuario agregado con exito, ya puede iniciar sesion\n\n";
+						cout << "===============================\n";
+						system("pause");
+						system("cls");
+						cout << "===============================\n";
+						cout << "\nSu usuario es: \n\n";
+						cout << nuevo->toString();
+						cout << "\n\n===============================\n";
+						system("pause");
+						system("cls");
+						FinalizarSub = 1;
+						break;
+					case 3:
 						cout << "===============================\n";
 						cout << "\nCerrando el Programa\n";
 						cout << "\n===============================\n";
@@ -571,12 +592,10 @@ void Control::SubMenu(Usuario* U)
 						break;
 					case 3:
 						cout << "===============================\n";
-						cout << "\nCerrando el menu\n";
+						cout << "\nCerrando el menu\n\n";
 						cout << "===============================\n";
 						FinalizarSub = 1;
 						Finalizar=1;
-						system("pause");
-						system("cls");
 						break;
 					}
 				} while (FinalizarSub != 1);
@@ -586,7 +605,7 @@ void Control::SubMenu(Usuario* U)
 		catch (string Comprobar)
 		{
 			cout << "===============================\n";
-			cout << "El numero que digito  es incorrecto, vuelva a intentar\n";
+			cout << "\nEl numero que digito  es incorrecto, vuelva a intentar\n\n";
 			cout << "===============================\n";
 			system("pause");
 			system("cls");

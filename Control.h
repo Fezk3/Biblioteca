@@ -12,6 +12,7 @@ public:
 	void MenuPrincipal();
 	void SubMenu(Usuario *);
 	void LlenaListas();
+	void UsuarioNuevo(Usuario *);
 private:
 	Biblioteca Global;
 };
