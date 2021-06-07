@@ -51,11 +51,11 @@ void Usuario::mostrarPrestamos() {
 
 }
 
-int Usuario::devolver(int id) {
+string Usuario::devolver(string id) {
 
 	Prestamo* temp = prestamos.retornaObj(id); // prestamo a devolver
 
-	int libroId = temp->getIdLibro();
+	string libroId = temp->getIdLibro();
 
 	cout << temp->toString()<<endl;
 
@@ -65,7 +65,7 @@ int Usuario::devolver(int id) {
 
 }
 
-bool Usuario::checkPrestamo(int idPres) {
+bool Usuario::checkPrestamo(string idPres) {
 
 	if (prestamos.cantidadTotalNodos() == 0 || prestamos.estaContenido(id) == false) {
 
