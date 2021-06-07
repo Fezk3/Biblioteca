@@ -3,7 +3,7 @@
 // id unico por prestamo
 int Prestamo::num = 1;
 
-Prestamo::Prestamo(int id_libro, int id_usuario, string dia_prestamo, string dia_vencimiento) : id_libro(id_libro), id_usuario(id_usuario), dia_prestamo(dia_prestamo), dia_vencimiento(dia_vencimiento) {
+Prestamo::Prestamo(string id_libro, string id_usuario, string dia_prestamo, string dia_vencimiento) : id_libro(id_libro), id_usuario(id_usuario), dia_prestamo(dia_prestamo), dia_vencimiento(dia_vencimiento) {
 
 	this->id = num;
 	num++;
@@ -15,13 +15,13 @@ Prestamo::~Prestamo() {
 }
 
 //sets
-void Prestamo::setIdLibro(int id_libro) {
+void Prestamo::setIdLibro(string id_libro) {
 
 	this->id_libro = id_libro;
 
 }
 
-void Prestamo::setIdUsuario(int id_usuario) {
+void Prestamo::setIdUsuario(string id_usuario) {
 
 	this->id_usuario = id_usuario;
 
@@ -40,13 +40,13 @@ void Prestamo::setVencimiento(string dia_vencimiento) {
 }
 
 //gets
-int Prestamo::getIdUsuario() {
+string Prestamo::getIdUsuario() {
 
 	return id_usuario;
 
 }
 
-int Prestamo::getIdLibro() {
+string Prestamo::getIdLibro() {
 
 	return id_libro;
 
@@ -64,7 +64,7 @@ string Prestamo::getDiaInicio() {
 
 }
 
-int Prestamo::getId() {
+string Prestamo::getId() {
 
 	return id;
 
