@@ -170,9 +170,17 @@ void Control::MenuLibros(Usuario* U)
 						cout << "===============================\n";
 						cout << "Digite el ID: ";
 						cin >> ID;
-						cout << " \n";
-						cout << "===============================\n";
-						Global.EliminarLibro(ID);
+						cout << "\n===============================\n";
+						if (Global.EliminarLibro(ID) == false) {
+
+							cout << "\nEl libro no existe\n";
+
+						}
+						else {
+
+							cout << "\nEl libro a sido eliminado con exito\n";
+
+						}
 						cout << "===============================\n";
 						FinalizarSub = 1;
 						system("pause");
@@ -243,8 +251,7 @@ void Control::MenuUsuarios(Usuario* U)
 						cin.ignore();
 						cout << "Digite el Nombre: \n";
 						getline(cin, Nombre);
-						cout << " \n";
-						cout << "===============================\n";
+						cout << "\n===============================\n";
 						Usuario* Nuevo;
 						Nuevo = new Usuario(Nombre, 1);
 						Global.AgregarUsuario(Nuevo);
@@ -278,9 +285,17 @@ void Control::MenuUsuarios(Usuario* U)
 						cout << "===============================\n";
 						cout << "Digite el ID: ";
 						cin >> ID;
-						cout << " \n";
-						cout << "===============================\n";
-						Global.EliminarUsuario(ID);
+						cout << "\n===============================\n";
+						if (Global.EliminarUsuario(ID) == false) {
+
+							cout << "El usuario no existe\n";
+
+						}
+						else {
+
+							cout << "Usuario a sido eliminado con exito\n";
+
+						}
 						cout << "===============================\n";
 						FinalizarSub = 1;
 						system("pause");
@@ -556,7 +571,7 @@ void Control::SubMenu(Usuario* U)
 						break;
 					case 3:
 						cout << "===============================\n";
-						cout << "Cerrando el menu\n";
+						cout << "\nCerrando el menu\n";
 						cout << "===============================\n";
 						FinalizarSub = 1;
 						Finalizar=1;
