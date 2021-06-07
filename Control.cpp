@@ -10,9 +10,9 @@ void Control::MenuInicioS()
 
 	do {
 		cout << "===============================\n";
-		cout << "Digite una Identificacion\n";
+		cout << "\nDigite una Identificacion\n";
 		cout << "ID: "; cin >> ID; cout << "\n";
-		cout << "===============================\n";
+		cout << "\n===============================\n";
 		system("pause");
 		system("cls");
 		Cliente = Global.TraerUsuario(ID);
@@ -79,12 +79,11 @@ void Control::MenuLibros(Usuario* U)
 						break;
 					case 2:
 						cout << "===============================\n";
-						cout << "Digite el ID: ";
+						cout << "\nDigite el ID: ";
 						cin >> ID;
-						cout << " \n";
-						cout << "===============================\n";
+						cout << "\n===============================\n";
 						Global.MostarLibro(ID);
-						cout << "===============================\n";
+						cout << "\n===============================\n";
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
@@ -92,7 +91,7 @@ void Control::MenuLibros(Usuario* U)
 					case 3:
 						cout << "===============================\n";
 						cin.ignore();
-						cout << "Escriba el criterio de busqueda (Materia,Titulo,Autor)\n";
+						cout << "\nEscriba el criterio de busqueda (Materia,Titulo,Autor)\n";
 						getline(cin, filtrodebusqueda);
 						Global.Coleccion.mostrarListaFiltrada(filtrodebusqueda);
 						FinalizarSub = 1;
@@ -104,10 +103,9 @@ void Control::MenuLibros(Usuario* U)
 						cin.ignore();
 						cout << "Digite un nombre: ";
 						getline(cin, parametros);
-						cout << " \n";
-						cout << "===============================\n";
+						cout << "\n===============================\n";
 						Global.MostrarCantidadLibrosEspc(parametros);
-						cout << "===============================\n";
+						cout << "\n===============================\n";
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
@@ -115,10 +113,9 @@ void Control::MenuLibros(Usuario* U)
 					case 5:
 						cout << "===============================\n";
 						cin.ignore();
-						cout << "Digite un nombre: ";
+						cout << "\nDigite un nombre: ";
 						getline(cin, parametros);
-						cout << " \n";
-						cout << "===============================\n";
+						cout << "\n===============================\n";
 						//cout << "La cantidad de libros disponibles es de: ";
 						Global.MostrarDisp(parametros); cout << "\n";
 						cout << "\n===============================\n";
@@ -327,8 +324,10 @@ void Control::MenuUsuarios(Usuario* U)
 						system("cls");
 						break;
 					case 8:
-						cout << "Su usuario es: \n";
+						cout << "===============================\n";
+						cout << "\nSu usuario es: \n\n";
 						cout<<Cliente->toString();
+						cout << "\n===============================\n";
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
@@ -508,8 +507,8 @@ void Control::MenuPrincipal()
 						break;
 					case 2:
 						cout << "===============================\n";
-						cout << "Cerrando el Programa\n";
-						cout << "===============================\n";
+						cout << "\nCerrando el Programa\n";
+						cout << "\n===============================\n";
 						FinalizarSub = 1;
 						Finalizar = 1;
 						system("pause");
@@ -524,8 +523,8 @@ void Control::MenuPrincipal()
 		catch (string Comprobar)
 		{
 			cout << "===============================\n";
-			cout << "El numero que digito  es incorrecto, vuelva a intentar\n";
-			cout << "===============================\n";
+			cout << "\nEl numero que digito  es incorrecto, vuelva a intentar\n";
+			cout << "\n===============================\n";
 			system("pause");
 			system("cls");
 		}
