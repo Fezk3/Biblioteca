@@ -20,7 +20,7 @@ private:
 	string editorial;
 	bool estado;
 	static int cont;
-	int id;
+	string id;
 
 public:
 
@@ -34,7 +34,7 @@ public:
 	void setAnnio_edi(string);
 	void setEditorial(string);
 	void setEstado(bool);
-	void setId(int);
+	void setId(string);
 
 	// gets
 
@@ -44,7 +44,7 @@ public:
 	string getAnnio_eddi();
 	string getEditorial();
 	bool getEstado();
-	int getId();
+	string getId();
 
 	// methods
 

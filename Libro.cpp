@@ -46,7 +46,7 @@ void Libro::setEstado(bool estado) {
 
 }
 
-void Libro::setId(int id) {
+void Libro::setId(string id) {
 
 	this->id = id;
 
@@ -84,7 +84,7 @@ bool Libro::getEstado() {
 
 }
 
-int Libro::getId() {
+string Libro::getId() {
 
 	return id;
 
