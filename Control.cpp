@@ -15,16 +15,14 @@ void Control::cambioEstadoUsuario(string id) {
 
 		temp = Global.Usuarios.retornaObj(id);
 		Global.Usuarios.cambioEstado(id);
-		cout << "\nEl estado del usuario: "<<temp->getNombre()<<" con el id " << id << " ha sido cambiado a " << (temp->getEstado() ? "Activo" : "Inactivo")<<"\n";
+		cout << "\nEl estado del usuario: "<<temp->getNombre()<<" con el id " << id << " ha sido cambiado a " << (temp->getEstado() ? "Activo" : "Inactivo")<<"\n\n";
 
 	}
 	else {
 
-		cout << "\nEl id ingresado no pertenece a ningun usuario registrado, intente con otro\n";
+		cout << "\nEl id ingresado no pertenece a ningun usuario registrado, intente con otro\n\n";
 
 	}
-
-	delete temp;
 
 }
 
