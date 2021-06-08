@@ -13,6 +13,7 @@ public:
 	void SubMenu(Usuario *);
 	void LlenaListas();
 	void UsuarioNuevo(Usuario *);
+	void cambioEstadoUsuario(string);
 private:
 	Biblioteca Global;
 };

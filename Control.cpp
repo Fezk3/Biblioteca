@@ -7,6 +7,27 @@ void Control::UsuarioNuevo(Usuario* nuevo) {
 
 }
 
+void Control::cambioEstadoUsuario(string id) {
+
+	Usuario* temp;
+
+	if (Global.Usuarios.estaContenido(id) == true) {
+
+		temp = Global.Usuarios.retornaObj(id);
+		Global.Usuarios.cambioEstado(id);
+		cout << "\nEl estado del usuario: "<<temp->getNombre()<<" con el id " << id << " ha sido cambiado a " << (temp->getEstado() ? "Activo" : "Inactivo")<<"\n";
+
+	}
+	else {
+
+		cout << "\nEl id ingresado no pertenece a ningun usuario registrado, intente con otro\n";
+
+	}
+
+	delete temp;
+
+}
+
 void Control::MenuInicioS()
 {
 	int Finalizar = 0;
