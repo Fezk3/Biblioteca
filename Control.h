@@ -5,6 +5,8 @@
 class Control
 {
 public:
+	Control();
+	virtual ~Control();
 	void MenuInicioS();
 	void MenuLibros(Usuario*);
 	void MenuUsuarios(Usuario *);
@@ -19,5 +21,3 @@ private:
 };
 
 #endif // !CONTROL_H
-
-

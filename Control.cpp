@@ -1,6 +1,14 @@
 #include "Control.h"
 #include <string> 
 
+Control::Control() {
+
+}
+
+Control::~Control() {
+
+}
+
 void Control::UsuarioNuevo(Usuario* nuevo) {
 
 	Global.Usuarios.agregar(nuevo);

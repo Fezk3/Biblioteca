@@ -26,7 +26,7 @@ private:
 public:
 
 	Libro(string, string, string,string,string,bool);
-	~Libro();
+	virtual ~Libro();
 
 	// sets
 	void setTitulo(string);

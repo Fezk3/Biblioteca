@@ -23,7 +23,7 @@ public:
     void MostrarEspeUsuario(string); //Muestra persona en especifico
     void MostarMaterias();// muestra las materias
     Usuario *TraerUsuario(string); //Trae un usuario con el metodod de Retorna  *T 
-    ~Biblioteca();
+    virtual ~Biblioteca();
 
 
     //Atributos

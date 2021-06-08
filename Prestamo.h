@@ -25,7 +25,7 @@ private:
 public:
 
 	Prestamo(string, string, string, string);
-	~Prestamo();
+	virtual ~Prestamo();
 
 	//sets
 	void setIdLibro(string);
