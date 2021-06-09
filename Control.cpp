@@ -253,15 +253,14 @@ void Control::MenuUsuarios(Usuario* U)
 		string ID;
 		string Comprobar;
 		cout << "============("  << Cliente->getNombre() <<  ")============\n\n";
-		cout << "1. Agregar Usuario\n";
+		cout << "1. Menu de Prestamos\n";
 		cout << "2. Mostar Usuarios\n";
 		cout << "3. Mostar Usuario Especifico\n";
-		cout << "4. Eliminar Usuario\n";
-		cout << "5. Menu de Prestamos\n";
-		cout << "6. Ver mis prestamos\n";
-		cout << "7. Ver mi cantidad de prestamos\n";
-		cout << "8. Ver mi Usuario\n";
-		cout << "9. Salir\n\n";
+		cout << "4. Ver mi Usuario\n";
+		cout << "5. Cambiar estado de usuario\n";
+		cout << "6. Agregar Usuario\n";
+		cout << "7. Eliminar Usuario\n";
+		cout << "8. Salir\n\n";
 		cout << "==================================\n";
 		cout << "Digite un numero: ";
 		cin >> Comprobar;
@@ -269,29 +268,24 @@ void Control::MenuUsuarios(Usuario* U)
 		system("cls");
 		try
 		{
-			if (Comprobar != "1" && Comprobar != "2" && Comprobar != "3" && Comprobar != "4" && Comprobar != "5" && Comprobar != "6" && Comprobar != "7" && Comprobar != "8" && Comprobar != "9") {
+			if (Comprobar != "1" && Comprobar != "2" && Comprobar != "3" && Comprobar != "4" && Comprobar != "5" && Comprobar != "6" && Comprobar != "7" && Comprobar != "8") {
+
 				throw Comprobar;
+
 			}
 			else {
 				string Nombre; bool Estado = false; int Cantidad = 0; 
 				do {
 					switch (stoi(Comprobar)) {
 					case 1:
-						cout << "===============================\n";
-						cin.ignore();
-						cout << "\nDigite el Nombre: \n";
-						getline(cin, Nombre);
-						cout << "\n\n===============================\n";
-						Usuario* Nuevo;
-						Nuevo = new Usuario(Nombre, 1);
-						Global.AgregarUsuario(Nuevo);
-						cout << "\nEl usuario ha sido creado exitosamente\n";
-						cout << Nuevo->toString();
+						MenuPrestamo(Cliente);
 						FinalizarSub = 1;
 						system("pause");
 						system("cls");
 						break;
+						
 					case 2:
+						
 						cout << "===============================\n\n";
 						Global.MostarUsuarios();
 						cout << "\n===============================\n";
@@ -300,6 +294,7 @@ void Control::MenuUsuarios(Usuario* U)
 						system("cls");
 						break;
 					case 3:
+
 						cout << "===============================\n\n";
 						cout << "Digite el ID: ";
 						cin >> ID;
@@ -310,7 +305,47 @@ void Control::MenuUsuarios(Usuario* U)
 						system("pause");
 						system("cls");
 						break;
+						
 					case 4:
+						
+						cout << "===============================\n";
+						cout << "\nSu usuario es: \n\n";
+						cout << Cliente->toString();
+						cout << "\n===============================\n";
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+
+					case 5:
+
+						cout << "===============================\n";
+						cout << "\nDigite el ID del usuario: "; cin >> ID;
+						cout << "\n";
+						cambioEstadoUsuario(ID);
+						cout << "\n===============================\n";
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+
+					case 6:
+						
+						cout << "===============================\n";
+						cin.ignore();
+						cout << "\nDigite el Nombre: \n";
+						getline(cin, Nombre);
+						cout << "\n===============================\n";
+						Usuario* Nuevo;
+						Nuevo = new Usuario(Nombre, 1);
+						Global.AgregarUsuario(Nuevo);
+						cout << "\nEl usuario ha sido creado exitosamente\n";
+						cout << Nuevo->toString();
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+					case 7:
 						cout << "===============================\n";
 						cout << "\nDigite el ID: ";
 						cin >> ID;
@@ -330,39 +365,8 @@ void Control::MenuUsuarios(Usuario* U)
 						system("pause");
 						system("cls");
 						break;
-					case 5:
-						MenuPrestamo(Cliente);
-						FinalizarSub = 1;
-						system("pause");
-						system("cls");
-						break;
-					case 6:
-						cout << "===============================\n\n";
-						Cliente->mostrarPrestamos();
-						cout << "\n===============================\n";
-						FinalizarSub = 1;
-						system("pause");
-						system("cls");
-						break;
-					case 7:
-						cout << "===============================\n";
-						cout << "\nLa cantidad de prestamos del usuario " << Cliente->getNombre() << " es de: ";
-						cout<<Cliente->cantidadPrestamos();
-						cout << "\n===============================\n";
-						FinalizarSub = 1;
-						system("pause");
-						system("cls");
-						break;
+
 					case 8:
-						cout << "===============================\n";
-						cout << "\nSu usuario es: \n\n";
-						cout<<Cliente->toString();
-						cout << "\n===============================\n";
-						FinalizarSub = 1;
-						system("pause");
-						system("cls");
-						break;
-					case 9:
 						cout << "===============================\n";
 						cout << "\nCerrando el Menu \n\n";
 						cout << "===============================\n";
@@ -397,14 +401,16 @@ void Control::MenuPrestamo(Usuario* U)
 		cout << "============"<<Cliente->getNombre()<<"============\n";
 		cout << "1. Solocitar\n";
 		cout << "2. Devolucion\n";
-		cout << "3. Salir\n";
+		cout << "3. Ver mis prestamos\n";
+		cout << "4. Ver mi cantidad de prestamos\n";
+		cout << "5. Salir\n";
 		cout << "==================================\n";
 		cout << "Digite un numero: "; cin >> Comprobar; cout << "\n";
 		system("pause");
 		system("cls");
 		try
 		{
-			if (Comprobar != "1" && Comprobar != "2" && Comprobar != "3") {
+			if (Comprobar != "1" && Comprobar != "2" && Comprobar != "3" && Comprobar != "4" && Comprobar != "5") {
 				throw Comprobar;
 			}
 			else {
@@ -449,7 +455,7 @@ void Control::MenuPrestamo(Usuario* U)
 							}
 						} else
 						{
-							cout << "\nEl usuario ya tiene el maximo numero de prestamos permitidos\n";
+							cout << "\nEl usuario ya tiene el maximo numero de prestamos permitidos o se encuentra inactivo\n";
 							system("pause");
 							system("cls");
 						}
@@ -478,6 +484,28 @@ void Control::MenuPrestamo(Usuario* U)
 						}
 						break;
 					case 3:
+
+						cout << "===============================\n\n";
+						Cliente->mostrarPrestamos();
+						cout << "\n===============================\n";
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+
+					case 4:
+
+						cout << "===============================\n";
+						cout << "\nLa cantidad de prestamos del usuario " << Cliente->getNombre() << " es de: ";
+						cout << Cliente->cantidadPrestamos();
+						cout << "\n\n===============================\n";
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+
+					case 5:
+
 						cout << "===============================\n";
 						cout << "\nCerrando el menu\n\n";
 						cout << "===============================\n";

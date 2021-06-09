@@ -11,7 +11,6 @@ int main()
     Control c;
 
     c.LlenaListas();
-    c.cambioEstadoUsuario("s");
     c.MenuPrincipal();
 
 
