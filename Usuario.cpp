@@ -87,8 +87,8 @@ string Usuario::toString() {
 
 	stringstream s;
 
-	s << "Nombre: " << getNombre() << endl;
-	s << "ID: " << getId() << endl;
+	s << "Nombre: " << nombre << endl;
+	s << "ID: " << id << endl;
 	s << "Libros prestados: " << prestamos.cantidadTotalNodos() << endl;
 	s << "Estado: " << (estado ? "Activo" : "Inactivo") << std::endl;
 

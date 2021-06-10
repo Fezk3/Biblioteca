@@ -96,12 +96,12 @@ string Libro::toString() {
 
 	stringstream x;
 	
-	x << "Titulo: " << getTitulo() << endl;
-	x << "Autor(es): " << getAutores() << endl;
-	x << "Materia: " << getMateria() << endl;
-	x << "Anio de Edicion: " << getAnnio_eddi() << endl;
-	x << "Estado: " << (getEstado() ? "Disponible" : "No disponible")<<endl;
-	x << "Id: " << getId() << endl;
+	x << "Titulo: " << titulo << endl;
+	x << "Autor(es): " << autores << endl;
+	x << "Materia: " << materia << endl;
+	x << "Anio de Edicion: " << annio_edi << endl;
+	x << "Estado: " << (estado ? "Disponible" : "No disponible")<<endl;
+	x << "Id: " << id << endl;
 
 	return x.str();
 
