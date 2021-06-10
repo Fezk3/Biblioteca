@@ -144,7 +144,7 @@
     <ClCompile Include="Libro.cpp" />
     <ClCompile Include="ObjetoBase.cpp" />
     <ClCompile Include="Prestamo.cpp" />
-    <ClCompile Include="Project-I.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Usuario.cpp" />
   </ItemGroup>
   <ItemGroup>
