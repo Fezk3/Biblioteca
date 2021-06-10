@@ -14,14 +14,6 @@ Usuario::Usuario(string Nombre) :nombre(Nombre) {
 Usuario::~Usuario() {
 
 }
-void Usuario::setNombre(string Nombre) {
-	this->nombre = Nombre;
-}
-
-void Usuario::setId(string ID) {
-	this->id = ID;
-}
-
 
 void Usuario::setEstado(bool Estado) {
 	this->estado = Estado;

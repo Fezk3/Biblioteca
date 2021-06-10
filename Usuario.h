@@ -12,8 +12,6 @@ class Usuario {
 public:
 	Usuario(string Nombre);
 	virtual ~Usuario();
-	void setNombre(string Nombre);
-	void setId(string ID);
 	void setEstado(bool Estado);
 	string getNombre();
 	string getId();
