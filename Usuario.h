@@ -18,12 +18,12 @@ public:
 	string getNombre();
 	string getId();
 	bool getEstado();
-	void prestamo(Prestamo*);
-	void mostrarPrestamos();
-	string devolver(string id); // retorna id del libro que esta devolviendo
-	int cantidadPrestamos();
+	virtual void prestamo(Prestamo*);
+	virtual void mostrarPrestamos();
+	virtual string devolver(string id); // retorna id del libro que esta devolviendo
+	virtual int cantidadPrestamos();
 	virtual string toString();
-	bool checkPrestamo(string); // false si el prestamo no esta en su lista, true si lo esta
+	virtual bool checkPrestamo(string); // false si el prestamo no esta en su lista, true si lo esta
 
 	//Atributos
 	Lista<Prestamo> prestamos;//Lista de prestamos 
