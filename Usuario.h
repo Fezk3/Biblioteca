@@ -6,9 +6,10 @@
 #include <string>
 #include "Lista.h"
 #include "Prestamo.h"
+#include "ObjetoBase.h"
 using std::string; using std::stringstream; using std::cout; using std::endl; using std::cin;
 
-class Usuario {
+class Usuario : objetoBase {
 public:
 	Usuario(string Nombre);
 	virtual ~Usuario();

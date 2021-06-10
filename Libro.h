@@ -4,13 +4,14 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include "ObjetoBase.h"
 using std::string;
 using std::stringstream;
 using std::endl;
 using std::cout;
 using std::cin;
 
-class Libro {
+class Libro  : objetoBase {
 
 private:
 

@@ -3,13 +3,14 @@
 #define PRESTAMO_H
 #include <iostream>
 #include <sstream>
+#include "ObjetoBase.h"
 using std::string;
 using std::stringstream;
 using std::endl;
 using std::cout;
 using std::cin;
 
-class Prestamo
+class Prestamo : objetoBase
 {
 
 private:
