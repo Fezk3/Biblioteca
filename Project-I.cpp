@@ -4,10 +4,12 @@
 int main()
 {
 
-    Control c;
+    Control *c = new Control;
 
-    c.LlenaListas();
-    c.MenuPrincipal();
+    c->LlenaListas();
+    c->MenuPrincipal();
+
+    delete c;
 
     return 0;
 }
