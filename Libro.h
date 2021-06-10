@@ -29,13 +29,7 @@ public:
 	virtual ~Libro();
 
 	// sets
-	void setTitulo(string);
-	void setAutores(string);
-	void setMateria(string);
-	void setAnnio_edi(string);
-	void setEditorial(string);
 	void setEstado(bool);
-	void setId(string);
 
 	// gets
 
