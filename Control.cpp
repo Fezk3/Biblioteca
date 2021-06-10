@@ -337,7 +337,7 @@ void Control::MenuUsuarios(Usuario* U)
 						getline(cin, Nombre);
 						cout << "\n===============================\n";
 						Usuario* Nuevo;
-						Nuevo = new Usuario(Nombre, 1);
+						Nuevo = new Usuario(Nombre);
 						Global.AgregarUsuario(Nuevo);
 						cout << "\nEl usuario ha sido creado exitosamente\n";
 						cout << Nuevo->toString();
@@ -566,7 +566,7 @@ void Control::MenuPrincipal()
 						cout << "===============================\n";
 						cout << "\nDigite su nombre: \n";
 						getline(cin, nombre);
-						nuevo = new Usuario(nombre, 1);
+						nuevo = new Usuario(nombre);
 						UsuarioNuevo(nuevo);
 						cout << "\n\nUsuario agregado con exito, ya puede iniciar sesion\n\n";
 						cout << "===============================\n";
@@ -690,8 +690,9 @@ void Control::LlenaListas() {
 		Libro* l15 = new Libro("Hunter x Hunter", "Yoshihiro Togashi", "Manga", "1997", "Historia de ficcion", 1);
 		Libro* l16 = new Libro("Hunter x Hunter", "Yoshihiro Togashi", "Manga", "1997", "Historia de ficcion", 1);
 
-		Usuario* u1 = new Usuario("Victor Segura", 1);
-		Usuario* u2 = new Usuario("Kevin Montero", 0);
+		Usuario* u1 = new Usuario("Victor Segura");
+		Usuario* u2 = new Usuario("Kevin Montero");
+		u2->setEstado(0);
 
 		Global.AgregarUsuario(u1); Global.AgregarUsuario(u2);
 		Global.AgregarLibro(l1); Global.AgregarLibro(l2); Global.AgregarLibro(l3); Global.AgregarLibro(l4);

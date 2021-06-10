@@ -10,7 +10,7 @@ using std::string; using std::stringstream; using std::cout; using std::endl; us
 
 class Usuario {
 public:
-	Usuario(string Nombre, bool Estado);
+	Usuario(string Nombre);
 	virtual ~Usuario();
 	void setNombre(string Nombre);
 	void setId(string ID);
