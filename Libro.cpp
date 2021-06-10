@@ -16,39 +16,9 @@ Libro::~Libro() {
 
 // sets
 
-void Libro::setTitulo(string titulo){
-
-	this->titulo = titulo;
-
-}
-
-void Libro::setAutores(string autores) {
-
-	this->autores = autores;
-
-}
-
-void Libro::setMateria(string materia) {
-
-	this->materia = materia;
-
-}
-
-void Libro::setAnnio_edi(string annio_edi) {
-
-	this->annio_edi = annio_edi;
-
-}
-
 void Libro::setEstado(bool estado) {
 
 	this->estado = estado;
-
-}
-
-void Libro::setId(string id) {
-
-	this->id = id;
 
 }
 
