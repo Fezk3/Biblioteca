@@ -7,15 +7,15 @@ class Control
 public:
 	Control();
 	virtual ~Control();
-	void MenuInicioS();
-	void MenuLibros(Usuario*);
-	void MenuUsuarios(Usuario *);
-	void MenuPrestamo(Usuario*);
-	void MenuPrincipal();
-	void SubMenu(Usuario *);
-	void LlenaListas();
-	void UsuarioNuevo(Usuario *);
-	void cambioEstadoUsuario(string);
+	virtual void MenuInicioS();
+	virtual void MenuLibros(Usuario*);
+	virtual void MenuUsuarios(Usuario *);
+	virtual void MenuPrestamo(Usuario*);
+	virtual void MenuPrincipal();
+	virtual void SubMenu(Usuario *);
+	virtual void LlenaListas();
+	virtual void UsuarioNuevo(Usuario *);
+	virtual void cambioEstadoUsuario(string);
 private:
 	Biblioteca Global;
 };

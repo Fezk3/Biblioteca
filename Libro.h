@@ -49,7 +49,7 @@ public:
 
 	// methods
 
-	string toString();
+	virtual string toString();
 
 };
 

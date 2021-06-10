@@ -10,20 +10,20 @@ class Biblioteca
 public:
 
     Biblioteca();
-    void AgregarLibro(Libro*);
-    void AgregarUsuario(Usuario*);
-    void MostarLibros();
-    void MostarUsuarios();
-    void MostarLibro(string);//Muestra libro
-    void MostrarListaFiltrada(string);//Muestra la lista por el filtro de titulo o materia o autores 
-    void MostrarCantidadLibrosEspc(string); // Muestra la cantidad de libros que hay disponibles de un libro(Sin importar el estado)
-    bool EliminarLibro(string);
-    bool EliminarUsuario(string);
-    void MostrarDisp(string);//Muestra la cantidad unidades disponibles (Libros) en especifico
-    void MostrarEspeUsuario(string); //Muestra persona en especifico
-    void MostarMaterias();// muestra las materias
-    Usuario *TraerUsuario(string); //Trae un usuario con el metodod de Retorna  *T 
-    virtual ~Biblioteca();
+    virtual void AgregarLibro(Libro*);
+    virtual void AgregarUsuario(Usuario*);
+    virtual void MostarLibros();
+    virtual void MostarUsuarios();
+    virtual void MostarLibro(string);//Muestra libro
+    virtual void MostrarListaFiltrada(string);//Muestra la lista por el filtro de titulo o materia o autores 
+    virtual void MostrarCantidadLibrosEspc(string); // Muestra la cantidad de libros que hay disponibles de un libro(Sin importar el estado)
+    virtual bool EliminarLibro(string);
+    virtual bool EliminarUsuario(string);
+    virtual void MostrarDisp(string);//Muestra la cantidad unidades disponibles (Libros) en especifico
+    virtual void MostrarEspeUsuario(string); //Muestra persona en especifico
+    virtual void MostarMaterias();// muestra las materias
+    virtual Usuario *TraerUsuario(string); //Trae un usuario con el metodod de Retorna  *T 
+    virtual virtual ~Biblioteca();
 
 
     //Atributos

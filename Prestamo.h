@@ -40,7 +40,7 @@ public:
 	string getVencimiento();
 	string getId();
 
-	string toString();
+	virtual string toString();
 
 };
 

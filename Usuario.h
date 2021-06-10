@@ -22,7 +22,7 @@ public:
 	void mostrarPrestamos();
 	string devolver(string id); // retorna id del libro que esta devolviendo
 	int cantidadPrestamos();
-	string toString();
+	virtual string toString();
 	bool checkPrestamo(string); // false si el prestamo no esta en su lista, true si lo esta
 
 	//Atributos
