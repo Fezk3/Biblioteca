@@ -16,7 +16,7 @@ private:
 
 public:
 
-	Lista() { head = NULL; }
+	Lista();
 	virtual ~Lista();
 
 	void agregar(T* dato);
@@ -35,6 +35,13 @@ public:
 	bool estaContenido(string);  //check mediante id si esta en la lista
 
 };
+
+template<class T>
+Lista<T>::Lista() {
+
+	head = NULL;
+
+}
 
 template <class T>
 Lista<T>::~Lista() {
