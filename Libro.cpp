@@ -60,6 +60,12 @@ string Libro::getId() {
 
 }
 
+string Libro::getEditorial() {
+
+	return editorial;
+
+}
+
 // methods
 
 string Libro::toString() {
