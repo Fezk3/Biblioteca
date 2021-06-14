@@ -100,7 +100,7 @@ string Prestamo::toString() {
 
 	stringstream x;
 
-	x << "Prestamo:\n\n";
+	x << "Prestamo:\n";
 	x << "Id del Prestamo: " << id << std::endl;
 	x << "Id del Usuario: " << id_usuario << std::endl;
 	x << "Nombre del Usuario: " << usuario<<std::endl;
