@@ -16,6 +16,7 @@ public:
 	virtual void LlenaListas();
 	virtual void UsuarioNuevo(Usuario *);
 	virtual void cambioEstadoUsuario(string);
+	virtual bool verificaStrings(string);
 private:
 	Biblioteca Global;
 };

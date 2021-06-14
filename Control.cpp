@@ -34,6 +34,21 @@ void Control::cambioEstadoUsuario(string id) {
 
 }
 
+bool Control::verificaStrings(string paraRevisar)
+{
+
+	if (paraRevisar[0] == ' ') {
+		return false;
+	}
+
+	if (paraRevisar.length() >= 3) {
+		return true;
+	}
+	
+	return false;
+
+}
+
 void Control::MenuInicioS()
 {
 	int Finalizar = 0;
