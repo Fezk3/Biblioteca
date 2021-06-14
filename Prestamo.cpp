@@ -3,7 +3,7 @@
 // id unico por prestamo
 int Prestamo::num = 1;
 
-Prestamo::Prestamo(string id_libro, string id_usuario) : id_libro(id_libro), id_usuario(id_usuario){
+Prestamo::Prestamo(string id_libro, string id_usuario, string usuario, string libro) : id_libro(id_libro), id_usuario(id_usuario), usuario(usuario), libro(libro){
 
 	this->id += std::to_string(num);
 	num++;
