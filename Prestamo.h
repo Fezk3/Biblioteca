@@ -17,6 +17,8 @@ class Prestamo : objetoBase
 
 private:
 
+	string usuario;
+	string libro;
 	string id_libro;
 	string id_usuario;
 	string dia_prestamo;
@@ -27,7 +29,7 @@ private:
 
 public:
 
-	Prestamo(string, string);
+	Prestamo(string, string, string, string);
 	virtual ~Prestamo();
 
 	//sets
