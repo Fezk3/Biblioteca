@@ -416,7 +416,7 @@ void Control::MenuPrestamo(Usuario* U)
 			else {
 				
 				do {
-					string titulo, diaInicial, diaVencimiento, id, idprestamo, libroadevolver;
+					string titulo, id, idprestamo, libroadevolver;
 					switch (stoi(Comprobar))
 					{
 					case 1:
@@ -426,6 +426,9 @@ void Control::MenuPrestamo(Usuario* U)
 							cout << "Digite el titulo del libro que desea: " << endl;
 							getline(cin, titulo);
 							id = Global.Coleccion.LibroDisponible(titulo);
+							cout << "\n";
+							system("pause");
+							system("cls");
 
 							if (id == "0") {
 								cout << "\nEl libro no se encuentra disponible\n\n";
@@ -436,20 +439,14 @@ void Control::MenuPrestamo(Usuario* U)
 								break;
 							}
 							else {
-								cout << "Digite le fecha inicial:\n";
-								getline(cin, diaInicial);
-								cout << "Digite el dia el fecha de vencimiento(3 dias despues)\n";
-								getline(cin, diaVencimiento);
-								cout << "==================================\n";
-								system("pause");
-								system("cls");
 								Prestamo* prestamoNuevo;
-								prestamoNuevo = new Prestamo(id, Cliente->getId(), diaInicial, diaVencimiento);
+								prestamoNuevo = new Prestamo(id, Cliente->getId());
 								Global.Coleccion.cambioEstado(id);//Pasando el estado del libro de true a false
 								Cliente->prestamo(prestamoNuevo);
 								cout << "==================================\n";
-								cout << "\nPrestamo realizado exitosamente:\n";
+								cout << "\nPrestamo realizado exitosamente:\n\n";
 								Cliente->prestamos.mostrarEspecifico(prestamoNuevo->getId());
+								cout << "\n";
 								system("pause");
 								system("cls");
 							}

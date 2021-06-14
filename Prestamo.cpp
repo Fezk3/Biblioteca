@@ -7,7 +7,7 @@ Prestamo::Prestamo(string id_libro, string id_usuario) : id_libro(id_libro), id_
 
 	this->id += std::to_string(num);
 	num++;
-
+	setDiaInicio(); setVencimiento();
 }
 
 Prestamo::~Prestamo() {
@@ -104,7 +104,7 @@ string Prestamo::toString() {
 	x << "Id del usuario: " << id_usuario << std::endl;
 	x << "Id del libro prestado: " << id_libro << std::endl;
 	x << "Dia en que se realizo el prestamo: " << dia_prestamo << std::endl;
-	x << "Dia de vencimiento (3 dias despues): " << dia_vencimiento << std::endl;
+	x << "Dia de vencimiento: " << dia_vencimiento << std::endl;
 
 	return x.str();
 

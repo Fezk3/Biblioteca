@@ -1,4 +1,5 @@
 #pragma once
+#pragma warning(disable : 4996)
 #ifndef PRESTAMO_H
 #define PRESTAMO_H
 #include <iostream>
