@@ -100,10 +100,13 @@ string Prestamo::toString() {
 
 	stringstream x;
 
-	x << "Id del prestamo: " << id << std::endl;
-	x << "Id del usuario: " << id_usuario << std::endl;
-	x << "Id del libro prestado: " << id_libro << std::endl;
-	x << "Dia en que se realizo el prestamo: " << dia_prestamo << std::endl;
+	x << "Prestamo:\n\n";
+	x << "Id del Prestamo: " << id << std::endl;
+	x << "Id del Usuario: " << id_usuario << std::endl;
+	x << "Nombre del Usuario: " << usuario<<std::endl;
+	x << "Id del Libro prestado: " << id_libro << std::endl;
+	x << "Titulo del Libro: " << libro << std::endl;
+	x << "Dia de inicio: " << dia_prestamo << std::endl;
 	x << "Dia de vencimiento: " << dia_vencimiento << std::endl;
 
 	return x.str();

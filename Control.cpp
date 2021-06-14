@@ -416,7 +416,7 @@ void Control::MenuPrestamo(Usuario* U)
 			else {
 				
 				do {
-					string titulo, id, idprestamo, libroadevolver;
+					string titulo, id, idprestamo, libroadevolver, libro;
 					switch (stoi(Comprobar))
 					{
 					case 1:
@@ -439,8 +439,9 @@ void Control::MenuPrestamo(Usuario* U)
 								break;
 							}
 							else {
+								libro = Global.Coleccion.retornaObj(id)->getTitulo();
 								Prestamo* prestamoNuevo;
-								prestamoNuevo = new Prestamo(id, Cliente->getId());
+								prestamoNuevo = new Prestamo(id, Cliente->getId(), Cliente->getNombre(), libro);
 								Global.Coleccion.cambioEstado(id);//Pasando el estado del libro de true a false
 								Cliente->prestamo(prestamoNuevo);
 								cout << "==================================\n";
