@@ -3,7 +3,7 @@
 // id unico por prestamo
 int Prestamo::num = 1;
 
-Prestamo::Prestamo(string id_libro, string id_usuario, string dia_prestamo, string dia_vencimiento) : id_libro(id_libro), id_usuario(id_usuario), dia_prestamo(dia_prestamo), dia_vencimiento(dia_vencimiento) {
+Prestamo::Prestamo(string id_libro, string id_usuario) : id_libro(id_libro), id_usuario(id_usuario){
 
 	this->id += std::to_string(num);
 	num++;
@@ -27,15 +27,40 @@ void Prestamo::setIdUsuario(string id_usuario) {
 
 }
 
-void Prestamo::setDiaInicio(string dia_prestamo) {
+void Prestamo::setDiaInicio() {
 
-	this->dia_prestamo = dia_prestamo;
+	std::time_t t = std::time(0);   
+	std::tm* now = std::localtime(&t);
+	dia_prestamo = std::to_string((now->tm_year + 1900)) += '-' + std::to_string((now->tm_mon + 1)) += "-" + std::to_string(now->tm_mday);
 
 }
 
-void Prestamo::setVencimiento(string dia_vencimiento) {
+void Prestamo::setVencimiento() {
 
-	this->dia_vencimiento = dia_vencimiento;
+	int dia = 0, mes = 0;
+	std::time_t t = std::time(0);
+	std::tm* now = std::localtime(&t);
+	if(now->tm_mday + 3 > 30){
+
+		if (now->tm_mday == 28) {
+			dia = 1;
+		}
+		else if (now->tm_mday == 29) {
+			dia = 2;
+		}
+		else if (now->tm_mday == 30) {
+			dia = 3;
+		}
+		else if (now->tm_mday == 31) {
+			dia = 4;
+		}
+		mes = now->tm_mon+2;
+		dia_vencimiento = std::to_string((now->tm_year + 1900)) += "-" + std::to_string(mes) += "-" + std::to_string(dia);
+
+	}
+	else {
+		dia_vencimiento = std::to_string((now->tm_year + 1900)) += "-" + std::to_string(now->tm_mon + 1) += "-" + std::to_string(now->tm_mday + 3);
+	}
 
 }
 

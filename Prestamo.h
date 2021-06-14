@@ -3,6 +3,7 @@
 #define PRESTAMO_H
 #include <iostream>
 #include <sstream>
+#include <ctime>
 #include "ObjetoBase.h"
 using std::string;
 using std::stringstream;
@@ -25,14 +26,14 @@ private:
 
 public:
 
-	Prestamo(string, string, string, string);
+	Prestamo(string, string);
 	virtual ~Prestamo();
 
 	//sets
 	void setIdLibro(string);
 	void setIdUsuario(string);
-	void setDiaInicio(string);
-	void setVencimiento(string);
+	void setDiaInicio();
+	void setVencimiento();
 	
 	//gets
 	string getIdLibro();
