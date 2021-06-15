@@ -41,7 +41,7 @@ bool Control::verificaStrings(string paraRevisar)
 		return false;
 	}
 
-	if (paraRevisar.length() >= 3) {
+	if (paraRevisar.length() >= 4) {
 		return true;
 	}
 	
@@ -194,14 +194,55 @@ void Control::MenuLibros(Usuario* U)
 						fflush(stdin);
 						cin.ignore();
 						getline(cin, titulo);
+						while (verificaStrings(titulo) != true)
+						{
+							cout << "\nNombre no valido, vuelva a intertarlo (4 o mas caracateres )\n\n";
+							system("pause");
+							system("cls");
+							cout << "Digite el Titulo: " << endl;
+							getline(cin, titulo);
+						}
 						cout << "Digite el Autor/Autores" << endl;
 						getline(cin, autor);
+						while (verificaStrings(autor) != true)
+						{
+							cout << "\Autor no valido, vuelva a intertarlo (4 o mas caracateres )\n\n";
+							system("pause");
+							system("cls");						
+							cout << "Digite el Autor/Autores" << endl;
+							getline(cin, autor);
+						}
 						cout << "Digite la materia:" << endl;
 						getline(cin, materia);
+						while (verificaStrings(materia) != true)
+						{		
+							cout << "\Materia no valida, vuelva a intertarlo (4 o mas caracateres )\n\n";
+							system("pause");
+							system("cls");
+							cout << "Digite la materia:" << endl;
+							getline(cin, materia);
+						}
 						cout << "Digite el Anno: " << endl;
 						getline(cin, anno);
+						while (verificaStrings(anno) != true)
+						{
+							cout << "\Anno no valido, vuelva a intertarlo (Digite uno valido)\n\n";
+							system("pause");
+							system("cls");
+							cout << "Digite el Anno: " << endl;
+							getline(cin, anno);
+						}
 						cout << "Digite la descripcion: " << endl;
 						getline(cin, descripcion);
+						while (verificaStrings(descripcion) != true)
+						{
+							cout << "\Descripcion no valida, vuelva a intertarlo (4 o mas caracateres )\n\n";
+							system("pause");
+							system("cls");
+							cin.ignore();
+							cout << "Digite la descripcion: " << endl;
+							getline(cin, descripcion);
+						}
 						cout << " \n";
 						cout << "===============================\n";
 						Libro* Nuevo;
@@ -350,6 +391,14 @@ void Control::MenuUsuarios(Usuario* U)
 						cin.ignore();
 						cout << "\nDigite el Nombre: \n";
 						getline(cin, Nombre);
+						while (verificaStrings(Nombre) != true)
+						{
+							cout << "\Nombre no valido, vuelva a intertarlo (4 o mas caracateres )\n\n";
+							system("pause");
+							system("cls");
+							cout << "Digite el Nombre: " << endl;
+							getline(cin, Nombre);
+						}
 						cout << "\n===============================\n";
 						Usuario* Nuevo;
 						Nuevo = new Usuario(Nombre);
@@ -579,6 +628,14 @@ void Control::MenuPrincipal()
 						cout << "===============================\n";
 						cout << "\nDigite su nombre: \n";
 						getline(cin, nombre);
+						while (verificaStrings(nombre) != true)
+						{
+							cout << "\Nombre no valido, vuelva a intertarlo (4 o mas caracateres )\n\n";
+							system("pause");
+							system("cls");
+							cout << "Digite el Nombre: " << endl;
+							getline(cin, nombre);
+						}
 						nuevo = new Usuario(nombre);
 						UsuarioNuevo(nuevo);
 						cout << "\n\nUsuario agregado con exito, ya puede iniciar sesion\n\n";
