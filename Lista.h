@@ -162,7 +162,7 @@ void Lista<T>::disponibilidad(string dispo) {
 
 	while (aux != NULL) {
 
-		if (aux->getDato()->getTitulo() == dispo) {
+		if (aux->getDato()->getNombre() == dispo) {
 
 			encontrado = true;
 
@@ -194,9 +194,9 @@ void Lista<T>::mostrarListaFiltrada(string filtro) {
 
 	while (aux != NULL) {
 
-		if(aux->getDato()->getMateria() == filtro || aux->getDato()->getAutores() == filtro || aux->getDato()->getTitulo() == filtro) {
+		if(aux->getDato()->getMateria() == filtro || aux->getDato()->getAutores() == filtro || aux->getDato()->getNombre() == filtro) {
 
-			std::cout <<"Libro: "<< aux->getDato()->getTitulo() << std::endl;
+			std::cout <<"Libro: "<< aux->getDato()->getNombre() << std::endl;
 			std::cout << "----------\n";
 			encontrado = true;
 
@@ -264,7 +264,7 @@ int Lista<T>::cantidadNodosEspec(string titulo) {
 	
 	while (aux != NULL) {
 
-		if (aux->getDato()->getTitulo() == titulo && aux->getDato()->getEstado() == true) {
+		if (aux->getDato()->getNombre() == titulo && aux->getDato()->getEstado() == true) {
 
 			cant++;
 
@@ -325,7 +325,7 @@ string Lista<T>::LibroDisponible(string titulo) {
 
 	while (aux != NULL) {
 
-		if (aux->getDato()->getEstado() == true && aux->getDato()->getTitulo() == titulo) {
+		if (aux->getDato()->getEstado() == true && aux->getDato()->getNombre() == titulo) {
 
 			return aux->getDato()->getId();
 
@@ -390,7 +390,7 @@ int Lista<T>::cantidadNodosIguales(string titulo) {
 
 	while (aux != NULL) {
 
-		if (aux->getDato()->getTitulo() == titulo) {
+		if (aux->getDato()->getNombre() == titulo) {
 
 			cont++;
 

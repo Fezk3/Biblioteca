@@ -503,7 +503,7 @@ void Control::MenuPrestamo(Usuario* U)
 								break;
 							}
 							else {
-								libro = Global.Coleccion.retornaObj(id)->getTitulo();
+								libro = Global.Coleccion.retornaObj(id)->getNombre();
 								Prestamo* prestamoNuevo;
 								prestamoNuevo = new Prestamo(id, Cliente->getId(), Cliente->getNombre(), libro);
 								Global.Coleccion.cambioEstado(id);//Pasando el estado del libro de true a false

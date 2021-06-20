@@ -15,7 +15,7 @@ class Libro  : objetoBase {
 
 private:
 
-	string titulo;
+	string nombre;
 	string autores;
 	string materia;
 	string annio_edi;
@@ -34,7 +34,7 @@ public:
 
 	// gets
 
-	string getTitulo();
+	string getNombre();
 	string getAutores();
 	string getMateria();
 	string getAnnio_eddi();
