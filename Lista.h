@@ -4,9 +4,6 @@
 #include <iostream>
 #include "Nodo.h"
 
-template <class T>
-class Nodo;
-
 template<class T>
 class Lista {
 
