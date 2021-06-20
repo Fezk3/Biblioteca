@@ -741,19 +741,19 @@ void Control::SubMenu(Usuario* U)
 void Control::LlenaListas() {
 
 		Libro* l1 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 1);
-		Libro* l2 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 0);
+		Libro* l2 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 1);
 		Libro* l3 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 1);
 		Libro* l4 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 1);
 
 		Libro* l5 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 1);
-		Libro* l6 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 0);
+		Libro* l6 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 1);
 		Libro* l7 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 1);
-		Libro* l8 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 0);
+		Libro* l8 = new Libro("Mort", "Terry Pratchett", "Novela", "2001", "Una novela de Discomundo", 1);
 
 		Libro* l9 = new Libro("Quimica General", "Kenneth A. Goldsby", "Quimica", "2011", "Todo sobre quimica general", 1);
 		Libro* l10 = new Libro("Quimica General", "Kenneth A. Goldsby", "Quimica", "2011", "Todo sobre quimica general", 1);
 		Libro* l11 = new Libro("Quimica General", "Kenneth A. Goldsby", "Quimica", "2011", "Todo sobre quimica general", 1);
-		Libro* l12 = new Libro("Quimica General", "Kenneth A. Goldsby", "Quimica", "2011", "Todo sobre quimica general", 0);
+		Libro* l12 = new Libro("Quimica General", "Kenneth A. Goldsby", "Quimica", "2011", "Todo sobre quimica general", 1);
 
 		Libro* l13 = new Libro("Hunter x Hunter", "Yoshihiro Togashi", "Manga", "1997", "Historia de ficcion", 1);
 		Libro* l14 = new Libro("Hunter x Hunter", "Yoshihiro Togashi", "Manga", "1997", "Historia de ficcion", 1);
