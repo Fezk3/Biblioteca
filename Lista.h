@@ -28,7 +28,6 @@ public:
 	int cantidadNodosEspec(string); // cantidad de nodos en base al titulo de un libro con estado true
 	int cantidadTotalNodos(); // total de nodos en la lista -> usar por si user quiere ver el total de libros tiene la biblioteca
 	void cambioEstado(string); // activo/suspendido || disponible/prestado apartir de id
-	void mostrarMaterias(); 
 	int cantidadNodosIguales(string); // todos los titulos iguales, sin importar el estado
 	string LibroDisponible(string); // retorna el primer id del primer libro disponible en base al titulo, para el prestamo
 	T* retornaObj(string id); // retorna objs en base al id 
@@ -402,14 +401,6 @@ int Lista<T>::cantidadNodosIguales(string titulo) {
 	}
 
 	return cont;
-
-}
-
-template <class T>
-void Lista<T>::mostrarMaterias() {
-
-	cout << "Las materias de las que se dispone son: \n";
-	cout << "Biologia\nQuimica\nNovela\nManga\n";
 
 }
 

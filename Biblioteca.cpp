@@ -63,7 +63,7 @@ void Biblioteca::MostrarEspeUsuario(string ID)
 
 void Biblioteca::MostarMaterias()
 {
-    Coleccion.mostrarMaterias();
+    cout << "Biologia - Codigo: 01\nNovela - Codigo: 02\nQuimica - Codigo: 03\nManga - Codigo: 04\n";
 }
 
 Usuario *Biblioteca::TraerUsuario(string ID)
