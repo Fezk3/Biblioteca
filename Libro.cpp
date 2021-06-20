@@ -76,7 +76,7 @@ string Libro::toString() {
 	x << "Autor(es): " << autores << endl;
 	x << "Materia: " << materia << endl;
 	x << "Anio de Edicion: " << annio_edi << endl;
-	x << "Estado: " << (estado ? "Disponible" : "No disponible")<<endl;
+	x << "Estado: " << (estado ? "Disponible" : "Prestado")<<endl;
 	x << "Id: " << id << endl;
 
 	return x.str();
