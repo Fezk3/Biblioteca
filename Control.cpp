@@ -69,11 +69,10 @@ void Control::MenuInicioS()
 			Finalizar=1;
 		}
 		else {
+
 			cout << "===============================\n";
 			cout << "\nEl usuario no existe o lo digito mal\n";
 			cout << "\n===============================\n";
-			system("pause");
-			system("cls");
 
 			Finalizar = 1;
 		}
