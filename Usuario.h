@@ -13,10 +13,10 @@ class Usuario : objetoBase {
 public:
 	Usuario(string Nombre);
 	virtual ~Usuario();
-	void setEstado(bool Estado);
-	string getNombre();
-	string getId();
-	bool getEstado();
+	virtual void setEstado(bool Estado);
+	virtual string getNombre();
+	virtual string getId();
+	virtual bool getEstado();
 	virtual void prestamo(Prestamo*);
 	virtual void mostrarPrestamos();
 	virtual string devolver(string id); // retorna id del libro que esta devolviendo

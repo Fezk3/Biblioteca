@@ -33,17 +33,17 @@ public:
 	virtual ~Prestamo();
 
 	//sets
-	void setIdLibro(string);
-	void setIdUsuario(string);
-	void setDiaInicio();
-	void setVencimiento();
+	virtual void setIdLibro(string);
+	virtual void setIdUsuario(string);
+	virtual void setDiaInicio();
+	virtual void setVencimiento();
 	
 	//gets
-	string getIdLibro();
-	string getIdUsuario();
-	string getDiaInicio();
-	string getVencimiento();
-	string getId();
+	virtual string getIdLibro();
+	virtual string getIdUsuario();
+	virtual string getDiaInicio();
+	virtual string getVencimiento();
+	virtual string getId();
 
 	virtual string toString();
 

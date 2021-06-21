@@ -30,17 +30,17 @@ public:
 	virtual ~Libro();
 
 	// sets
-	void setEstado(bool);
+	virtual void setEstado(bool);
 
 	// gets
 
-	string getNombre();
-	string getAutores();
-	string getMateria();
-	string getAnnio_eddi();
-	string getEditorial();
-	bool getEstado();
-	string getId();
+	virtual string getNombre();
+	virtual string getAutores();
+	virtual string getMateria();
+	virtual string getAnnio_eddi();
+	virtual string getEditorial();
+	virtual bool getEstado();
+	virtual string getId();
 
 	// methods
 
