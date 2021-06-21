@@ -58,7 +58,7 @@ void Control::MenuInicioS()
 
 	do {
 		cout << "===============================\n";
-		cout << "\nDigite una Identificacion\n";
+		cout << "\nDigite su Identificacion\n";
 		cout << "ID: "; cin >> ID; cout << "\n";
 		cout << "\n===============================\n";
 		system("pause");
