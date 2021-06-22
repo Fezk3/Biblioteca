@@ -4,12 +4,14 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <fstream>
 #include "ObjetoBase.h"
 using std::string;
 using std::stringstream;
 using std::endl;
 using std::cout;
 using std::cin;
+using std::ifstream;
 
 class Libro  : objetoBase {
 
@@ -45,6 +47,7 @@ public:
 	// methods
 
 	virtual string toString();
+	Libro& autoread(ifstream&);
 
 };
 

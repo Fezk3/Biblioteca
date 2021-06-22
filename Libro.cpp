@@ -82,3 +82,21 @@ string Libro::toString() {
 	return x.str();
 
 }
+
+Libro& Libro::autoread(ifstream& z) {
+
+	string nombre, autores, materia, annio_edi, editorial;
+	bool estado;
+
+	getline(z, nombre);
+	z >> autores;
+	z >> materia;
+	z >> annio_edi;
+	z >> editorial;
+	z >> estado;
+
+	z.ignore();
+
+	return(*new Libro(nombre, autores, materia, annio_edi, editorial, estado));
+
+}
