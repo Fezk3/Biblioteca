@@ -1,7 +1,9 @@
 #pragma once
 #ifndef CONTROL_H
 #define CONTROL_H
+#include <fstream>
 #include "Biblioteca.h"
+using std::ifstream;
 class Control
 {
 public:
@@ -14,6 +16,8 @@ public:
 	virtual void MenuPrincipal();
 	virtual void SubMenu(Usuario *);
 	virtual void LlenaListas();
+	virtual void LlenaListaLibro();
+	virtual void LlenaListaUsuario();
 	virtual void UsuarioNuevo(Usuario *);
 	virtual void cambioEstadoUsuario(string);
 	virtual bool verificaStrings(string);

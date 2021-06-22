@@ -13,7 +13,8 @@ using std::string; using std::stringstream; using std::cout; using std::endl; us
 class Usuario : objetoBase {
 public:
 	Usuario(string Nombre);
-	Usuario(string, bool);
+	Usuario(string, bool, string);
+	Usuario();
 	virtual ~Usuario();
 	virtual void setEstado(bool Estado);
 	virtual string getNombre();

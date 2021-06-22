@@ -10,6 +10,20 @@ materia(materia), annio_edi(annio_edi), editorial(editorial), estado(estado){
 
 }
 
+Libro::Libro(string nombre, string autores, string materia, string annio_edi, string editorial, bool estado, string id) : nombre(nombre), autores(autores),
+materia(materia), annio_edi(annio_edi), editorial(editorial), estado(estado), id(id) {
+
+	cont++;
+
+}
+
+Libro::Libro() {
+
+	nombre = ""; materia = ""; editorial = ""; id = "0";
+	autores = ""; annio_edi = ""; estado = 0;
+
+}
+
 Libro::~Libro() {
 
 }
@@ -76,6 +90,7 @@ string Libro::toString() {
 	x << "Autor(es): " << autores << endl;
 	x << "Materia: " << materia << endl;
 	x << "Anio de Edicion: " << annio_edi << endl;
+	x << "Editorial: " << editorial << endl;
 	x << "Estado: " << (estado ? "Disponible" : "Prestado")<<endl;
 	x << "Id: " << id << endl;
 
@@ -85,7 +100,7 @@ string Libro::toString() {
 
 Libro& Libro::autoread(ifstream& z) {
 
-	string nombre, autores, materia, annio_edi, editorial;
+	string nombre, autores, materia, annio_edi, editorial, id;
 	bool estado;
 
 	getline(z, nombre);
@@ -94,9 +109,10 @@ Libro& Libro::autoread(ifstream& z) {
 	z >> annio_edi;
 	z >> editorial;
 	z >> estado;
+	z >> id;
 
 	z.ignore();
 
-	return(*new Libro(nombre, autores, materia, annio_edi, editorial, estado));
+	return(*new Libro(nombre, autores, materia, annio_edi, editorial, estado, id));
 
 }

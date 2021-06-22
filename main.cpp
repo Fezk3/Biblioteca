@@ -6,7 +6,8 @@ int main()
 
     Control *c = new Control;
 
-    c->LlenaListas();
+    c->LlenaListaUsuario();
+    c->LlenaListaLibro();
     c->MenuPrincipal();
 
     delete c;

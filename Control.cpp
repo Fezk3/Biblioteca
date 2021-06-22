@@ -763,10 +763,78 @@ void Control::LlenaListas() {
 		Usuario* u2 = new Usuario("Kevin Montero");
 		u2->setEstado(0);
 
-		Global.AgregarUsuario(u1); Global.AgregarUsuario(u2);
+	//	Global.AgregarUsuario(u1); Global.AgregarUsuario(u2);
 		Global.AgregarLibro(l1); Global.AgregarLibro(l2); Global.AgregarLibro(l3); Global.AgregarLibro(l4);
 		Global.AgregarLibro(l5); Global.AgregarLibro(l6); Global.AgregarLibro(l7); Global.AgregarLibro(l8);
 		Global.AgregarLibro(l9); Global.AgregarLibro(l10); Global.AgregarLibro(l11); Global.AgregarLibro(l12);
 		Global.AgregarLibro(l13); Global.AgregarLibro(l14); Global.AgregarLibro(l15); Global.AgregarLibro(l16);
+
+}
+
+void Control::LlenaListaUsuario() {
+
+	Usuario* n = new Usuario;
+	Usuario* aux = new Usuario;
+
+	ifstream z;
+
+	z.open("Users.txt");
+
+	if (!z || z.good() == false) {
+
+		z.close();
+
+	}
+	else {
+
+		while (z.eof() == false) {
+
+			n = &aux->autoread(z);
+
+			if (n->getNombre() != "") {
+
+				Global.AgregarUsuario(n);
+
+			}
+
+		}
+
+	}
+
+	z.close();
+
+}
+
+void Control::LlenaListaLibro() {
+
+	Libro* n = new Libro;
+	Libro* aux = new Libro;
+
+	ifstream z;
+
+	z.open("Libros.txt");
+
+	if (!z || z.good() == false) {
+
+		z.close();
+
+	}
+	else {
+
+		while (z.eof() == false) {
+
+			n = &aux->autoread(z);
+
+			if (n->getNombre() != "") {
+
+				Global.AgregarLibro(n);
+
+			}
+
+		}
+
+	}
+
+	z.close();
 
 }

@@ -29,6 +29,8 @@ private:
 public:
 
 	Libro(string, string, string,string,string,bool);
+	Libro(string, string, string, string, string, bool, string);
+	Libro();
 	virtual ~Libro();
 
 	// sets
