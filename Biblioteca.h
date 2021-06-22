@@ -26,7 +26,6 @@ public:
     virtual virtual ~Biblioteca();
 
 
-    //Atributos
     Lista<Libro> Coleccion;//Se guardan todos los libros
     Lista<Usuario> Usuarios;//Los administradores o bibliotecarios
 };
