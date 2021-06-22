@@ -231,7 +231,7 @@ void Control::MenuLibros(Usuario* U)
 							cout << "Digite el Anno: " << endl;
 							getline(cin, anno);
 						}
-						cout << "Digite la descripcion: " << endl;
+						cout << "Digite la editorial: " << endl;
 						getline(cin, descripcion);
 						while (verificaStrings(descripcion) != true)
 						{
