@@ -12,6 +12,9 @@ Prestamo::Prestamo(string id_libro, string id_usuario, string usuario, string li
 
 Prestamo::Prestamo(string id_libro, string id_usuario, string usuario, string libro, string diaP, string diaVen) : id_libro(id_libro), id_usuario(id_usuario), usuario(usuario), libro(libro), dia_prestamo(diaP), dia_vencimiento(diaVen) {
 
+	this->id += std::to_string(num);
+	num++;
+
 }
 
 Prestamo::~Prestamo() {

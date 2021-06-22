@@ -10,6 +10,12 @@ Usuario::Usuario(string Nombre) :nombre(Nombre) {
 
 }
 
+Usuario::Usuario(string nombre, bool estado) : nombre(nombre), estado(estado) {
+
+	this->id += std::to_string(cont);
+	cont++;
+}
+
 Usuario::~Usuario() {
 
 }
@@ -87,3 +93,16 @@ string Usuario::toString() {
 	return s.str();
 }
 
+Usuario& Usuario::autoread(ifstream& z) {
+
+	string nombre;
+	bool estado;
+
+	getline(z, nombre);
+	z >> estado;
+
+	z.ignore();
+
+	return(*new Usuario(nombre, estado));
+
+}

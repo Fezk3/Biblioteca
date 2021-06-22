@@ -4,14 +4,16 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <fstream>
 #include "Lista.h"
 #include "Prestamo.h"
 #include "ObjetoBase.h"
-using std::string; using std::stringstream; using std::cout; using std::endl; using std::cin;
+using std::string; using std::stringstream; using std::cout; using std::endl; using std::cin; using std::ifstream;
 
 class Usuario : objetoBase {
 public:
 	Usuario(string Nombre);
+	Usuario(string, bool);
 	virtual ~Usuario();
 	virtual void setEstado(bool Estado);
 	virtual string getNombre();
@@ -23,6 +25,7 @@ public:
 	virtual int cantidadPrestamos();
 	virtual string toString();
 	virtual bool checkPrestamo(string); // false si el prestamo no esta en su lista, true si lo esta
+	virtual Usuario& autoread(ifstream&);
 
 	//Atributos
 	Lista<Prestamo> prestamos;//Lista de prestamos 
