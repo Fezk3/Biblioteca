@@ -6,6 +6,7 @@ int main()
 
     Control *c = new Control;
 
+    //c->LlenaListas(); // estatic
     c->LlenaListaUsuario();
     c->LlenaListaLibro();
     c->MenuPrincipal();
