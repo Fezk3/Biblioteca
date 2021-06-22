@@ -28,8 +28,8 @@ private:
 
 public:
 
-	Libro(string, string, string,string,string,bool);
-	Libro(string, string, string, string, string, bool, string);
+	Libro(string, string, string,string,string,bool); // nuevo
+	Libro(string, string, string, string, string, bool, string); // con archivo
 	Libro();
 	virtual ~Libro();
 

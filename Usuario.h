@@ -12,8 +12,8 @@ using std::string; using std::stringstream; using std::cout; using std::endl; us
 
 class Usuario : objetoBase {
 public:
-	Usuario(string Nombre);
-	Usuario(string, bool, string);
+	Usuario(string Nombre); // nuevo
+	Usuario(string, bool, string); // con archivo
 	Usuario();
 	virtual ~Usuario();
 	virtual void setEstado(bool Estado);
