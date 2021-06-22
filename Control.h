@@ -15,7 +15,7 @@ public:
 	virtual void MenuPrestamo(Usuario*);
 	virtual void MenuPrincipal();
 	virtual void SubMenu(Usuario *);
-	//virtual void LlenaListas();  estatico
+	virtual void LlenaListas();  estatico
 	virtual void LlenaListaLibro();
 	virtual void LlenaListaUsuario();
 	virtual void UsuarioNuevo(Usuario *);

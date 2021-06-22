@@ -737,7 +737,7 @@ void Control::SubMenu(Usuario* U)
 	} while (Finalizar != 1);
 
 }
-/*
+
 void Control::LlenaListas() {
 
 		Libro* l1 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 1);
@@ -771,7 +771,7 @@ void Control::LlenaListas() {
 		Global.AgregarLibro(l13); Global.AgregarLibro(l14); Global.AgregarLibro(l15); Global.AgregarLibro(l16);
 
 }
-*/
+
 void Control::LlenaListaUsuario() {
 
 	Usuario* n = new Usuario;
