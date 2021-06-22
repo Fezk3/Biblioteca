@@ -737,6 +737,7 @@ void Control::SubMenu(Usuario* U)
 	} while (Finalizar != 1);
 
 }
+/*
 void Control::LlenaListas() {
 
 		Libro* l1 = new Libro("Vida Marina", "Bob Gibbons", "Biologia", "2003", "Todo sobre los ecosistemas marinos", 1);
@@ -763,14 +764,14 @@ void Control::LlenaListas() {
 		Usuario* u2 = new Usuario("Kevin Montero");
 		u2->setEstado(0);
 
-	//	Global.AgregarUsuario(u1); Global.AgregarUsuario(u2);
+		Global.AgregarUsuario(u1); Global.AgregarUsuario(u2);
 		Global.AgregarLibro(l1); Global.AgregarLibro(l2); Global.AgregarLibro(l3); Global.AgregarLibro(l4);
 		Global.AgregarLibro(l5); Global.AgregarLibro(l6); Global.AgregarLibro(l7); Global.AgregarLibro(l8);
 		Global.AgregarLibro(l9); Global.AgregarLibro(l10); Global.AgregarLibro(l11); Global.AgregarLibro(l12);
 		Global.AgregarLibro(l13); Global.AgregarLibro(l14); Global.AgregarLibro(l15); Global.AgregarLibro(l16);
 
 }
-
+*/
 void Control::LlenaListaUsuario() {
 
 	Usuario* n = new Usuario;
