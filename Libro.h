@@ -47,7 +47,7 @@ public:
 	// methods
 
 	virtual string toString();
-	Libro& autoread(ifstream&);
+	virtual Libro& autoread(ifstream&);
 
 };
 

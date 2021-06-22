@@ -52,7 +52,7 @@ public:
 
 	//methods
 
-	Prestamo& autoread(ifstream&);
+	virtual Prestamo& autoread(ifstream&);
 
 };
 
