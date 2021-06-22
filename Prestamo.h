@@ -5,12 +5,14 @@
 #include <iostream>
 #include <sstream>
 #include <ctime>
+#include <fstream>
 #include "ObjetoBase.h"
 using std::string;
 using std::stringstream;
 using std::endl;
 using std::cout;
 using std::cin;
+using std::ifstream;
 
 class Prestamo : objetoBase
 {
@@ -29,7 +31,8 @@ private:
 
 public:
 
-	Prestamo(string, string, string, string);
+	Prestamo(string, string, string, string); // nuevos prestamos -> fechas auto
+	Prestamo(string, string, string, string, string, string); // para cargar de archivo
 	virtual ~Prestamo();
 
 	//sets
@@ -46,6 +49,10 @@ public:
 	virtual string getId();
 
 	virtual string toString();
+
+	//methods
+
+	Prestamo& autoread(ifstream&);
 
 };
 
