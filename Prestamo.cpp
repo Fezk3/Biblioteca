@@ -7,14 +7,7 @@ Prestamo::Prestamo(string id_libro, string id_usuario, string usuario, string li
 
 	this->id += std::to_string(num);
 	num++;
-	setDiaInicio(); setVencimiento();  // problema con archivos -> para nuevos hacer desde menu cuando se creen
-}
-
-Prestamo::Prestamo(string id_libro, string id_usuario, string usuario, string libro, string diaP, string diaVen) : id_libro(id_libro), id_usuario(id_usuario), usuario(usuario), libro(libro), dia_prestamo(diaP), dia_vencimiento(diaVen) {
-
-	this->id += std::to_string(num);
-	num++;
-
+	setDiaInicio(); setVencimiento();  
 }
 
 Prestamo::~Prestamo() {
@@ -117,23 +110,5 @@ string Prestamo::toString() {
 	x << "Dia de vencimiento: " << dia_vencimiento << std::endl;
 
 	return x.str();
-
-}
-
-Prestamo& Prestamo::autoread(ifstream& z) {
-
-	string id_usuario, usuario, id_libro, libro, dia_prestamo, dia_vencimiento;
-
-	getline(z, id_usuario);
-	z >> usuario;
-	z >> id_libro;
-	z >> libro;
-	z >> dia_prestamo;
-	z >> dia_vencimiento;
-
-	z.ignore();
-
-	return(*new Prestamo(id_libro, id_usuario, usuario, libro, dia_prestamo, dia_vencimiento));
-
 
 }

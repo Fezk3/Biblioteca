@@ -31,8 +31,7 @@ private:
 
 public:
 
-	Prestamo(string, string, string, string); // nuevos prestamos -> fechas auto
-	Prestamo(string, string, string, string, string, string); // para cargar de archivo
+	Prestamo(string, string, string, string);
 	virtual ~Prestamo();
 
 	//sets
@@ -49,10 +48,6 @@ public:
 	virtual string getId();
 
 	virtual string toString();
-
-	//methods
-
-	virtual Prestamo& autoread(ifstream&);
 
 };
 
