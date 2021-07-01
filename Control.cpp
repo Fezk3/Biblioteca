@@ -312,10 +312,11 @@ void Control::MenuUsuarios(Usuario* U)
 		cout << "2. Mostar Usuarios\n";
 		cout << "3. Mostar Usuario Especifico\n";
 		cout << "4. Ver mi Usuario\n";
-		cout << "5. Cambiar estado de usuario\n";
-		cout << "6. Agregar Usuario\n";
-		cout << "7. Eliminar Usuario\n";
-		cout << "8. Salir\n\n";
+		cout << "5. Ver cantidad total de usuarios\n";
+		cout << "6. Cambiar estado de usuario\n";
+		cout << "7. Agregar Usuario\n";
+		cout << "8. Eliminar Usuario\n";
+		cout << "9. Salir\n\n";
 		cout << "==================================\n";
 		cout << "Digite un numero: ";
 		cin >> Comprobar;
@@ -374,6 +375,16 @@ void Control::MenuUsuarios(Usuario* U)
 
 					case 5:
 
+						cout << "==============================\n";
+						cout << "\nEl numero de Usuarios totales es de: " << Global.Usuarios.cantidadTotalNodos() << "\n";
+						cout << "\n=================================\n";
+						FinalizarSub = 1;
+						system("pause");
+						system("cls");
+						break;
+
+					case 6:
+
 						cout << "===============================\n";
 						cout << "\nDigite el ID del usuario: "; cin >> ID;
 						cout << "\n";
@@ -384,7 +395,7 @@ void Control::MenuUsuarios(Usuario* U)
 						system("cls");
 						break;
 
-					case 6:
+					case 7:
 						
 						cout << "===============================\n";
 						cin.ignore();
@@ -408,7 +419,7 @@ void Control::MenuUsuarios(Usuario* U)
 						system("pause");
 						system("cls");
 						break;
-					case 7:
+					case 8:
 						cout << "===============================\n";
 						cout << "\nDigite el ID: ";
 						cin >> ID;
@@ -429,7 +440,7 @@ void Control::MenuUsuarios(Usuario* U)
 						system("cls");
 						break;
 
-					case 8:
+					case 9:
 						cout << "===============================\n";
 						cout << "\nCerrando el Menu \n\n";
 						cout << "===============================\n";
