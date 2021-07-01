@@ -473,7 +473,7 @@ void Control::MenuPrestamo(Usuario* U)
 
 	do {
 		cout << "============"<<Cliente->getNombre()<<"============\n";
-		cout << "1. Solocitar\n";
+		cout << "1. Solicitar\n";
 		cout << "2. Devolucion\n";
 		cout << "3. Ver mis prestamos\n";
 		cout << "4. Ver mi cantidad de prestamos\n";
@@ -611,7 +611,7 @@ void Control::MenuPrincipal()
 
 	do {
 		cout << "============Bienvenido============\n";
-		cout << "\n1. Iniciar secion\n";
+		cout << "\n1. Iniciar sesion\n";
 		cout << "2. Registrarse\n";
 		cout << "3. Salir\n\n";
 		cout << "==================================\n";
