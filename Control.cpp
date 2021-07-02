@@ -403,7 +403,7 @@ void Control::MenuUsuarios(Usuario* U)
 						getline(cin, Nombre);
 						while (verificaStrings(Nombre) != true)
 						{
-							cout << "\Nombre no valido, vuelva a intertarlo (4 o mas caracateres )\n\n";
+							cout << "\Nombre invalido, vuelva a intertarlo (4 o mas caracateres )\n\n";
 							system("pause");
 							system("cls");
 							cout << "Digite el Nombre: " << endl;
@@ -555,7 +555,7 @@ void Control::MenuPrestamo(Usuario* U)
 							
 							libroadevolver = Cliente->devolver(idprestamo);
 							Global.Coleccion.cambioEstado(libroadevolver);
-							cout << "===============================\n\n";
+							cout << "===============================\n";
 							cout << "\nEl libro ha sido devuelto con exito\n";
 							cout << "\n===============================\n";
 							system("pause");
@@ -649,7 +649,7 @@ void Control::MenuPrincipal()
 						getline(cin, nombre);
 						while (verificaStrings(nombre) != true)
 						{
-							cout << "\Nombre no valido, vuelva a intertarlo (4 o mas caracateres )\n\n";
+							cout << "\Nombre invalido, vuelva a intertarlo (4 o mas caracateres )\n\n";
 							system("pause");
 							system("cls");
 							cout << "Digite el Nombre: " << endl;
