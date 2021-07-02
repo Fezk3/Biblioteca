@@ -657,14 +657,15 @@ void Control::MenuPrincipal()
 						}
 						nuevo = new Usuario(nombre);
 						UsuarioNuevo(nuevo);
-						cout << "\n\nUsuario agregado con exito, ya puede iniciar sesion\n\n";
+						cout << "===============================\n";
+						cout << "\nUsuario agregado con exito, ya puede iniciar sesion\n\n";
 						cout << "===============================\n";
 						system("pause");
 						system("cls");
 						cout << "===============================\n";
 						cout << "\nSu usuario es: \n\n";
 						cout << nuevo->toString();
-						cout << "\n\n===============================\n";
+						cout << "\n\n===============================\n\n";
 						system("pause");
 						system("cls");
 						FinalizarSub = 1;
