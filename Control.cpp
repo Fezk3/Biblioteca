@@ -235,7 +235,7 @@ void Control::MenuLibros(Usuario* U)
 						getline(cin, descripcion);
 						while (verificaStrings(descripcion) != true)
 						{
-							cout << "\Descripcion no valida, vuelva a intertarlo (4 o mas caracateres )\n\n";
+							cout << "\nEditorial no valida, vuelva a intertarlo (4 o mas caracateres )\n\n";
 							system("pause");
 							system("cls");
 							cin.ignore();
