@@ -505,7 +505,8 @@ void Control::MenuPrestamo(Usuario* U)
 							system("cls");
 
 							if (id == "0") {
-								cout << "\nEl libro no se encuentra disponible\n\n";
+								cout << "==================================\n";
+								cout << "\nNo hay ejemplares disponibles del libro, intente con otro\n\n";
 								cout << "==================================\n";
 								system("pause");
 								system("cls");
@@ -520,14 +521,18 @@ void Control::MenuPrestamo(Usuario* U)
 								Cliente->prestamo(prestamoNuevo);
 								cout << "==================================\n";
 								cout << "\nPrestamo realizado exitosamente:\n\n";
+								cout << "==================================\n";
 								Cliente->prestamos.mostrarEspecifico(prestamoNuevo->getId());
-								cout << "\n";
+								cout << "\n\n";
 								system("pause");
 								system("cls");
 							}
 						} else
 						{
-							cout << "\nEl usuario ya tiene el maximo numero de prestamos permitidos o se encuentra inactivo\n";
+							cout << "===============================\n\n";
+							cout << Cliente->getNombre() << " no puede solicitar un prestamo en este momento\n";
+							cout << "Ya tiene el maximo numero de prestamos permitidos o se encuentra inactivo\n";
+							cout << "\n===============================\n";
 							system("pause");
 							system("cls");
 						}
@@ -538,7 +543,9 @@ void Control::MenuPrestamo(Usuario* U)
 						cout<<"Digite el id del prestamo que desea devolver:\n";
 						cin >> idprestamo;
 						if (Cliente->checkPrestamo(idprestamo) == false) {
-							cout << "\nEl id no corresponde a ningun prestamo activo" << endl;
+							cout << "===============================\n";
+							cout << "\nEl id no corresponde a ninguno de sus prestamos, intente con un id valido\n";
+							cout << "\n===============================\n";
 							system("pause");
 							system("cls");
 							FinalizarSub = 1;
@@ -548,7 +555,7 @@ void Control::MenuPrestamo(Usuario* U)
 							
 							libroadevolver = Cliente->devolver(idprestamo);
 							Global.Coleccion.cambioEstado(libroadevolver);
-							cout << "El libro ha sido devuelto con exito\n";
+							cout << "\n\nEl libro ha sido devuelto con exito\n\n";
 							system("pause");
 							system("cls");
 							FinalizarSub = 1;
