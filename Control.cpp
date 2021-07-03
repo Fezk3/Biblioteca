@@ -98,7 +98,7 @@ void Control::MenuLibros(Usuario* U)
 		cout << "4. Ver cantidad total de unidades de un libro\n";
 		cout << "5. Ver Disponibilidad para prestamos de un Libro\n";
 		cout << "6. Ver lista materias\n";
-		cout << "7. Mostrar cantidad total de libros\n";
+		cout << "7. Mostrar cantidad total de libros de la Biblioteca\n";
 		cout << "8. Agregar Libro\n";
 		cout << "9. Eliminar Libro\n";
 		cout << "10. Salir\n";
