@@ -15,3 +15,12 @@ int main()
 
     return 0;
 }
+
+/*
+
+    Integrantes: 
+                    Victor Segura Pereira
+                    Kevin Montero Nuñez
+
+
+*/
