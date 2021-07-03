@@ -13,7 +13,7 @@ using std::cout;
 using std::cin;
 using std::ifstream;
 
-class Libro  : objetoBase {
+class Libro  : public objetoBase {
 
 private:
 
