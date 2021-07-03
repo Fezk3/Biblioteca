@@ -171,7 +171,7 @@ void Lista<T>::disponibilidad(string dispo) {
 
 	if (encontrado == true) {
 
-		std::cout << "Libro " << dispo << " esta disponible con un total de " << cantidadNodosEspec(dispo) << std::endl;
+		std::cout << "Libro " << dispo << " esta disponible con un total de " << cantidadNodosEspec(dispo) <<" ejemplares" << std::endl;
 
 	}
 	else {
