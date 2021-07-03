@@ -6,7 +6,7 @@ int main()
 
     Control *c = new Control;
 
-    //c->LlenaListas(); // estatic
+    //c->LlenaListas(); // static
     c->LlenaListaUsuario();
     c->LlenaListaLibro();
     c->MenuPrincipal();
@@ -19,10 +19,10 @@ int main()
 /*
 
     Integrantes: 
-                    Victor Segura Pereira
-                    Kevin Montero Nuñez
+                 Victor Segura Pereira
+                 Kevin Montero Nuñez
 
-    Repositorio: https://github.com/Fezk3/Project-I
-
+    Repositorio: 
+                 https://github.com/Fezk3/Project-I
 
 */
