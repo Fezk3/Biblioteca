@@ -98,7 +98,7 @@ void Control::MenuLibros(Usuario* U)
 		cout << "4. Ver cantidad total de unidades de un libro\n";
 		cout << "5. Ver Disponibilidad para prestamos de un Libro\n";
 		cout << "6. Ver lista materias\n";
-		cout << "7. Mostrar cantidad total de libros disponibles\n";
+		cout << "7. Mostrar cantidad total de libros\n";
 		cout << "8. Agregar Libro\n";
 		cout << "9. Eliminar Libro\n";
 		cout << "10. Salir\n";
@@ -221,11 +221,11 @@ void Control::MenuLibros(Usuario* U)
 							cout << "Digite la materia:" << endl;
 							getline(cin, materia);
 						}
-						cout << "Digite el Anno: " << endl;
+						cout << "Digite el Anio: " << endl;
 						getline(cin, anno);
 						while (verificaStrings(anno) != true)
 						{
-							cout << "\Anno no valido, vuelva a intertarlo (Digite uno valido)\n\n";
+							cout << "\Anio no valido, vuelva a intertarlo (Digite uno valido)\n\n";
 							system("pause");
 							system("cls");
 							cout << "Digite el Anno: " << endl;
@@ -238,8 +238,7 @@ void Control::MenuLibros(Usuario* U)
 							cout << "\nEditorial no valida, vuelva a intertarlo (4 o mas caracateres )\n\n";
 							system("pause");
 							system("cls");
-							cin.ignore();
-							cout << "Digite la descripcion: " << endl;
+							cout << "Digite la editorial: " << endl;
 							getline(cin, descripcion);
 						}
 						cout << " \n";
